@@ -20,7 +20,8 @@ export class CardContainer extends Component {
 
 
 export const mapStateToProps = state => ({
-  roasters: state.roasters
+  roasters: state.roasters,
+  coffees: state.coffees
 })
 
 export default connect(mapStateToProps, null)(CardContainer)

@@ -12,6 +12,9 @@ export const Header = (props) => {
       <NavLink to='/form'> 
         Add New Roaster
       </NavLink>
+      <NavLink to='/current-roasters'> 
+        See Current Roasters
+      </NavLink>
     </div>
   )
 }
