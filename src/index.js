@@ -5,7 +5,8 @@ import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { rootReducer } from './reducers/index'
+import { BrowserRouter } from 'react-router-dom';
+import { rootReducer } from './reducers/index';
 
 const store = createStore(
   rootReducer,
@@ -13,9 +14,11 @@ const store = createStore(
   )
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
   document.getElementById('root')
   );
 registerServiceWorker();

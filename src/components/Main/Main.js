@@ -1,12 +1,14 @@
 import React from 'react';
-import { key } from '../../Utilities/api-key'
-import { body, text } from '../../Utilities/emailBody'
+import { key } from '../../Utilities/api-key';
+import { body, text } from '../../Utilities/emailBody';
+import { Route, Switch } from 'react-router-dom';
+import { CardContainer } from '../CardContainer/CardContainer';
+import { Form } from '../Form/Form';
+import { Login } from '../Login/Login';
 
 export const Main = (props) => {
-  console.log(key)
   const sgMail = require('@sendgrid/mail');
   sgMail.setApiKey(key);
-  console.log(sgMail)
   const msg = {
     to: 'jpquinn605@gmail.com',
     from: 'hello@amethystcoffee.co',
@@ -18,9 +20,11 @@ export const Main = (props) => {
 
   return (
     <div>
-      <h1>
-        Main Container
-      </h1>
+      <Switch>
+        <Route exact path = '/' component={CardContainer} />
+        <Route path='/form' component={Form} />
+        <Route path='/login' component={Login} />
+      </Switch>
     </div>
   )
 }
