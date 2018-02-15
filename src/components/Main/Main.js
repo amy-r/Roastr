@@ -7,6 +7,7 @@ import Form from '../Form/Form';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import { Login } from '../Login/Login';
+import CoffeeForm from '../CoffeeForm/CoffeeForm';
 
 export const Main = (props) => {
   // const sgMail = require('@sendgrid/mail');
@@ -24,6 +25,8 @@ export const Main = (props) => {
     <div>
       <Switch>
         <Route path='/form' component={Form} />
+        <Route path='/coffee-form' component={CoffeeForm} />
+        <Route path='/current-roasters' component={CardContainer} />
         <Route exact path='/' component={Login} />
       </Switch>
     </div>
