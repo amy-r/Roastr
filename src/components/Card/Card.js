@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Cards = () => {
+export const Card = (props) => {
+  const card = Object.entries(props).map ( entry => {
+    return <li> { entry[0] } : { entry[1] } </li>
+  })
 
-  
-render(
   return(
+    <div>
+      {card}
+    </div>
   )
-  )
-}
-
-
-mapStateToProps(state) => {
-  roasters: state.roasters
 }

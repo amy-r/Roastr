@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Header } from '../Header/Header'
-import { Main } from '../Main/Main'
+import { Header } from '../Header/Header';
+import { Main } from '../Main/Main';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 
 class App extends Component {
   render() {
@@ -14,4 +17,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(connect(null, null)(App));
