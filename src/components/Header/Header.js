@@ -12,9 +12,6 @@ export const Header = (props) => {
       <NavLink to='/form'> 
         Add New Roaster
       </NavLink>
-      <NavLink to ='/login'>
-        User Login
-      </NavLink>
     </div>
   )
 }
