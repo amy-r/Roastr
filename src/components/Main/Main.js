@@ -1,6 +1,6 @@
 import React from 'react';
-import { key } from '../Utilities/.api-key'
-import { body, text } from '../Utilities/emailBody'
+import { key } from '../../Utilities/api-key'
+import { body, text } from '../../Utilities/emailBody'
 
 export const Main = (props) => {
   console.log(key)
