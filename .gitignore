@@ -21,4 +21,5 @@ yarn-debug.log*
 yarn-error.log*
 
 #api-key
-/src/Api/.api-key.js
+./src/Utilities/api-key.js
+api-key.js

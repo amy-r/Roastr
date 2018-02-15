@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const body = (
   `<div>
     <h1> Hello, Amy! </h1>
