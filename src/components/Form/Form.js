@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addRoaster } from '../../actions/addRoaster';
+import { withRouter } from 'react-router';
+import './Form.css';
 
 export class Form extends Component {
   constructor(props) {
@@ -24,12 +26,17 @@ export class Form extends Component {
       water,
       contact
      } 
-     // console.log(this.props)
     this.props.addRoaster(newRoaster);
+    this.setState({
+      name: '',
+      location: '',
+      equipment: '',
+      water: '',
+      contact: '',
+    })
   }
 
   handleChange = (event) => {
-    event.preventDefault();
     const {name, value} = event.target
     this.setState({[name]:value})
   }
@@ -38,11 +45,31 @@ export class Form extends Component {
 
     return (
       <form onSubmit= {this.handleSubmit}>
-        <input type="text" name="name" value={this.state.name} onChange={this.handleChange}/>
-        <input type="text" name="location" value={this.state.location} onChange={this.handleChange}/>
-        <input type="text" name="equipment" value={this.state.equipment} onChange={this.handleChange}/>
-        <input type="text" name="water" value={this.state.water} onChange={this.handleChange}/>
-        <input type="text" name="contact" value={this.state.contact} onChange={this.handleChange}/>
+        <input type="text" 
+          name="name" 
+          value={this.state.name}
+          placeholder='Name' 
+          onChange={this.handleChange}/>
+        <input type="text" 
+          name="location" 
+          value={this.state.location} 
+          placeholder='Location'
+          onChange={this.handleChange}/>
+        <input type="text" 
+          name="equipment" 
+          value={this.state.equipment} 
+          placeholder='Equipment'
+          onChange={this.handleChange}/>
+        <input type="text" 
+          name="water" 
+          value={this.state.water} 
+          placeholder='Water'
+          onChange={this.handleChange}/>
+        <input type="text" 
+          name="contact" 
+          value={this.state.contact} 
+          placeholder='Contact'
+          onChange={this.handleChange}/>
         <input type="submit"/>
       </form>
     )
@@ -57,4 +84,4 @@ export const mapDispatchToProps = (dispatch) => ({
   addRoaster: roaster => dispatch(addRoaster(roaster))
 })
 
-export default connect(null, mapDispatchToProps)(Form);
+export default withRouter(connect(null, mapDispatchToProps)(Form))
