@@ -9,20 +9,22 @@ import { connect } from 'react-redux';
 import Login from '../Login/Login';
 import CoffeeForm from '../CoffeeForm/CoffeeForm';
 
+const sgMail = require('@sendgrid/mail');
+  sgMail.setApiKey(key);
+  const msg = {
+    to: 'jpquinn605@gmail.com',
+    from: 'hello@amethystcoffee.co',
+    subject: 'Hello, Jordan!',
+    text: text,
+    html: body
+  };
+  sgMail.send(msg);
+
+
 export class Main extends Component {
   constructor(props) {
     super(props);
   }
-  // const sgMail = require('@sendgrid/mail');
-  // sgMail.setApiKey(key);
-  // const msg = {
-  //   to: 'jpquinn605@gmail.com',
-  //   from: 'hello@amethystcoffee.co',
-  //   subject: 'Hello, Jordan!',
-  //   text: text,
-  //   html: body
-  // };
-  // sgMail.send(msg);
   render() {
     return (
       <div>

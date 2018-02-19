@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { addRoaster } from '../../actions/index';
 import { withRouter } from 'react-router';
 import './Form.css';
+import { addRoasterData } from '../../Utilities/firebaseFunctions'
 
 export class Form extends Component {
   constructor(props) {  
@@ -18,22 +19,26 @@ export class Form extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    const { history, user, addRoaster } = this.props
     const {name, location, equipment, water, contact} = this.state;
     const newRoaster = {
+      userId: user.userId,
       name,
       location,
       equipment,
       water,
       contact
-     } 
-    this.props.addRoaster(newRoaster);
+    } 
+    addRoaster(newRoaster);
+    addRoasterData(newRoaster);
     this.setState({
       name: '',
       location: '',
       equipment: '',
       water: '',
       contact: '',
-    })
+    });
+    history.push('/current-roasters');
   }
 
   handleChange = (event) => {
@@ -76,12 +81,12 @@ export class Form extends Component {
   }
 }
 
-// export const mapStateToProps = (state) => {
-//   roaster: state.roaster;
-// }
+export const mapStateToProps = state => ({
+  user: state.user
+})
 
-export const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = dispatch => ({
   addRoaster: roaster => dispatch(addRoaster(roaster))
 })
 
-export default withRouter(connect(null, mapDispatchToProps)(Form))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Form))
