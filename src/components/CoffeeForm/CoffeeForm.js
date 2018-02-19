@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addCoffee } from '../../actions/addRoaster';
+import { addCoffee } from '../../actions/index';
 import { withRouter } from 'react-router';
 import './CoffeForm.css';
 
