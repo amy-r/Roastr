@@ -4,10 +4,11 @@ import { connect } from 'react-redux';
 import { uiConfig } from '../../Utilities/firebase-config';
 import { logIn, logOut } from '../../actions/index';
 import * as firebase from 'firebase';
-import { config } from '../../Utilities/firebase-config'
-firebase.initializeApp(config);
+import { writeUserData, pullRoasters } from '../../Utilities/firebaseFunctions'
+import { firebaseApp } from '../../Utilities/firebaseFunctions'
 
-
+var db = firebaseApp.database();
+var ref = db.ref('/roasters');
 
 export class Login extends Component {
   constructor(props) {
@@ -24,6 +25,8 @@ export class Login extends Component {
           userId: user.uid 
         }
         this.props.logIn(userToStore)
+        writeUserData(userToStore)
+        pullRoasters(ref)
       } catch (error) {
         console.log(error)
       }
