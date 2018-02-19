@@ -6,7 +6,7 @@ import CardContainer from '../CardContainer/CardContainer';
 import Form from '../Form/Form';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
-import { Login } from '../Login/Login';
+import Login from '../Login/Login';
 import CoffeeForm from '../CoffeeForm/CoffeeForm';
 
 export const Main = (props) => {

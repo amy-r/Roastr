@@ -8,9 +8,6 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { rootReducer } from './reducers/index';
 import * as firebase from "firebase";
-import { config } from './Utilities/firebase-config'
-
-firebase.initializeApp(config);
 
 // const provider = new firebase.auth.GoogleAuthProvider();
 

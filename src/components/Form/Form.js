@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addRoaster } from '../../actions/addRoaster';
+import { addRoaster } from '../../actions/index';
 import { withRouter } from 'react-router';
 import './Form.css';
 
 export class Form extends Component {
-  constructor(props) {
+  constructor(props) {  
     super(props);
     this.state = {
       name:'',
