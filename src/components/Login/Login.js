@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { connect } from 'react-redux';
 import { uiConfig } from '../../Utilities/firebase-config';
-import { logIn } from '../../actions/index';
+import { logIn, logOut } from '../../actions/index';
 import * as firebase from 'firebase';
 import { config } from '../../Utilities/firebase-config'
 firebase.initializeApp(config);
@@ -17,12 +17,12 @@ export class Login extends Component {
  async componentDidMount() {
    firebase.auth().onAuthStateChanged( user => {
       try {
-        console.log(user)
         const userToStore = {
           userName: user.displayName,
           userEmail: user.email,
           userPhoto: user.photoUrl,
-          userId: user.uid }
+          userId: user.uid 
+        }
         this.props.logIn(userToStore)
       } catch (error) {
         console.log(error)
@@ -30,12 +30,28 @@ export class Login extends Component {
     })
   }
 
+  signOut = (user) => {
+    firebase.auth().signOut()
+    this.props.logOut(user)
+  }
+
   render() {
-    return(
+    const { user, signOut } = this.props 
+    if(!user.userName) {
+      return(
         <div>
           <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
         </div>
-    )
+      ) 
+    } else {
+       return (
+        <div>
+          <h1> Welcome, {user.userName} </h1>
+          <img src={user.userPhoto} />
+          <button onClick={this.signOut} > Sign Out</button>
+        </div>
+      )
+    }
   }
 }
 
@@ -45,7 +61,8 @@ export const mapStateToProps = store => ({
 })
 
 export const mapDispatchToProps = dispatch => ({
-  logIn: user => dispatch(logIn(user))
+  logIn: user => dispatch(logIn(user)),
+  logOut: user => dispatch(logOut(user))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login)
