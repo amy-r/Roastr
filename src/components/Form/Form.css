@@ -1,5 +1,61 @@
-input {
-  display: block;
-  margin: auto;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #444444;
+  letter-spacing: 0.2rem;
 }
 
+input {
+  display: block;
+  color: #AA9E91;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: auto;
+  border-style: none;
+  padding: 5px;
+  margin-top: 5px;
+  height: 20px;
+}
+
+.full {
+  width: 400px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.half {
+  width: 186px;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.right {
+  margin-left: 15px; 
+}
+
+.new-roaster {
+  background-color: #BB997F;
+  margin: auto;
+  width: 500px;
+  padding: 20px;
+  -webkit-box-shadow: 6px 4px 34px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 4px 34px -5px rgba(0,0,0,0.75);
+  box-shadow: 6px 4px 34px -5px rgba(0,0,0,0.75);
+}
+
+.submit {
+  background-color: #444444;
+  color: white;
+  padding: 10px;
+  margin: 40px 0 0 45px;
+  height: 50px;
+  width: 80px
+}
+
+.submit:hover {
+  background-color: #898078;
+}

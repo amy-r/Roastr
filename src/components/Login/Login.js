@@ -6,6 +6,12 @@ import { logIn, logOut } from '../../actions/index';
 import * as firebase from 'firebase';
 import { writeUserData, pullRoasters } from '../../Utilities/firebaseFunctions'
 import { firebaseApp } from '../../Utilities/firebaseFunctions'
+import { config } from '../../Utilities/firebase-config'
+import HeaderImage from '../../assets/header-triangle_2.svg';
+import Logo from '../../assets/logo-1.svg';
+import './Login.css';
+import Header  from '../Header/Header'
+// firebase.initializeApp(config);
 
 var db = firebaseApp.database();
 var ref = db.ref('/roasters');
@@ -43,12 +49,18 @@ export class Login extends Component {
     if(!user.userName) {
       return(
         <div>
+          <div className='header-container'>
+            <img src = {HeaderImage} className='header-triagle' alt='image of portafilters' />
+          </div>
+          <h3> welcome to </h3>
+          <img src= {Logo} alt='Roastr logo' className='landing-logo'/>
           <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
         </div>
       ) 
     } else {
        return (
         <div>
+          <Header />
           <h1> Welcome, {user.userName} </h1>
           <img src={user.userPhoto} />
           <button onClick={this.signOut} > Sign Out</button>

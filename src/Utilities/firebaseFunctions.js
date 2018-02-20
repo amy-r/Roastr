@@ -12,14 +12,16 @@ export const writeUserData = ({userId, userName, userEmail}) => {
   });
 }
 
-export const addRoasterData = ({userId, name, location, equipment, water, contact}) => {
-  firebase.database().ref('roasters/' + name).set({
+export const addRoasterData = ({userId, name, location, altitude, equipment, water, contact, email}) => {
+  firebaseApp.database().ref('roasters/' + name).set({
     userId,
     name,
+    altitude,
     location,
     equipment,
     water,
     contact,
+    email,
   })
 }
 
