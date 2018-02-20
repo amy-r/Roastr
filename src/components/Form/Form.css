@@ -1,5 +1,29 @@
 input {
   display: block;
   margin: auto;
+  border-style: none;
+  padding: 5px;
+  margin-top: 5px;
 }
 
+.full {
+  width: 400px;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.half {
+  width: 192px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.right {
+  margin-left: 5px; 
+}
+
+.new-roaster {
+  background-color: #BB997F;
+  margin: auto;
+  width: 600px;
+}
