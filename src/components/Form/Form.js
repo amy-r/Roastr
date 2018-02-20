@@ -63,45 +63,45 @@ export class Form extends Component {
           className="full"
           name="name" 
           value={this.state.name}
-          placeholder='Name' 
+          placeholder='NAME' 
           onChange={this.handleChange}/>
         <input type="text" 
           className="half"
           name="location" 
           value={this.state.location} 
-          placeholder='Location'
+          placeholder='LOCATION'
           onChange={this.handleChange}/>
           <input type="text" 
           className="half right"
           name="altitude" 
           value={this.state.altitude} 
-          placeholder='Altitude'
+          placeholder='ALTITUDE'
           onChange={this.handleChange}/>
         <input type="text" 
           className="full"
           name="equipment" 
           value={this.state.equipment} 
-          placeholder='Equipment'
+          placeholder='EQUIPMENT'
           onChange={this.handleChange}/>
         <input type="text" 
           className="full"
           name="water" 
           value={this.state.water} 
-          placeholder='Water TDDs'
+          placeholder='WATER TDDS'
           onChange={this.handleChange}/>
         <input type="text" 
           name="contact" 
           className="half"
           value={this.state.contact} 
-          placeholder='Contact'
+          placeholder='CONTACT'
           onChange={this.handleChange}/>
         <input type="text" 
           name="email" 
           className="half right"
           value={this.state.email} 
-          placeholder='Email'
+          placeholder='EMAIL'
           onChange={this.handleChange}/>
-        <input type="submit" className="submit"/>
+        <input type="submit" className="submit" value='SUBMIT'/>
       </form>
     </div>  
     )
