@@ -1,0 +1,12 @@
+
+.add {
+  text-align: center;
+}
+
+.addButton {
+  background-image: '../../assets/add.svg'
+}
+
+.addButton:hover {
+  background-image: '../../assets/add-hover.svg'
+}
