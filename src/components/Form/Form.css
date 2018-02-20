@@ -12,6 +12,7 @@ input {
   display: block;
   color: #AA9E91;
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   font-weight: 300;
   margin: auto;
   border-style: none;
@@ -27,13 +28,13 @@ input {
 }
 
 .half {
-  width: 192px;
+  width: 186px;
   display: inline-block;
   margin-top: 15px;
 }
 
 .right {
-  margin-left: 5px; 
+  margin-left: 15px; 
 }
 
 .new-roaster {
@@ -41,9 +42,9 @@ input {
   margin: auto;
   width: 500px;
   padding: 20px;
-  -webkit-box-shadow: 2px 4px 14px -5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 2px 4px 14px -5px rgba(0,0,0,0.75);
-  box-shadow: 2px 4px 14px -5px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 6px 4px 34px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 4px 34px -5px rgba(0,0,0,0.75);
+  box-shadow: 6px 4px 34px -5px rgba(0,0,0,0.75);
 }
 
 .submit {

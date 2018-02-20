@@ -116,4 +116,4 @@ export const mapDispatchToProps = dispatch => ({
   addRoaster: roaster => dispatch(addRoaster(roaster))
 })
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Form))
+export default connect(mapStateToProps, mapDispatchToProps)(Form)
