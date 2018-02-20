@@ -7,6 +7,7 @@ import Form from '../Form/Form';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import Login from '../Login/Login';
+import Header from '../Header/Header';
 import CoffeeForm from '../CoffeeForm/CoffeeForm';
 
 const sgMail = require('@sendgrid/mail');
@@ -22,12 +23,16 @@ const sgMail = require('@sendgrid/mail');
 
 
 export class Main extends Component {
-  constructor(props) {
-    super(props);
+  displayHeader = () => {
+    if(this.props.user.userName) {
+      return <Header />
+    }
   }
+
   render() {
     return (
       <div>
+        { this.displayHeader() }
         <Switch>
           <Route path='/form' component={Form} />
           <Route path='/coffee-form' component={CoffeeForm} />

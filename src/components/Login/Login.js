@@ -10,8 +10,6 @@ import { config } from '../../Utilities/firebase-config'
 import HeaderImage from '../../assets/header-triangle_2.svg';
 import Logo from '../../assets/logo.svg';
 import './Login.css';
-import Header  from '../Header/Header'
-// firebase.initializeApp(config);
 
 var db = firebaseApp.database();
 var ref = db.ref('/roasters');
@@ -60,7 +58,6 @@ export class Login extends Component {
     } else {
        return (
         <div>
-          <Header />
           <h1> Welcome, {user.userName} </h1>
           <img src={user.userPhoto} />
           <button onClick={this.signOut} > Sign Out</button>
