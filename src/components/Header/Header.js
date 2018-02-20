@@ -7,11 +7,15 @@ import './Header.css'
 export const Header = (props) => {
   const displayUserActions = (
     <div>
-      <NavLink to='/form'> 
-        Add New Roaster
+      <NavLink to='/form'>
+        <h3 className='nav'> 
+        ADD ROASTER
+        </h3>
       </NavLink>
       <NavLink to='/current-roasters'> 
-        See Current Roasters
+        <h3 className='nav'>
+        DISPLAY ROASTERS
+        </h3>
       </NavLink>
     </div>
   )
@@ -20,12 +24,12 @@ export const Header = (props) => {
     <div>
       <div className='header-desktop'>
       <img src={Logo} className= 'header-logo' />
+      {displayUserActions}
       <NavLink to ='/'>
         <h3 className='nav'>
-          Roastr
+          HOME
         </h3>
       </NavLink>
-      { props.user.userName && displayUserActions }
       </div>
     </div>
   )
