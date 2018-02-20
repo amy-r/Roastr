@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Logo from './header-logo.svg';
+import './Header.css'
 
 export const Header = (props) => {
   const displayUserActions = (
@@ -16,12 +18,15 @@ export const Header = (props) => {
 
   return (
     <div>
+      <div className='header-desktop'>
+      <img src={Logo} className= 'header-logo' />
       <NavLink to ='/'>
-        <h1>
+        <h3 className='nav'>
           Roastr
-        </h1>
+        </h3>
       </NavLink>
       { props.user.userName && displayUserActions }
+      </div>
     </div>
   )
 }

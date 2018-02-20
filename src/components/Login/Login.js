@@ -8,7 +8,7 @@ import { writeUserData, pullRoasters } from '../../Utilities/firebaseFunctions'
 import { firebaseApp } from '../../Utilities/firebaseFunctions'
 import { config } from '../../Utilities/firebase-config'
 import HeaderImage from '../../assets/header-triangle_2.svg';
-import Logo from '../../assets/logo-1.svg';
+import Logo from '../../assets/logo.svg';
 import './Login.css';
 import Header  from '../Header/Header'
 // firebase.initializeApp(config);

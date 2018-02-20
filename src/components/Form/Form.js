@@ -4,7 +4,7 @@ import { addRoaster } from '../../actions/index';
 import { withRouter } from 'react-router';
 import './Form.css';
 import { addRoasterData } from '../../Utilities/firebaseFunctions';
-// import { Header } from '../Header/Header.js'
+import Header from '../Header/Header.js'
 
 export class Form extends Component {
   constructor(props) {  
@@ -57,6 +57,7 @@ export class Form extends Component {
 
     return (
     <div>
+    <Header />
       <h1> ADD A NEW ROASTER </h1>
       <form onSubmit= {this.handleSubmit} className = 'new-roaster'>
         <input type="text" 
