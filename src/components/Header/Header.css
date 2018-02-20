@@ -1,0 +1,19 @@
+.header-desktop {
+  height:100px;
+  background-color: #444444;
+}
+
+.header-logo {
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+.nav {
+  float: right;
+  display: inline-block;
+  color: white;
+  margin-right: 10px;
+}

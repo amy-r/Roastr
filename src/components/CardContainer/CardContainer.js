@@ -1,7 +1,8 @@
 import React, { Component }from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Card } from '../Card/Card';
+
 
 export class CardContainer extends Component {
 
@@ -11,7 +12,13 @@ export class CardContainer extends Component {
     })
     return(
       <div>
-        <h1>Currently Reviewed Roasters: </h1>
+        <h1> Roasters: </h1>
+        <p> hi </p>
+        <h3 className='nav'>
+          <NavLink to='/form'>    
+            ADD ROASTER
+          </NavLink>
+        </h3>
         {roasters}
       </div>
     )
@@ -24,4 +31,4 @@ export const mapStateToProps = state => ({
   coffees: state.coffees
 })
 
-export default connect(mapStateToProps, null)(CardContainer)
+export default withRouter(connect(mapStateToProps, null)(CardContainer))
