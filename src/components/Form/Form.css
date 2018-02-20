@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #444444;
+  letter-spacing: 0.2rem;
+}
+
 input {
   display: block;
+  color: #AA9E91;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
   margin: auto;
   border-style: none;
   padding: 5px;
@@ -25,5 +38,6 @@ input {
 .new-roaster {
   background-color: #BB997F;
   margin: auto;
-  width: 600px;
+  width: 500px;
+  padding: 50px;
 }
