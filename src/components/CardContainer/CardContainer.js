@@ -18,15 +18,16 @@ export class CardContainer extends Component {
     return(
       <div>
         <h1> ROASTERS </h1>
-        <h3 className='add'>
-            ADD NEW ROASTER
-        </h3>
-          <NavLink to='/form'>
+          <NavLink to='/form' className='addButton'>
             <HoverImage
               src={add}
               hoverSrc={addhover}
+              className='addButton'
             />
           </NavLink>
+        <h3 className='add'>
+            ADD NEW
+        </h3>
         {roasters}
       </div>
     )
