@@ -6,12 +6,20 @@ import { withRouter } from 'react-router-dom';
 import { logIn } from '../../actions/index';
 import { connect } from 'react-redux';
 import * as firebase from 'firebase';
+import { pullRoasters } from '../../Utilities/firebaseFunctions';
+import { firebaseApp } from '../../Utilities/firebaseFunctions'
+
+export const db = firebaseApp.database();
+const ref = db.ref('/roasters');
+
 
 class App extends Component {
+
   componentDidMount() {
     const user = JSON.parse(localStorage.getItem('user'))
     if (user) {
      this.props.logIn(user);
+     pullRoasters(ref)
     }
   }
 

@@ -25,11 +25,8 @@ export const addRoasterData = ({userId, name, location, altitude, equipment, wat
   })
 }
 
-export const pullRoasters = (ref) => {
-  ref.on("value", function(snapshot) {
-    console.log(snapshot.val());
-  }, function (errorObject) {
-    console.log("The read failed: " + errorObject.code);
-  });
-
+export const pullRoasters = async (ref) => {
+  const currentValue = await ref.once("value")
+  const snapshotValue = await currentValue.val()
+  return snapshotValue
 }

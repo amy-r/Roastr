@@ -14,7 +14,7 @@ import CoffeeForm from '../CoffeeForm/CoffeeForm';
 //   sgMail.setApiKey(key);
 //   const msg = {
 //     to: 'jpquinn605@gmail.com',
-//     from: 'hello@amethystcoffee.co',
+//     from: 'elle@amethystcoffee.co',
 //     subject: 'Hello, Jordan!',
 //     text: text,
 //     html: body
