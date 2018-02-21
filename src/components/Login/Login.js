@@ -28,6 +28,7 @@ export class Login extends Component {
           userPhoto: user.photoUrl,
           userId: user.uid 
         }
+        localStorage.setItem('user', JSON.stringify(userToStore))
         this.props.logIn(userToStore)
         writeUserData(userToStore)
         pullRoasters(ref)
