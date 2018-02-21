@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should exist 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Login
+    user={
+        Object {
+            "userEmail": "Jordan@Project.com",
+            "userId": "fancy encryption",
+            "userName": "Jordan",
+            "userPhoto": "photo-url",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+           Welcome, 
+          Jordan
+           
+</h1>,
+        <img
+          src="photo-url"
+/>,
+        <button
+          onClick={[Function]}
+>
+           Sign Out
+</button>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            " Welcome, ",
+            "Jordan",
+            " ",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          " Welcome, ",
+          "Jordan",
+          " ",
+        ],
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "src": "photo-url",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": " Sign Out",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": " Sign Out",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+             Welcome, 
+            Jordan
+             
+</h1>,
+          <img
+            src="photo-url"
+/>,
+          <button
+            onClick={[Function]}
+>
+             Sign Out
+</button>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              " Welcome, ",
+              "Jordan",
+              " ",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            " Welcome, ",
+            "Jordan",
+            " ",
+          ],
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "src": "photo-url",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " Sign Out",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": " Sign Out",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;
