@@ -7,14 +7,9 @@ import './Header.css'
 export const Header = (props) => {
   const displayUserActions = (
     <div>
-      <NavLink to='/form'>
-        <h3 className='nav'> 
-        ADD ROASTER
-        </h3>
-      </NavLink>
       <NavLink to='/current-roasters'> 
         <h3 className='nav'>
-        DISPLAY ROASTERS
+        ROASTERS
         </h3>
       </NavLink>
     </div>

@@ -58,9 +58,10 @@ export class Login extends Component {
     } else {
        return (
         <div>
-          <h1> Welcome, {user.userName} </h1>
+          <h1> WELCOME</h1> 
+          <h3 className='name'>{user.userName} </h3>
           <img src={user.userPhoto} />
-          <button onClick={this.signOut} > Sign Out</button>
+          <button onClick={this.signOut} className='logout'> LOG OUT</button>
         </div>
       )
     }

@@ -10,3 +10,23 @@ h3 {
   font-weight: 300;
   margin-bottom: 0;
 }
+
+h1 {
+  margin-bottom: 0;
+}
+
+.name {
+  margin-top: 3px;
+  margin-bottom: 15px;
+}
+
+.logout {
+  background-color: #444444;
+  color: white;
+  height: 50px;
+  width: 80px
+}
+
+.logout:hover {
+  background-color: #d29f7a;
+}
