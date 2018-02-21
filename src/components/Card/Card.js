@@ -8,21 +8,23 @@ export const Card = (props) => {
   const newProps = Object.entries(props)
 
   newProps.shift();
-  
+
   const card = newProps.map ( entry => {
     if (entry[0] === 'name') {
-      return <li className='roaster-name'> { entry[1] } </li>
+      return <li> <h3 className='roaster-name'>{ entry[1] } </h3></li>
     } else {
-      return <li> { entry[0] } : { entry[1] } </li>
+      return <li className='roaster-data'> { entry[0] } : { entry[1] } </li>
     }
   })
 
   return(
     <div>
-      <ul>
-      {card}
-      </ul>
-      <Link to='coffee-form'> Add New Coffee </Link>
+      <div className='roaster-card'>
+        <ul id='roaster-list'>
+          {card}
+        </ul>
+      <Link to='coffee-form'> <button className='new-coffee'>+ NEW COFFEE</button> </Link>
+      </div>
     </div>
   )
 }
