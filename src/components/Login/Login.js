@@ -10,9 +10,9 @@ import { config } from '../../Utilities/firebase-config'
 import HeaderImage from '../../assets/header-triangle_2.svg';
 import Logo from '../../assets/logo.svg';
 import './Login.css';
+const db = firebaseApp.database();
+const ref = db.ref('/roasters');
 
-var db = firebaseApp.database();
-var ref = db.ref('/roasters');
 
 export class Login extends Component {
   constructor(props) {
@@ -21,20 +21,18 @@ export class Login extends Component {
 
  async componentDidMount() {
    firebase.auth().onAuthStateChanged( user => {
-      try {
-        const userToStore = {
-          userName: user.displayName,
-          userEmail: user.email,
-          userPhoto: user.photoUrl,
-          userId: user.uid 
-        }
-        this.props.logIn(userToStore)
-        writeUserData(userToStore)
-        pullRoasters(ref)
-      } catch (error) {
-        console.log(error)
-      }
-    })
+    const userToStore = {
+      userName: user.displayName,
+      userEmail: user.email,
+      userPhoto: user.photoUrl,
+      userId: user.uid 
+    }
+    localStorage.setItem('user', JSON.stringify(userToStore))
+    this.props.logIn(userToStore)
+    writeUserData(userToStore)
+  })
+  const currentRoasters = await pullRoasters(ref);
+  localStorage.setItem('roasters', JSON.stringify(currentRoasters))
   }
 
   signOut = (user) => {
@@ -58,9 +56,10 @@ export class Login extends Component {
     } else {
        return (
         <div>
-          <h1> Welcome, {user.userName} </h1>
+          <h1> WELCOME</h1> 
+          <h3 className='name'>{user.userName} </h3>
           <img src={user.userPhoto} />
-          <button onClick={this.signOut} > Sign Out</button>
+          <button onClick={this.signOut} className='logout'> LOG OUT</button>
         </div>
       )
     }

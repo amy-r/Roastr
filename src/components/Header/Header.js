@@ -10,14 +10,9 @@ export const Header = (props) => {
       <div className='header-desktop'>
       <img src={Logo} className= 'header-logo' />
       <div>
-      <NavLink to='/form'>
-        <h3 className='nav'> 
-        ADD ROASTER
-        </h3>
-      </NavLink>
       <NavLink to='/current-roasters'> 
         <h3 className='nav'>
-        DISPLAY ROASTERS
+        ROASTERS
         </h3>
       </NavLink>
     </div>

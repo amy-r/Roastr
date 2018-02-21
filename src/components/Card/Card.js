@@ -10,7 +10,9 @@ export const Card = (props) => {
 
   return(
     <div>
+      <ul>
       {card}
+      </ul>
       <Link to='coffee-form'> Add New Coffee </Link>
     </div>
   )

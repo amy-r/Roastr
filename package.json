@@ -10,6 +10,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-firebaseui": "^1.1.8",
+    "react-hover-image": "^1.0.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",

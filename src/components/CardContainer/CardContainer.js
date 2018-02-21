@@ -2,22 +2,32 @@ import React, { Component }from 'react';
 import { withRouter, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Card } from '../Card/Card';
+import './CardContainer.css';
+import HoverImage from "react-hover-image";
+import add from './add.svg';
+import addhover from './add-hover.svg';
 
 
 export class CardContainer extends Component {
-
+ 
   render() {
     const roasters = this.props.roasters.map( roaster => {
       return <Card {...roaster} />
     })
+
     return(
       <div>
-        <h1> Roasters: </h1>
-        <p> hi </p>
-        <h3 className='nav'>
-          <NavLink to='/form'>    
-            ADD ROASTER
+        <h1> ROASTERS </h1>
+          <input type="text" className ='search' placeholder="SEARCH" /> 
+          <NavLink to='/form' className='addButton'>
+            <HoverImage
+              src={add}
+              hoverSrc={addhover}
+              className='addButton'
+            />
           </NavLink>
+        <h3 className='add'>
+            ADD NEW
         </h3>
         {roasters}
       </div>
