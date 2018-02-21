@@ -1,0 +1,613 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should exist 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Form />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+           ADD A NEW ROASTER 
+</h1>,
+        <form
+          className="new-roaster"
+          onSubmit={[Function]}
+>
+          <input
+                    className="full"
+                    name="name"
+                    onChange={[Function]}
+                    placeholder="NAME"
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="half"
+                    name="location"
+                    onChange={[Function]}
+                    placeholder="LOCATION"
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="half right"
+                    name="altitude"
+                    onChange={[Function]}
+                    placeholder="ALTITUDE"
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="full"
+                    name="equipment"
+                    onChange={[Function]}
+                    placeholder="EQUIPMENT"
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="full"
+                    name="water"
+                    onChange={[Function]}
+                    placeholder="WATER TDDS"
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="half"
+                    name="contact"
+                    onChange={[Function]}
+                    placeholder="CONTACT"
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="half right"
+                    name="email"
+                    onChange={[Function]}
+                    placeholder="EMAIL"
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="submit"
+                    type="submit"
+                    value="SUBMIT"
+          />
+</form>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": " ADD A NEW ROASTER ",
+        },
+        "ref": null,
+        "rendered": " ADD A NEW ROASTER ",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <input
+              className="full"
+              name="name"
+              onChange={[Function]}
+              placeholder="NAME"
+              type="text"
+              value=""
+/>,
+            <input
+              className="half"
+              name="location"
+              onChange={[Function]}
+              placeholder="LOCATION"
+              type="text"
+              value=""
+/>,
+            <input
+              className="half right"
+              name="altitude"
+              onChange={[Function]}
+              placeholder="ALTITUDE"
+              type="text"
+              value=""
+/>,
+            <input
+              className="full"
+              name="equipment"
+              onChange={[Function]}
+              placeholder="EQUIPMENT"
+              type="text"
+              value=""
+/>,
+            <input
+              className="full"
+              name="water"
+              onChange={[Function]}
+              placeholder="WATER TDDS"
+              type="text"
+              value=""
+/>,
+            <input
+              className="half"
+              name="contact"
+              onChange={[Function]}
+              placeholder="CONTACT"
+              type="text"
+              value=""
+/>,
+            <input
+              className="half right"
+              name="email"
+              onChange={[Function]}
+              placeholder="EMAIL"
+              type="text"
+              value=""
+/>,
+            <input
+              className="submit"
+              type="submit"
+              value="SUBMIT"
+/>,
+          ],
+          "className": "new-roaster",
+          "onSubmit": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full",
+              "name": "name",
+              "onChange": [Function],
+              "placeholder": "NAME",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "half",
+              "name": "location",
+              "onChange": [Function],
+              "placeholder": "LOCATION",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "half right",
+              "name": "altitude",
+              "onChange": [Function],
+              "placeholder": "ALTITUDE",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full",
+              "name": "equipment",
+              "onChange": [Function],
+              "placeholder": "EQUIPMENT",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full",
+              "name": "water",
+              "onChange": [Function],
+              "placeholder": "WATER TDDS",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "half",
+              "name": "contact",
+              "onChange": [Function],
+              "placeholder": "CONTACT",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "half right",
+              "name": "email",
+              "onChange": [Function],
+              "placeholder": "EMAIL",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "submit",
+              "type": "submit",
+              "value": "SUBMIT",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "form",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+             ADD A NEW ROASTER 
+</h1>,
+          <form
+            className="new-roaster"
+            onSubmit={[Function]}
+>
+            <input
+                        className="full"
+                        name="name"
+                        onChange={[Function]}
+                        placeholder="NAME"
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="half"
+                        name="location"
+                        onChange={[Function]}
+                        placeholder="LOCATION"
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="half right"
+                        name="altitude"
+                        onChange={[Function]}
+                        placeholder="ALTITUDE"
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="full"
+                        name="equipment"
+                        onChange={[Function]}
+                        placeholder="EQUIPMENT"
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="full"
+                        name="water"
+                        onChange={[Function]}
+                        placeholder="WATER TDDS"
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="half"
+                        name="contact"
+                        onChange={[Function]}
+                        placeholder="CONTACT"
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="half right"
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="EMAIL"
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="submit"
+                        type="submit"
+                        value="SUBMIT"
+            />
+</form>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " ADD A NEW ROASTER ",
+          },
+          "ref": null,
+          "rendered": " ADD A NEW ROASTER ",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <input
+                className="full"
+                name="name"
+                onChange={[Function]}
+                placeholder="NAME"
+                type="text"
+                value=""
+/>,
+              <input
+                className="half"
+                name="location"
+                onChange={[Function]}
+                placeholder="LOCATION"
+                type="text"
+                value=""
+/>,
+              <input
+                className="half right"
+                name="altitude"
+                onChange={[Function]}
+                placeholder="ALTITUDE"
+                type="text"
+                value=""
+/>,
+              <input
+                className="full"
+                name="equipment"
+                onChange={[Function]}
+                placeholder="EQUIPMENT"
+                type="text"
+                value=""
+/>,
+              <input
+                className="full"
+                name="water"
+                onChange={[Function]}
+                placeholder="WATER TDDS"
+                type="text"
+                value=""
+/>,
+              <input
+                className="half"
+                name="contact"
+                onChange={[Function]}
+                placeholder="CONTACT"
+                type="text"
+                value=""
+/>,
+              <input
+                className="half right"
+                name="email"
+                onChange={[Function]}
+                placeholder="EMAIL"
+                type="text"
+                value=""
+/>,
+              <input
+                className="submit"
+                type="submit"
+                value="SUBMIT"
+/>,
+            ],
+            "className": "new-roaster",
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full",
+                "name": "name",
+                "onChange": [Function],
+                "placeholder": "NAME",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "half",
+                "name": "location",
+                "onChange": [Function],
+                "placeholder": "LOCATION",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "half right",
+                "name": "altitude",
+                "onChange": [Function],
+                "placeholder": "ALTITUDE",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full",
+                "name": "equipment",
+                "onChange": [Function],
+                "placeholder": "EQUIPMENT",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full",
+                "name": "water",
+                "onChange": [Function],
+                "placeholder": "WATER TDDS",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "half",
+                "name": "contact",
+                "onChange": [Function],
+                "placeholder": "CONTACT",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "half right",
+                "name": "email",
+                "onChange": [Function],
+                "placeholder": "EMAIL",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "submit",
+                "type": "submit",
+                "value": "SUBMIT",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

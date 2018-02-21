@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 
+describe('App', () => {
+  it('should exist', () => {
+    const wrapper = shallow(<App />)
 
-it('exists', () => {
-
+    expect(wrapper).toMatchSnapshot();
+  })
 })
