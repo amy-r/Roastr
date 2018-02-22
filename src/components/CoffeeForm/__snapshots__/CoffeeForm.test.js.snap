@@ -1,0 +1,521 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CoffeeForm should exist 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CoffeeForm />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <input
+          name="name"
+          onChange={[Function]}
+          placeholder="Name"
+          type="text"
+          value=""
+/>,
+        <input
+          name="overallScore"
+          onChange={[Function]}
+          placeholder="Overall Score (1-6)"
+          type="text"
+          value=""
+/>,
+        <input
+          name="region"
+          onChange={[Function]}
+          placeholder="Region"
+          type="text"
+          value=""
+/>,
+        <input
+          name="acidity"
+          onChange={[Function]}
+          placeholder="Acidity (1-6)"
+          type="text"
+          value=""
+/>,
+        <input
+          name="body"
+          onChange={[Function]}
+          placeholder="Body (1-6)"
+          type="text"
+          value=""
+/>,
+        <input
+          name="sweetness"
+          onChange={[Function]}
+          placeholder="Sweetness (1-6)"
+          type="text"
+          value=""
+/>,
+        <input
+          name="tactile"
+          onChange={[Function]}
+          placeholder="Tactile (1-6)"
+          type="text"
+          value=""
+/>,
+        <input
+          name="overallImpression"
+          onChange={[Function]}
+          placeholder="Overall Impression (Comments)"
+          type="text"
+          value=""
+/>,
+        <input
+          name="roaster"
+          onChange={[Function]}
+          placeholder="Roaster Name"
+          type="text"
+          value=""
+/>,
+        <input
+          name="additionalComments"
+          onChange={[Function]}
+          placeholder="Additional Comments (Optional)"
+          type="text"
+          value=""
+/>,
+        <input
+          type="submit"
+/>,
+      ],
+      "onSubmit": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "name",
+          "onChange": [Function],
+          "placeholder": "Name",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "overallScore",
+          "onChange": [Function],
+          "placeholder": "Overall Score (1-6)",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "region",
+          "onChange": [Function],
+          "placeholder": "Region",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "acidity",
+          "onChange": [Function],
+          "placeholder": "Acidity (1-6)",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "body",
+          "onChange": [Function],
+          "placeholder": "Body (1-6)",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "sweetness",
+          "onChange": [Function],
+          "placeholder": "Sweetness (1-6)",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "tactile",
+          "onChange": [Function],
+          "placeholder": "Tactile (1-6)",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "overallImpression",
+          "onChange": [Function],
+          "placeholder": "Overall Impression (Comments)",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "roaster",
+          "onChange": [Function],
+          "placeholder": "Roaster Name",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "additionalComments",
+          "onChange": [Function],
+          "placeholder": "Additional Comments (Optional)",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "type": "submit",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <input
+            name="name"
+            onChange={[Function]}
+            placeholder="Name"
+            type="text"
+            value=""
+/>,
+          <input
+            name="overallScore"
+            onChange={[Function]}
+            placeholder="Overall Score (1-6)"
+            type="text"
+            value=""
+/>,
+          <input
+            name="region"
+            onChange={[Function]}
+            placeholder="Region"
+            type="text"
+            value=""
+/>,
+          <input
+            name="acidity"
+            onChange={[Function]}
+            placeholder="Acidity (1-6)"
+            type="text"
+            value=""
+/>,
+          <input
+            name="body"
+            onChange={[Function]}
+            placeholder="Body (1-6)"
+            type="text"
+            value=""
+/>,
+          <input
+            name="sweetness"
+            onChange={[Function]}
+            placeholder="Sweetness (1-6)"
+            type="text"
+            value=""
+/>,
+          <input
+            name="tactile"
+            onChange={[Function]}
+            placeholder="Tactile (1-6)"
+            type="text"
+            value=""
+/>,
+          <input
+            name="overallImpression"
+            onChange={[Function]}
+            placeholder="Overall Impression (Comments)"
+            type="text"
+            value=""
+/>,
+          <input
+            name="roaster"
+            onChange={[Function]}
+            placeholder="Roaster Name"
+            type="text"
+            value=""
+/>,
+          <input
+            name="additionalComments"
+            onChange={[Function]}
+            placeholder="Additional Comments (Optional)"
+            type="text"
+            value=""
+/>,
+          <input
+            type="submit"
+/>,
+        ],
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "name",
+            "onChange": [Function],
+            "placeholder": "Name",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "overallScore",
+            "onChange": [Function],
+            "placeholder": "Overall Score (1-6)",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "region",
+            "onChange": [Function],
+            "placeholder": "Region",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "acidity",
+            "onChange": [Function],
+            "placeholder": "Acidity (1-6)",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "body",
+            "onChange": [Function],
+            "placeholder": "Body (1-6)",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "sweetness",
+            "onChange": [Function],
+            "placeholder": "Sweetness (1-6)",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "tactile",
+            "onChange": [Function],
+            "placeholder": "Tactile (1-6)",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "overallImpression",
+            "onChange": [Function],
+            "placeholder": "Overall Impression (Comments)",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "roaster",
+            "onChange": [Function],
+            "placeholder": "Roaster Name",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "additionalComments",
+            "onChange": [Function],
+            "placeholder": "Additional Comments (Optional)",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "type": "submit",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
