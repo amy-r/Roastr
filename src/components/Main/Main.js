@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { key } from '../../Utilities/api-key';
-import { body, text } from '../../Utilities/emailBody';
+// import { key } from '../../Utilities/api-key';
+// import { body, text } from '../../Utilities/emailBody';
 import { Route, Switch } from 'react-router-dom';
 import CardContainer from '../CardContainer/CardContainer';
 import Form from '../Form/Form';

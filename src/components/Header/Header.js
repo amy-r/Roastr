@@ -8,7 +8,7 @@ export const Header = (props) => {
   return (
     <div>
       <div className='header-desktop'>
-      <img src={Logo} className= 'header-logo' />
+      <img src={Logo} alt='roastr logo' className='header-logo' />
       <div>
       <NavLink to='/current-roasters'> 
         <h3 className='nav'>
