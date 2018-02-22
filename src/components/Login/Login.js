@@ -6,25 +6,20 @@ import { logIn, logOut } from '../../actions/index';
 import * as firebase from 'firebase';
 import { writeUserData, pullRoasters } from '../../Utilities/firebaseFunctions'
 import { firebaseApp } from '../../Utilities/firebaseFunctions'
-import { config } from '../../Utilities/firebase-config'
 import HeaderImage from '../../assets/header-triangle_2.svg';
 import Logo from '../../assets/logo.svg';
 import './Login.css';
+
 const db = firebaseApp.database();
 const ref = db.ref('/roasters');
 
-
 export class Login extends Component {
-  constructor(props) {
-    super(props)
-  }
-
  async componentDidMount() {
    firebase.auth().onAuthStateChanged( user => {
     const userToStore = {
       userName: user.displayName,
       userEmail: user.email,
-      userPhoto: user.photoUrl,
+      userPhoto: user.photoURL,
       userId: user.uid 
     }
     localStorage.setItem('user', JSON.stringify(userToStore))
@@ -32,21 +27,23 @@ export class Login extends Component {
     writeUserData(userToStore)
   })
   const currentRoasters = await pullRoasters(ref);
-  localStorage.setItem('roasters', JSON.stringify(currentRoasters))
+  localStorage.setItem('roasters', JSON.stringify(currentRoasters));
   }
 
   signOut = (user) => {
-    firebase.auth().signOut()
-    this.props.logOut(user)
+    firebase.auth().signOut();
+    localStorage.removeItem('user');
+    localStorage.removeItem('roasters');
+    this.props.logOut(user);
   }
 
   render() {
-    const { user, signOut } = this.props 
+    const { user } = this.props 
     if(!user.userName) {
       return(
         <div>
           <div className='header-container'>
-            <img src = {HeaderImage} className='header-triagle' alt='image of portafilters' />
+            <img src = {HeaderImage} className='header-triagle' alt='Roastr Logo' />
           </div>
           <h3> welcome to </h3>
           <img src= {Logo} alt='Roastr logo' className='landing-logo'/>
@@ -58,7 +55,7 @@ export class Login extends Component {
         <div>
           <h1> WELCOME</h1> 
           <h3 className='name'>{user.userName} </h3>
-          <img src={user.userPhoto} />
+          <img src={user.userPhoto} alt='user'/>
           <button onClick={this.signOut} className='logout'> LOG OUT</button>
         </div>
       )

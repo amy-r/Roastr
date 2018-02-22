@@ -18,7 +18,7 @@ export const Header = (props) => {
   return (
     <div>
       <div className='header-desktop'>
-      <img src={Logo} className= 'header-logo' />
+      <img src={Logo} alt='Roastr logo'className='header-logo' />
       {displayUserActions}
       <NavLink to ='/'>
         <h3 className='nav'>
