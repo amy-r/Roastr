@@ -21,3 +21,8 @@
   margin-top: 5px;
   height: 20px;
 }
+
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+}

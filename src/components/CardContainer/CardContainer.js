@@ -29,7 +29,9 @@ export class CardContainer extends Component {
         <h3 className='add'>
             ADD NEW
         </h3>
-        {roasters}
+        <div className='card-section'>
+          {roasters}
+        </div>
       </div>
     )
   }
