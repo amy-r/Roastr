@@ -1,4 +1,3 @@
-// needs a snapshot test and mstp/mdtp
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { CardContainer } from './CardContainer';
@@ -29,4 +28,6 @@ describe('CardContainer', () => {
 
     expect(wrapper).toMatchSnapshot();
   })
+
+  // it('should receive props from MSTP and MDTP')
 })
