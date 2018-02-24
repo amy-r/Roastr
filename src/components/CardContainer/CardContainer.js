@@ -9,13 +9,19 @@ import addhover from './add-hover.svg';
 
 
 export class CardContainer extends Component {
- 
-  render() {
-    const roasters = this.props.roasters.map( roaster => {
-      return <Card {...roaster} />
-    })
 
-    return(
+  renderedCards = () => {
+    const cards = this.props.roasters.map( (roaster, i) => {
+      console.log(i)
+      return <Card key={i} {...roaster} />
+      }
+    )
+
+    return cards
+  }
+
+  render() {     
+    return (
       <div>
         <h1> ROASTERS </h1>
           <input type="text" className ='search' placeholder="SEARCH" /> 
@@ -30,7 +36,7 @@ export class CardContainer extends Component {
             ADD NEW
         </h3>
         <div className='card-section'>
-          {roasters}
+          {this.renderedCards()}
         </div>
       </div>
     )
