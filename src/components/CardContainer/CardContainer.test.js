@@ -25,9 +25,7 @@ const mockRoasters = [
 describe('CardContainer', () => {
 
   it('should render correctly', () => {
-
     const wrapper = shallow(<CardContainer roasters={mockRoasters}/>)
-
     expect(wrapper).toMatchSnapshot();
   })
 })
