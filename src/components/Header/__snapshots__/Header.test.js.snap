@@ -21,21 +21,11 @@ ShallowWrapper {
         className="header-desktop"
 >
         <img
+                alt="roastr logo"
                 className="header-logo"
                 src="header-logo.svg"
         />
         <div>
-                <NavLink
-                        activeClassName="active"
-                        ariaCurrent="true"
-                        to="/form"
-                >
-                        <h3
-                                className="nav"
-                        >
-                                ADD ROASTER
-                        </h3>
-                </NavLink>
                 <NavLink
                         activeClassName="active"
                         ariaCurrent="true"
@@ -44,7 +34,7 @@ ShallowWrapper {
                         <h3
                                 className="nav"
                         >
-                                DISPLAY ROASTERS
+                                ROASTERS
                         </h3>
                 </NavLink>
         </div>
@@ -69,21 +59,11 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <img
+            alt="roastr logo"
             className="header-logo"
             src="header-logo.svg"
 />,
           <div>
-            <NavLink
-                        activeClassName="active"
-                        ariaCurrent="true"
-                        to="/form"
-            >
-                        <h3
-                                    className="nav"
-                        >
-                                    ADD ROASTER
-                        </h3>
-            </NavLink>
             <NavLink
                         activeClassName="active"
                         ariaCurrent="true"
@@ -92,7 +72,7 @@ ShallowWrapper {
                         <h3
                                     className="nav"
                         >
-                                    DISPLAY ROASTERS
+                                    ROASTERS
                         </h3>
             </NavLink>
 </div>,
@@ -117,6 +97,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "alt": "roastr logo",
             "className": "header-logo",
             "src": "header-logo.svg",
           },
@@ -129,92 +110,48 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <NavLink
-                activeClassName="active"
-                ariaCurrent="true"
-                to="/form"
+            "children": <NavLink
+              activeClassName="active"
+              ariaCurrent="true"
+              to="/current-roasters"
 >
-                <h3
-                                className="nav"
-                >
-                                ADD ROASTER
-                </h3>
+              <h3
+                            className="nav"
+              >
+                            ROASTERS
+              </h3>
 </NavLink>,
-              <NavLink
-                activeClassName="active"
-                ariaCurrent="true"
-                to="/current-roasters"
->
-                <h3
-                                className="nav"
-                >
-                                DISPLAY ROASTERS
-                </h3>
-</NavLink>,
-            ],
           },
           "ref": null,
-          "rendered": Array [
-            Object {
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "ariaCurrent": "true",
+              "children": <h3
+                className="nav"
+>
+                ROASTERS
+</h3>,
+              "to": "/current-roasters",
+            },
+            "ref": null,
+            "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "host",
               "props": Object {
-                "activeClassName": "active",
-                "ariaCurrent": "true",
-                "children": <h3
-                  className="nav"
->
-                  ADD ROASTER
-</h3>,
-                "to": "/form",
+                "children": "ROASTERS",
+                "className": "nav",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "ADD ROASTER",
-                  "className": "nav",
-                },
-                "ref": null,
-                "rendered": "ADD ROASTER",
-                "type": "h3",
-              },
-              "type": [Function],
+              "rendered": "ROASTERS",
+              "type": "h3",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "activeClassName": "active",
-                "ariaCurrent": "true",
-                "children": <h3
-                  className="nav"
->
-                  DISPLAY ROASTERS
-</h3>,
-                "to": "/current-roasters",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "DISPLAY ROASTERS",
-                  "className": "nav",
-                },
-                "ref": null,
-                "rendered": "DISPLAY ROASTERS",
-                "type": "h3",
-              },
-              "type": [Function],
-            },
-          ],
+            "type": [Function],
+          },
           "type": "div",
         },
         Object {
@@ -261,21 +198,11 @@ ShallowWrapper {
           className="header-desktop"
 >
           <img
+                    alt="roastr logo"
                     className="header-logo"
                     src="header-logo.svg"
           />
           <div>
-                    <NavLink
-                              activeClassName="active"
-                              ariaCurrent="true"
-                              to="/form"
-                    >
-                              <h3
-                                        className="nav"
-                              >
-                                        ADD ROASTER
-                              </h3>
-                    </NavLink>
                     <NavLink
                               activeClassName="active"
                               ariaCurrent="true"
@@ -284,7 +211,7 @@ ShallowWrapper {
                               <h3
                                         className="nav"
                               >
-                                        DISPLAY ROASTERS
+                                        ROASTERS
                               </h3>
                     </NavLink>
           </div>
@@ -309,21 +236,11 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <img
+              alt="roastr logo"
               className="header-logo"
               src="header-logo.svg"
 />,
             <div>
-              <NavLink
-                            activeClassName="active"
-                            ariaCurrent="true"
-                            to="/form"
-              >
-                            <h3
-                                          className="nav"
-                            >
-                                          ADD ROASTER
-                            </h3>
-              </NavLink>
               <NavLink
                             activeClassName="active"
                             ariaCurrent="true"
@@ -332,7 +249,7 @@ ShallowWrapper {
                             <h3
                                           className="nav"
                             >
-                                          DISPLAY ROASTERS
+                                          ROASTERS
                             </h3>
               </NavLink>
 </div>,
@@ -357,6 +274,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "alt": "roastr logo",
               "className": "header-logo",
               "src": "header-logo.svg",
             },
@@ -369,92 +287,48 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <NavLink
-                  activeClassName="active"
-                  ariaCurrent="true"
-                  to="/form"
+              "children": <NavLink
+                activeClassName="active"
+                ariaCurrent="true"
+                to="/current-roasters"
 >
-                  <h3
-                                    className="nav"
-                  >
-                                    ADD ROASTER
-                  </h3>
+                <h3
+                                className="nav"
+                >
+                                ROASTERS
+                </h3>
 </NavLink>,
-                <NavLink
-                  activeClassName="active"
-                  ariaCurrent="true"
-                  to="/current-roasters"
->
-                  <h3
-                                    className="nav"
-                  >
-                                    DISPLAY ROASTERS
-                  </h3>
-</NavLink>,
-              ],
             },
             "ref": null,
-            "rendered": Array [
-              Object {
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "ariaCurrent": "true",
+                "children": <h3
+                  className="nav"
+>
+                  ROASTERS
+</h3>,
+                "to": "/current-roasters",
+              },
+              "ref": null,
+              "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "host",
                 "props": Object {
-                  "activeClassName": "active",
-                  "ariaCurrent": "true",
-                  "children": <h3
-                    className="nav"
->
-                    ADD ROASTER
-</h3>,
-                  "to": "/form",
+                  "children": "ROASTERS",
+                  "className": "nav",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "ADD ROASTER",
-                    "className": "nav",
-                  },
-                  "ref": null,
-                  "rendered": "ADD ROASTER",
-                  "type": "h3",
-                },
-                "type": [Function],
+                "rendered": "ROASTERS",
+                "type": "h3",
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "ariaCurrent": "true",
-                  "children": <h3
-                    className="nav"
->
-                    DISPLAY ROASTERS
-</h3>,
-                  "to": "/current-roasters",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "DISPLAY ROASTERS",
-                    "className": "nav",
-                  },
-                  "ref": null,
-                  "rendered": "DISPLAY ROASTERS",
-                  "type": "h3",
-                },
-                "type": [Function],
-              },
-            ],
+              "type": [Function],
+            },
             "type": "div",
           },
           Object {

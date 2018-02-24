@@ -3,6 +3,11 @@ export const addRoaster =  (roaster) => ({
   roaster
 })
 
+export const retrievedRoasters = (roasters) => ({
+  type: 'RETRIEVED_ROASTERS',
+  roasters
+})
+
 export const addCoffee = (coffee) => ({
   type: 'ADD_COFFEE',
   coffee

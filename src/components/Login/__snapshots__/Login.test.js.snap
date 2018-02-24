@@ -28,17 +28,23 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h1>
-           Welcome, 
+           WELCOME
+</h1>,
+        <h3
+          className="name"
+>
           Jordan
            
-</h1>,
+</h3>,
         <img
+          alt="user"
           src="photo-url"
 />,
         <button
+          className="logout"
           onClick={[Function]}
 >
-           Sign Out
+           LOG OUT
 </button>,
       ],
     },
@@ -49,18 +55,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            " Welcome, ",
-            "Jordan",
-            " ",
-          ],
+          "children": " WELCOME",
         },
         "ref": null,
-        "rendered": Array [
-          " Welcome, ",
-          "Jordan",
-          " ",
-        ],
+        "rendered": " WELCOME",
         "type": "h1",
       },
       Object {
@@ -68,6 +66,25 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": Array [
+            "Jordan",
+            " ",
+          ],
+          "className": "name",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Jordan",
+          " ",
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "user",
           "src": "photo-url",
         },
         "ref": null,
@@ -79,11 +96,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": " Sign Out",
+          "children": " LOG OUT",
+          "className": "logout",
           "onClick": [Function],
         },
         "ref": null,
-        "rendered": " Sign Out",
+        "rendered": " LOG OUT",
         "type": "button",
       },
     ],
@@ -97,17 +115,23 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h1>
-             Welcome, 
+             WELCOME
+</h1>,
+          <h3
+            className="name"
+>
             Jordan
              
-</h1>,
+</h3>,
           <img
+            alt="user"
             src="photo-url"
 />,
           <button
+            className="logout"
             onClick={[Function]}
 >
-             Sign Out
+             LOG OUT
 </button>,
         ],
       },
@@ -118,18 +142,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              " Welcome, ",
-              "Jordan",
-              " ",
-            ],
+            "children": " WELCOME",
           },
           "ref": null,
-          "rendered": Array [
-            " Welcome, ",
-            "Jordan",
-            " ",
-          ],
+          "rendered": " WELCOME",
           "type": "h1",
         },
         Object {
@@ -137,6 +153,25 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": Array [
+              "Jordan",
+              " ",
+            ],
+            "className": "name",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Jordan",
+            " ",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "user",
             "src": "photo-url",
           },
           "ref": null,
@@ -148,11 +183,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": " Sign Out",
+            "children": " LOG OUT",
+            "className": "logout",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": " Sign Out",
+          "rendered": " LOG OUT",
           "type": "button",
         },
       ],
