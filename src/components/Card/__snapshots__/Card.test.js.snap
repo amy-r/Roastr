@@ -20,10 +20,51 @@ ShallowWrapper {
       "children": <div
         className="roaster-card"
 >
+        <h3
+                className="roaster-name"
+        >
+                 
+                 
+        </h3>
         <ul
                 id="roaster-list"
         >
-                
+                <li
+                        className="roaster-data"
+                >
+                         location: 
+                         
+                </li>
+                <li
+                        className="roaster-data"
+                >
+                         altitude: 
+                         
+                </li>
+                <li
+                        className="roaster-data"
+                >
+                         equipment: 
+                         
+                </li>
+                <li
+                        className="roaster-data"
+                >
+                         water: 
+                         
+                </li>
+                <li
+                        className="roaster-data"
+                >
+                         contact: 
+                         
+                </li>
+                <li
+                        className="roaster-data"
+                >
+                         email: 
+                         
+                </li>
         </ul>
         <Link
                 replace={false}
@@ -46,10 +87,51 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <h3
+            className="roaster-name"
+>
+             
+             
+</h3>,
           <ul
             id="roaster-list"
 >
-            
+            <li
+                        className="roaster-data"
+            >
+                         location: 
+                         
+            </li>
+            <li
+                        className="roaster-data"
+            >
+                         altitude: 
+                         
+            </li>
+            <li
+                        className="roaster-data"
+            >
+                         equipment: 
+                         
+            </li>
+            <li
+                        className="roaster-data"
+            >
+                         water: 
+                         
+            </li>
+            <li
+                        className="roaster-data"
+            >
+                         contact: 
+                         
+            </li>
+            <li
+                        className="roaster-data"
+            >
+                         email: 
+                         
+            </li>
 </ul>,
           <Link
             replace={false}
@@ -73,11 +155,189 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [],
+            "children": Array [
+              " ",
+              undefined,
+              " ",
+            ],
+            "className": "roaster-name",
+          },
+          "ref": null,
+          "rendered": Array [
+            " ",
+            undefined,
+            " ",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="roaster-data"
+>
+                 location: 
+                 
+</li>,
+              <li
+                className="roaster-data"
+>
+                 altitude: 
+                 
+</li>,
+              <li
+                className="roaster-data"
+>
+                 equipment: 
+                 
+</li>,
+              <li
+                className="roaster-data"
+>
+                 water: 
+                 
+</li>,
+              <li
+                className="roaster-data"
+>
+                 contact: 
+                 
+</li>,
+              <li
+                className="roaster-data"
+>
+                 email: 
+                 
+</li>,
+            ],
             "id": "roaster-list",
           },
           "ref": null,
-          "rendered": Array [],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " location: ",
+                  undefined,
+                  " ",
+                ],
+                "className": "roaster-data",
+              },
+              "ref": null,
+              "rendered": Array [
+                " location: ",
+                undefined,
+                " ",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " altitude: ",
+                  undefined,
+                  " ",
+                ],
+                "className": "roaster-data",
+              },
+              "ref": null,
+              "rendered": Array [
+                " altitude: ",
+                undefined,
+                " ",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " equipment: ",
+                  undefined,
+                  " ",
+                ],
+                "className": "roaster-data",
+              },
+              "ref": null,
+              "rendered": Array [
+                " equipment: ",
+                undefined,
+                " ",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " water: ",
+                  undefined,
+                  " ",
+                ],
+                "className": "roaster-data",
+              },
+              "ref": null,
+              "rendered": Array [
+                " water: ",
+                undefined,
+                " ",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " contact: ",
+                  undefined,
+                  " ",
+                ],
+                "className": "roaster-data",
+              },
+              "ref": null,
+              "rendered": Array [
+                " contact: ",
+                undefined,
+                " ",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " email: ",
+                  undefined,
+                  " ",
+                ],
+                "className": "roaster-data",
+              },
+              "ref": null,
+              "rendered": Array [
+                " email: ",
+                undefined,
+                " ",
+              ],
+              "type": "li",
+            },
+          ],
           "type": "ul",
         },
         Object {
@@ -130,10 +390,51 @@ ShallowWrapper {
         "children": <div
           className="roaster-card"
 >
+          <h3
+                    className="roaster-name"
+          >
+                     
+                     
+          </h3>
           <ul
                     id="roaster-list"
           >
-                    
+                    <li
+                              className="roaster-data"
+                    >
+                               location: 
+                               
+                    </li>
+                    <li
+                              className="roaster-data"
+                    >
+                               altitude: 
+                               
+                    </li>
+                    <li
+                              className="roaster-data"
+                    >
+                               equipment: 
+                               
+                    </li>
+                    <li
+                              className="roaster-data"
+                    >
+                               water: 
+                               
+                    </li>
+                    <li
+                              className="roaster-data"
+                    >
+                               contact: 
+                               
+                    </li>
+                    <li
+                              className="roaster-data"
+                    >
+                               email: 
+                               
+                    </li>
           </ul>
           <Link
                     replace={false}
@@ -156,10 +457,51 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            <h3
+              className="roaster-name"
+>
+               
+               
+</h3>,
             <ul
               id="roaster-list"
 >
-              
+              <li
+                            className="roaster-data"
+              >
+                             location: 
+                             
+              </li>
+              <li
+                            className="roaster-data"
+              >
+                             altitude: 
+                             
+              </li>
+              <li
+                            className="roaster-data"
+              >
+                             equipment: 
+                             
+              </li>
+              <li
+                            className="roaster-data"
+              >
+                             water: 
+                             
+              </li>
+              <li
+                            className="roaster-data"
+              >
+                             contact: 
+                             
+              </li>
+              <li
+                            className="roaster-data"
+              >
+                             email: 
+                             
+              </li>
 </ul>,
             <Link
               replace={false}
@@ -183,11 +525,189 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [],
+              "children": Array [
+                " ",
+                undefined,
+                " ",
+              ],
+              "className": "roaster-name",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              undefined,
+              " ",
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li
+                  className="roaster-data"
+>
+                   location: 
+                   
+</li>,
+                <li
+                  className="roaster-data"
+>
+                   altitude: 
+                   
+</li>,
+                <li
+                  className="roaster-data"
+>
+                   equipment: 
+                   
+</li>,
+                <li
+                  className="roaster-data"
+>
+                   water: 
+                   
+</li>,
+                <li
+                  className="roaster-data"
+>
+                   contact: 
+                   
+</li>,
+                <li
+                  className="roaster-data"
+>
+                   email: 
+                   
+</li>,
+              ],
               "id": "roaster-list",
             },
             "ref": null,
-            "rendered": Array [],
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " location: ",
+                    undefined,
+                    " ",
+                  ],
+                  "className": "roaster-data",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " location: ",
+                  undefined,
+                  " ",
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " altitude: ",
+                    undefined,
+                    " ",
+                  ],
+                  "className": "roaster-data",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " altitude: ",
+                  undefined,
+                  " ",
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " equipment: ",
+                    undefined,
+                    " ",
+                  ],
+                  "className": "roaster-data",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " equipment: ",
+                  undefined,
+                  " ",
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " water: ",
+                    undefined,
+                    " ",
+                  ],
+                  "className": "roaster-data",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " water: ",
+                  undefined,
+                  " ",
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " contact: ",
+                    undefined,
+                    " ",
+                  ],
+                  "className": "roaster-data",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " contact: ",
+                  undefined,
+                  " ",
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " email: ",
+                    undefined,
+                    " ",
+                  ],
+                  "className": "roaster-data",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " email: ",
+                  undefined,
+                  " ",
+                ],
+                "type": "li",
+              },
+            ],
             "type": "ul",
           },
           Object {

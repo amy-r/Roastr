@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { connect } from 'react-redux';
 import { uiConfig } from '../../Utilities/firebase-config';
-import { logIn, logOut } from '../../actions/index';
+import { logIn, logOut, retrievedRoasters } from '../../actions/index';
 import * as firebase from 'firebase';
 import { writeUserData, pullRoasters } from '../../Utilities/firebaseFunctions'
 import { firebaseApp } from '../../Utilities/firebaseFunctions'
@@ -14,20 +14,36 @@ const db = firebaseApp.database();
 const ref = db.ref('/roasters');
 
 export class Login extends Component {
- async componentDidMount() {
-   firebase.auth().onAuthStateChanged( user => {
-    const userToStore = {
-      userName: user.displayName,
-      userEmail: user.email,
-      userPhoto: user.photoURL,
-      userId: user.uid 
+  constructor() {
+    super()
+
+    this.state = {
+      errorState: ''
     }
-    localStorage.setItem('user', JSON.stringify(userToStore))
-    this.props.logIn(userToStore)
-    writeUserData(userToStore)
-  })
-  const currentRoasters = await pullRoasters(ref);
-  localStorage.setItem('roasters', JSON.stringify(currentRoasters));
+  }
+
+ componentDidMount() {
+   try{
+     firebase.auth().onAuthStateChanged( async user => {
+      if(user) {
+        const userToStore = {
+          userName: user.displayName,
+          userEmail: user.email,
+          userPhoto: user.photoURL,
+          userId: user.uid 
+        }
+        localStorage.setItem('user', JSON.stringify(userToStore))
+        this.props.logIn(userToStore)
+        writeUserData(userToStore)
+        const currentRoasters = await pullRoasters(ref);
+        localStorage.setItem('roasters', JSON.stringify(currentRoasters));
+      }
+    })
+    } catch (error) {
+      this.setState({
+        errorState: error.message
+      })
+    }
   }
 
   signOut = (user) => {
@@ -70,7 +86,8 @@ export const mapStateToProps = store => ({
 
 export const mapDispatchToProps = dispatch => ({
   logIn: user => dispatch(logIn(user)),
-  logOut: user => dispatch(logOut(user))
+  logOut: user => dispatch(logOut(user)),
+  retrievedRoasters: roasters => dispatch(retrievedRoasters(roasters))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login)

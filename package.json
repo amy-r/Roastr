@@ -2,7 +2,7 @@
   "name": "portafilter",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000/",
+  "proxy": "https://localhost:3000",
   "dependencies": {
     "@sendgrid/mail": "^6.2.1",
     "firebase": "^4.9.1",

@@ -3,23 +3,18 @@ import { Link } from 'react-router-dom';
 import './Card.css'
 
 export const Card = (props) => {
-  const newProps = Object.entries(props)
-
-  newProps.shift();
-
-  const card = newProps.map ( entry => {
-    if (entry[0] === 'name') {
-      return <li> <h3 className='roaster-name'>{ entry[1] } </h3></li>
-    } else {
-      return <li className='roaster-data'> { entry[0] } : { entry[1] } </li>
-    }
-  })
-
+  const { name, location, altitude, equipment, water, contact, email } = props;
   return(
     <div>
       <div className='roaster-card'>
+        <h3 className='roaster-name'> {name} </h3>
         <ul id='roaster-list'>
-          {card}
+          <li className='roaster-data'> location: {location} </li>
+          <li className='roaster-data'> altitude: {altitude} </li>
+          <li className='roaster-data'> equipment: {equipment} </li>
+          <li className='roaster-data'> water: {water} </li>
+          <li className='roaster-data'> contact: {contact} </li>
+          <li className='roaster-data'> email: {email} </li>
         </ul>
       <Link to='coffee-form'> <button className='new-coffee'>+ NEW COFFEE</button> </Link>
       </div>

@@ -11,7 +11,6 @@ export const writeUserData = ({userId, userName, userEmail}) => {
 
 export const addRoasterData = ({userId, name, location, altitude, equipment, water, contact, email}) => {
   firebaseApp.database().ref('roasters/' + name).set({
-    userId,
     name,
     altitude,
     location,
@@ -22,8 +21,14 @@ export const addRoasterData = ({userId, name, location, altitude, equipment, wat
   })
 }
 
+const convertToArray = (roasters) => {
+  return Object.keys(roasters).map( roaster => {
+    return {...roasters[roaster]}
+  });
+}
+
 export const pullRoasters = async (ref) => {
   const currentValue = await ref.once("value")
   const snapshotValue = await currentValue.val()
-  return snapshotValue
+  return convertToArray(snapshotValue)
 }
