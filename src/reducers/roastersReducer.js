@@ -6,3 +6,5 @@ export const roastersReducer = (state=[], action) => {
       return state  
   }
 }
+
+export default roastersReducer
