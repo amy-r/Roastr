@@ -6,7 +6,7 @@ import { shallow } from 'enzyme';
 describe('CardContainer', () => {
   it('should render correctly', () => {
     const mockRoasters = [
-      { userId: "71yYVDRUpOO8BR5153LMNCOmrV52",
+      { userId: "encryptedid",
         name: "Corvus",
         location: "Denver",
         altitude: "5280",
@@ -14,7 +14,7 @@ describe('CardContainer', () => {
         water: "calcium",
         contact: "dom",
         email: "dom@corvus.com" },
-      { userId: "71yYVDRUpOO8BR5153LMNCOmrV52",
+      { userId: "encryptedid",
         name: "Boxcar",
         location: "Boulder",
         altitude: "5360",
