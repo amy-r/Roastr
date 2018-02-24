@@ -1,4 +1,4 @@
-export const coffeeReducer = (state=[], action) => {
+const coffeeReducer = (state=[], action) => {
   switch (action.type) {
     case 'ADD_COFFEE' :
       return [...state, action.coffee]
@@ -6,3 +6,5 @@ export const coffeeReducer = (state=[], action) => {
       return state
   }
 }
+
+export default coffeeReducer;
