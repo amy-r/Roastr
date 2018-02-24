@@ -32,7 +32,8 @@ describe('CardContainer', () => {
   })
 })
 
-describe('MSTP and MDTP', () => {
+describe('MSTP', () => {
+
   it('should define roaster props for the container MSTP', () => {
     const name = "Corvus";
     const location = "Denver";
@@ -40,5 +41,14 @@ describe('MSTP and MDTP', () => {
     const expected = [{ name, location }]
     const mapped = mapStateToProps(mockStore);
     expect(mapped.roasters).toEqual(expected);
+  })
+
+  it('should define coffee props for the container MSTP', () => {
+    const name = "San Sebastian";
+    const overallScore = "6";
+    const mockStore = {coffees: [ {name, overallScore }]}
+    const expected = [ {name, overallScore}]
+    const mapped = mapStateToProps(mockStore);
+    expect(mapped.coffees).toEqual(expected);
   })
 })
