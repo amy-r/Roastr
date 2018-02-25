@@ -85,7 +85,7 @@ export class Form extends Component {
           className="full"
           name="water" 
           value={this.state.water} 
-          placeholder='WATER TDDS'
+          placeholder='WATER TDS'
           onChange={this.handleChange}/>
         <input type="text" 
           name="contact" 

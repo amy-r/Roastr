@@ -8,7 +8,6 @@ import add from './add.svg';
 import addhover from './add-hover.svg';
 import { retrievedRoasters } from '../../actions/index'
 
-
 export class CardContainer extends Component {
   componentDidMount() {
     const currentRoasters = 
@@ -45,7 +44,6 @@ export class CardContainer extends Component {
     )
   }
 }
-
 
 export const mapStateToProps = state => ({
   roasters: state.roasters,
