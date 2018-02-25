@@ -5,11 +5,10 @@ import { withRouter } from 'react-router-dom';
 import { logIn } from '../../actions/index';
 import { connect } from 'react-redux';
 import { pullRoasters } from '../../Utilities/firebaseFunctions';
-import { firebaseApp } from '../../Utilities/firebaseFunctions'
+import { firebaseApp } from '../../Utilities/firebaseFunctions';
 
 export const db = firebaseApp.database();
 const ref = db.ref('/roasters');
-
 
 export class App extends Component {
   async componentDidMount() {

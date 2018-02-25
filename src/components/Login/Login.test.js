@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Login, mapStateToProps, mapDispatchToProps } from './Login';
-import { shallow } from 'enzyme';
+import { Login, mapStateToProps, mapDispatchToProps, signOut } from './Login';
+import { shallow, mount } from 'enzyme';
+require('jest-localstorage-mock');
 
 describe('Login', () => {
-  it('should exist', () => {
+  let wrapper;
+;
+
+  beforeEach(()=> {
     const mockUser = {
       userName: 'Jordan',
       userEmail: 'Jordan@Project.com',
@@ -12,9 +16,30 @@ describe('Login', () => {
       userId: 'fancy encryption'
     }
 
-    const wrapper = shallow(<Login user={mockUser}/>, {disableLifecycleMethods:true});
+    wrapper = shallow(<Login logOut={jest.fn()} user={mockUser}/>, {disableLifecycleMethods:true});
     
+  })
+
+  it('should exist', () => {
     expect(wrapper).toMatchSnapshot();
+  })
+
+  it('should remove the user from local storage when signOut is called', () => {
+    const KEY = 'userName';
+    const VALUE = 'Jordan';
+
+    localStorage.setItem(KEY, VALUE);
+    expect(localStorage.setItem).toHaveBeenCalledWith(KEY, VALUE);
+    expect(localStorage.__STORE__[KEY]).toBe(VALUE);
+
+    wrapper.instance().signOut(KEY);
+    expect(sessionStorage.__STORE__).toEqual({});
+  })
+
+  it('should call dispatch action on signOut', () => {
+    const KEY = 'userName';
+    wrapper.instance().signOut(KEY);
+    expect(jest.fn()).toHaveBeenCalled
   })
 })
 
@@ -46,6 +71,6 @@ describe('MSTP and MDTP', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.retrievedRoasters();
-    expect(mockDispatch).toHaveBeenCalled;
+    expect(mockDispatch).toHaveBeenCalledTimes(1);
   })
 })
