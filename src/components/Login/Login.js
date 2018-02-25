@@ -22,7 +22,32 @@ export class Login extends Component {
     }
   }
 
+ // Views (React) should have no logic in them (besides view logic)
+ // if you're using something like Redux.
+ // This logic should be moved to action creators and reducers
  componentDidMount() {
+   // Why is this function wrapped in a try-catch?
+   // Based on the documentation
+   // https://firebase.google.com/docs/reference/js/firebase.auth.Auth#onAuthStateChanged
+   // It takes a onChaged and onError callback
+
+   // If this logic were in an action creator or reducer
+   // this block in Login.js would look something like:
+
+   // firebase.auth().onAuthStateChanged(function(user) {
+   //   actionCreator.userSignedIn(user);
+   // },
+   // function(error) {
+   //   actionCreator.userSignInFailed(error);
+   // });
+
+   // In fact, now that I think about it,
+   // the above code should be in an action creator
+   // this view should try as hard as it can
+   // to be ignorant of firebase
+   // (un?)fortunately, you're able to use a StyledFirebaseAuth
+   // component, so this view needs to know about it on some level
+
    try{
      firebase.auth().onAuthStateChanged( async user => {
       if(user) {
@@ -30,7 +55,7 @@ export class Login extends Component {
           userName: user.displayName,
           userEmail: user.email,
           userPhoto: user.photoURL,
-          userId: user.uid 
+          userId: user.uid
         }
         localStorage.setItem('user', JSON.stringify(userToStore))
         this.props.logIn(userToStore)
@@ -54,7 +79,7 @@ export class Login extends Component {
   }
 
   render() {
-    const { user } = this.props 
+    const { user } = this.props
     if(!user.userName) {
       return(
         <div>
@@ -65,11 +90,11 @@ export class Login extends Component {
           <img src= {Logo} alt='Roastr logo' className='landing-logo'/>
           <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
         </div>
-      ) 
+      )
     } else {
        return (
         <div>
-          <h1> WELCOME</h1> 
+          <h1> WELCOME</h1>
           <h3 className='name'>{user.userName} </h3>
           <img src={user.userPhoto} alt='user'/>
           <button onClick={this.signOut} className='logout'> LOG OUT</button>

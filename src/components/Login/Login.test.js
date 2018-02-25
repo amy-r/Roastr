@@ -17,13 +17,22 @@ describe('Login', () => {
     }
 
     wrapper = shallow(<Login logOut={jest.fn()} user={mockUser}/>, {disableLifecycleMethods:true});
-    
+
   })
 
   it('should exist', () => {
     expect(wrapper).toMatchSnapshot();
   })
-
+  // Remember to structure your tests with
+  // describe('some condition', () => {
+  //   beforeEach(() => {
+  //     ... make the condition true...
+  //   });
+  //
+  //   it('does something based on the above condition', () => {
+  //     ...
+  //   });
+  // })
   it('should remove the user from local storage when signOut is called', () => {
     const KEY = 'userName';
     const VALUE = 'Jordan';
@@ -43,6 +52,10 @@ describe('Login', () => {
   })
 })
 
+// Tests also serve as documentation
+// Avoid using jargon like MSTP and MDTP
+// so people unfamiliar with redux can get a handle on what's going on,
+// or at least google the terms
 describe('MSTP and MDTP', () => {
   it('should define user props for the container', () => {
     const userName= "David Bowie";

@@ -5,7 +5,7 @@ import './Form.css';
 import { addRoasterData } from '../../Utilities/firebaseFunctions';
 
 export class Form extends Component {
-  constructor(props) {  
+  constructor(props) {
     super(props);
     this.state = {
       name:'',
@@ -22,6 +22,9 @@ export class Form extends Component {
     event.preventDefault();
     const { history, user, addRoaster } = this.props
     const {name, location, altitude, equipment, water, contact, email} = this.state;
+    // I'd put this logic in your action creator
+    // what a new user is and how to make one doesn't feel
+    // like a view concern
     const newRoaster = {
       userId: user.userId,
       name,
@@ -31,7 +34,7 @@ export class Form extends Component {
       water,
       contact,
       email
-    } 
+    }
     addRoaster(newRoaster);
     addRoasterData(newRoaster);
     this.setState({
@@ -57,51 +60,51 @@ export class Form extends Component {
     <div>
       <h1> ADD A NEW ROASTER </h1>
       <form onSubmit= {this.handleSubmit} className = 'new-roaster'>
-        <input type="text" 
+        <input type="text"
           className="full"
-          name="name" 
+          name="name"
           value={this.state.name}
-          placeholder='NAME' 
+          placeholder='NAME'
           onChange={this.handleChange}/>
-        <input type="text" 
+        <input type="text"
           className="half"
-          name="location" 
-          value={this.state.location} 
+          name="location"
+          value={this.state.location}
           placeholder='LOCATION'
           onChange={this.handleChange}/>
-          <input type="text" 
+          <input type="text"
           className="half right"
-          name="altitude" 
-          value={this.state.altitude} 
+          name="altitude"
+          value={this.state.altitude}
           placeholder='ALTITUDE'
           onChange={this.handleChange}/>
-        <input type="text" 
+        <input type="text"
           className="full"
-          name="equipment" 
-          value={this.state.equipment} 
+          name="equipment"
+          value={this.state.equipment}
           placeholder='EQUIPMENT'
           onChange={this.handleChange}/>
-        <input type="text" 
+        <input type="text"
           className="full"
-          name="water" 
-          value={this.state.water} 
+          name="water"
+          value={this.state.water}
           placeholder='WATER TDS'
           onChange={this.handleChange}/>
-        <input type="text" 
-          name="contact" 
+        <input type="text"
+          name="contact"
           className="half"
-          value={this.state.contact} 
+          value={this.state.contact}
           placeholder='CONTACT'
           onChange={this.handleChange}/>
-        <input type="text" 
-          name="email" 
+        <input type="text"
+          name="email"
           className="half right"
-          value={this.state.email} 
+          value={this.state.email}
           placeholder='EMAIL'
           onChange={this.handleChange}/>
         <input type="submit" className="submit" value='SUBMIT'/>
       </form>
-    </div>  
+    </div>
     )
   }
 }
