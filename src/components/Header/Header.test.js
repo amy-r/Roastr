@@ -18,7 +18,7 @@ describe('Header', () => {
 })
 
 describe('MSTP', () => {
-  it('should define user props for the container MSTP', () => {
+  it('should define user props for the container', () => {
     const userName= "Ziggy Stardust";
     const userEmail= "ziggy@gmail.com";
     const mockStore = {user: [ {name, userEmail} ]};

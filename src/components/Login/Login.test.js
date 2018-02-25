@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Login } from './Login';
+import { Login, mapStateToProps, mapDispatchToProps } from './Login';
 import { shallow } from 'enzyme';
 
 describe('Login', () => {
@@ -16,6 +16,15 @@ describe('Login', () => {
     
     expect(wrapper).toMatchSnapshot();
   })
+})
 
-
+describe('MSTP and MDTP', () => {
+  it('should define user props for the container', () => {
+    const userName= "David Bowie";
+    const userEmail= "david@gmail.com";
+    const mockStore = {user: [ {name, userEmail} ]};
+    const expected = [ {name, userEmail} ];
+    const mapped = mapStateToProps(mockStore);
+    expect(mapped.user).toEqual(expected)
+  })
 })
