@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addCoffee } from '../../actions/index';
 import { withRouter } from 'react-router';
+import { createEmail } from '../../Utilities/emailBody'
 import '../Form/Form.css';
 
 export class CoffeeForm extends Component {
@@ -9,6 +10,7 @@ export class CoffeeForm extends Component {
     super(props);
     this.state = {
       name:'',
+      email: '',
       overallScore: '',
       region: '',
       acidity: '',
@@ -21,10 +23,11 @@ export class CoffeeForm extends Component {
     }
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     const {
-      name, 
+      name,
+      email, 
       overallScore, 
       region, 
       acidity,
@@ -38,6 +41,7 @@ export class CoffeeForm extends Component {
 
     const newCoffee = {
       name, 
+      email,
       overallScore, 
       region, 
       acidity,
@@ -50,8 +54,10 @@ export class CoffeeForm extends Component {
     }
 
     this.props.addCoffee(newCoffee);
+    this.sendEmail(newCoffee)
     this.setState({
       name: '',
+      email: '',
       overallScore: '',
       region: '',
       acidity: '',
@@ -69,6 +75,21 @@ export class CoffeeForm extends Component {
     this.setState({[name]:value})
   }
 
+  sendEmail = async (form) => {
+    const emailToSend = createEmail(form)
+    console.log(emailToSend.html)
+    const sentEmailResponse = await fetch('http://localhost:3001/send-form', {
+      method: 'POST',
+      headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+      },  
+      body: JSON.stringify(emailToSend)
+    })
+    const parsedResonse = await sentEmailResponse.json();
+    console.log(parsedResonse)
+  }
+
   render() {
 
     return (
@@ -78,6 +99,12 @@ export class CoffeeForm extends Component {
           name="name" 
           value={this.state.name}
           placeholder='Name' 
+          onChange={this.handleChange}/>
+        <input type="email"
+          className='full' 
+          name="email" 
+          value={this.state.email}
+          placeholder='Email' 
           onChange={this.handleChange}/>
         <input type="text" 
           name="overallScore"

@@ -19,6 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <input
+          className="full"
           name="name"
           onChange={[Function]}
           placeholder="Name"
@@ -26,6 +27,7 @@ ShallowWrapper {
           value=""
 />,
         <input
+          className="full"
           name="overallScore"
           onChange={[Function]}
           placeholder="Overall Score (1-6)"
@@ -33,6 +35,7 @@ ShallowWrapper {
           value=""
 />,
         <input
+          className="full"
           name="region"
           onChange={[Function]}
           placeholder="Region"
@@ -40,6 +43,7 @@ ShallowWrapper {
           value=""
 />,
         <input
+          className="full"
           name="acidity"
           onChange={[Function]}
           placeholder="Acidity (1-6)"
@@ -47,6 +51,7 @@ ShallowWrapper {
           value=""
 />,
         <input
+          className="full"
           name="body"
           onChange={[Function]}
           placeholder="Body (1-6)"
@@ -54,6 +59,7 @@ ShallowWrapper {
           value=""
 />,
         <input
+          className="full"
           name="sweetness"
           onChange={[Function]}
           placeholder="Sweetness (1-6)"
@@ -61,6 +67,7 @@ ShallowWrapper {
           value=""
 />,
         <input
+          className="full"
           name="tactile"
           onChange={[Function]}
           placeholder="Tactile (1-6)"
@@ -68,6 +75,7 @@ ShallowWrapper {
           value=""
 />,
         <input
+          className="full"
           name="overallImpression"
           onChange={[Function]}
           placeholder="Overall Impression (Comments)"
@@ -75,6 +83,7 @@ ShallowWrapper {
           value=""
 />,
         <input
+          className="full"
           name="roaster"
           onChange={[Function]}
           placeholder="Roaster Name"
@@ -82,6 +91,7 @@ ShallowWrapper {
           value=""
 />,
         <input
+          className="full"
           name="additionalComments"
           onChange={[Function]}
           placeholder="Additional Comments (Optional)"
@@ -89,9 +99,11 @@ ShallowWrapper {
           value=""
 />,
         <input
+          className="submit"
           type="submit"
 />,
       ],
+      "className": "new-roaster",
       "onSubmit": [Function],
     },
     "ref": null,
@@ -101,6 +113,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "full",
           "name": "name",
           "onChange": [Function],
           "placeholder": "Name",
@@ -116,6 +129,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "full",
           "name": "overallScore",
           "onChange": [Function],
           "placeholder": "Overall Score (1-6)",
@@ -131,6 +145,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "full",
           "name": "region",
           "onChange": [Function],
           "placeholder": "Region",
@@ -146,6 +161,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "full",
           "name": "acidity",
           "onChange": [Function],
           "placeholder": "Acidity (1-6)",
@@ -161,6 +177,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "full",
           "name": "body",
           "onChange": [Function],
           "placeholder": "Body (1-6)",
@@ -176,6 +193,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "full",
           "name": "sweetness",
           "onChange": [Function],
           "placeholder": "Sweetness (1-6)",
@@ -191,6 +209,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "full",
           "name": "tactile",
           "onChange": [Function],
           "placeholder": "Tactile (1-6)",
@@ -206,6 +225,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "full",
           "name": "overallImpression",
           "onChange": [Function],
           "placeholder": "Overall Impression (Comments)",
@@ -221,6 +241,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "full",
           "name": "roaster",
           "onChange": [Function],
           "placeholder": "Roaster Name",
@@ -236,6 +257,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "full",
           "name": "additionalComments",
           "onChange": [Function],
           "placeholder": "Additional Comments (Optional)",
@@ -251,6 +273,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "submit",
           "type": "submit",
         },
         "ref": null,
@@ -268,6 +291,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <input
+            className="full"
             name="name"
             onChange={[Function]}
             placeholder="Name"
@@ -275,6 +299,7 @@ ShallowWrapper {
             value=""
 />,
           <input
+            className="full"
             name="overallScore"
             onChange={[Function]}
             placeholder="Overall Score (1-6)"
@@ -282,6 +307,7 @@ ShallowWrapper {
             value=""
 />,
           <input
+            className="full"
             name="region"
             onChange={[Function]}
             placeholder="Region"
@@ -289,6 +315,7 @@ ShallowWrapper {
             value=""
 />,
           <input
+            className="full"
             name="acidity"
             onChange={[Function]}
             placeholder="Acidity (1-6)"
@@ -296,6 +323,7 @@ ShallowWrapper {
             value=""
 />,
           <input
+            className="full"
             name="body"
             onChange={[Function]}
             placeholder="Body (1-6)"
@@ -303,6 +331,7 @@ ShallowWrapper {
             value=""
 />,
           <input
+            className="full"
             name="sweetness"
             onChange={[Function]}
             placeholder="Sweetness (1-6)"
@@ -310,6 +339,7 @@ ShallowWrapper {
             value=""
 />,
           <input
+            className="full"
             name="tactile"
             onChange={[Function]}
             placeholder="Tactile (1-6)"
@@ -317,6 +347,7 @@ ShallowWrapper {
             value=""
 />,
           <input
+            className="full"
             name="overallImpression"
             onChange={[Function]}
             placeholder="Overall Impression (Comments)"
@@ -324,6 +355,7 @@ ShallowWrapper {
             value=""
 />,
           <input
+            className="full"
             name="roaster"
             onChange={[Function]}
             placeholder="Roaster Name"
@@ -331,6 +363,7 @@ ShallowWrapper {
             value=""
 />,
           <input
+            className="full"
             name="additionalComments"
             onChange={[Function]}
             placeholder="Additional Comments (Optional)"
@@ -338,9 +371,11 @@ ShallowWrapper {
             value=""
 />,
           <input
+            className="submit"
             type="submit"
 />,
         ],
+        "className": "new-roaster",
         "onSubmit": [Function],
       },
       "ref": null,
@@ -350,6 +385,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "full",
             "name": "name",
             "onChange": [Function],
             "placeholder": "Name",
@@ -365,6 +401,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "full",
             "name": "overallScore",
             "onChange": [Function],
             "placeholder": "Overall Score (1-6)",
@@ -380,6 +417,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "full",
             "name": "region",
             "onChange": [Function],
             "placeholder": "Region",
@@ -395,6 +433,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "full",
             "name": "acidity",
             "onChange": [Function],
             "placeholder": "Acidity (1-6)",
@@ -410,6 +449,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "full",
             "name": "body",
             "onChange": [Function],
             "placeholder": "Body (1-6)",
@@ -425,6 +465,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "full",
             "name": "sweetness",
             "onChange": [Function],
             "placeholder": "Sweetness (1-6)",
@@ -440,6 +481,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "full",
             "name": "tactile",
             "onChange": [Function],
             "placeholder": "Tactile (1-6)",
@@ -455,6 +497,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "full",
             "name": "overallImpression",
             "onChange": [Function],
             "placeholder": "Overall Impression (Comments)",
@@ -470,6 +513,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "full",
             "name": "roaster",
             "onChange": [Function],
             "placeholder": "Roaster Name",
@@ -485,6 +529,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "full",
             "name": "additionalComments",
             "onChange": [Function],
             "placeholder": "Additional Comments (Optional)",
@@ -500,6 +545,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "submit",
             "type": "submit",
           },
           "ref": null,
