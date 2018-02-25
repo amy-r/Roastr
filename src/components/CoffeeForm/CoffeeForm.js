@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addCoffee } from '../../actions/index';
 import { withRouter } from 'react-router';
+import { createEmail } from '../../Utilities/emailBody'
 import '../Form/Form.css';
 
 export class CoffeeForm extends Component {
@@ -21,7 +22,7 @@ export class CoffeeForm extends Component {
     }
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     const {
       name, 
@@ -50,6 +51,7 @@ export class CoffeeForm extends Component {
     }
 
     this.props.addCoffee(newCoffee);
+
     this.setState({
       name: '',
       overallScore: '',
@@ -67,6 +69,10 @@ export class CoffeeForm extends Component {
   handleChange = (event) => {
     const {name, value} = event.target
     this.setState({[name]:value})
+  }
+
+  sendEmail = (form) => {
+
   }
 
   render() {
