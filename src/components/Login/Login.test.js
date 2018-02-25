@@ -6,6 +6,8 @@ require('jest-localstorage-mock');
 
 describe('Login', () => {
   let wrapper;
+;
+
   beforeEach(()=> {
     const mockUser = {
       userName: 'Jordan',
@@ -23,8 +25,8 @@ describe('Login', () => {
   })
 
   it('should remove the user from local storage when signOut is called', () => {
-    const KEY = 'userName'
-    const VALUE = 'Jordan'
+    const KEY = 'userName';
+    const VALUE = 'Jordan';
 
     localStorage.setItem(KEY, VALUE);
     expect(localStorage.setItem).toHaveBeenCalledWith(KEY, VALUE);
@@ -32,6 +34,12 @@ describe('Login', () => {
 
     wrapper.instance().signOut(KEY);
     expect(sessionStorage.__STORE__).toEqual({});
+  })
+
+  it('should call dispatch action on signOut', () => {
+    const KEY = 'userName';
+    wrapper.instance().signOut(KEY);
+    expect(jest.fn()).toHaveBeenCalled
   })
 })
 
@@ -63,6 +71,6 @@ describe('MSTP and MDTP', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.retrievedRoasters();
-    expect(mockDispatch).toHaveBeenCalled;
+    expect(mockDispatch).toHaveBeenCalledTimes(1);
   })
 })
