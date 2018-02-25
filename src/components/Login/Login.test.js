@@ -27,4 +27,25 @@ describe('MSTP and MDTP', () => {
     const mapped = mapStateToProps(mockStore);
     expect(mapped.user).toEqual(expected)
   })
+
+  it('should call the dispatch function on MDTP for logIn', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.logIn();
+    expect(mockDispatch).toHaveBeenCalled;
+  })
+
+  it('should call the dispatch function on MDTP for logOut', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.logOut();
+    expect(mockDispatch).toHaveBeenCalled;
+  })
+
+  it('should call the dispatch function on MDTP for retrievedRoasters', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.retrievedRoasters();
+    expect(mockDispatch).toHaveBeenCalled;
+  })
 })

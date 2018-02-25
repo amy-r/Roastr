@@ -32,8 +32,8 @@ describe('CardContainer', () => {
   })
 })
 
-describe('MSTP and MDTP', () => {
-  it('should define roaster props for the container MSTP', () => {
+describe('MSTP', () => {
+  it('should define roaster props for the container', () => {
     const name = "Corvus";
     const location = "Denver";
     const mockStore = {roasters: [ { name, location }]}
