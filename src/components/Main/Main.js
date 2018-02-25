@@ -4,7 +4,7 @@ import CardContainer from '../CardContainer/CardContainer';
 import Form from '../Form/Form';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
-import { SingleRoaster } from '../singleRoaster/singleRoaster';
+import SingleRoaster from '../singleRoaster/singleRoaster';
 import Login from '../Login/Login';
 import Header from '../Header/Header';
 import CoffeeForm from '../CoffeeForm/CoffeeForm';
@@ -17,10 +17,10 @@ export class Main extends Component {
   }
 
   findRoute = (match, data) => {
-    console.log(match)
     const found = data.find( item => {
       return item.name === match.params.name
     })
+    
     return <SingleRoaster {...found} />
   }
 

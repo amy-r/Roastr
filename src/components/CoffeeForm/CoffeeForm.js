@@ -26,9 +26,7 @@ export class CoffeeForm extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    
     const newCoffee = {...this.state}
-
     addCoffeeData(newCoffee);
     this.props.addCoffee(newCoffee);
     this.sendEmail(newCoffee);
