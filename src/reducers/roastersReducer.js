@@ -3,7 +3,7 @@ export const roastersReducer = (state=[], action) => {
     case 'ADD_ROASTER':
       return [...state, action.roaster]
     case 'RETRIEVED_ROASTERS' :
-      return [...state, ...action.roasters]
+      return [...action.roasters]
     default:
       return state  
   }

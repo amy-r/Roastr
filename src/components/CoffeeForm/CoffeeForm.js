@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addCoffee } from '../../actions/index';
 import { withRouter } from 'react-router';
+import { addCoffeeData } from '../../Utilities/firebaseFunctions';
 import { createEmail } from '../../Utilities/emailBody'
 import '../Form/Form.css';
 
@@ -25,36 +26,12 @@ export class CoffeeForm extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    const {
-      name,
-      email, 
-      overallScore, 
-      region, 
-      acidity,
-      body,
-      sweetness,
-      tactile,
-      overallImpression,
-      roaster, 
-      additionalComments
-    } = this.state;
+    
+    const newCoffee = {...this.state}
 
-    const newCoffee = {
-      name, 
-      email,
-      overallScore, 
-      region, 
-      acidity,
-      body,
-      sweetness,
-      tactile,
-      overallImpression,
-      roaster, 
-      additionalComments
-    }
-
+    addCoffeeData(newCoffee);
     this.props.addCoffee(newCoffee);
-    this.sendEmail(newCoffee)
+    this.sendEmail(newCoffee);
     this.setState({
       name: '',
       email: '',
@@ -67,7 +44,7 @@ export class CoffeeForm extends Component {
       overallImpression: '',
       roaster: '',
       additionalComments: '',
-    })
+    });
   }
 
   handleChange = (event) => {
@@ -76,18 +53,19 @@ export class CoffeeForm extends Component {
   }
 
   sendEmail = async (form) => {
-    const emailToSend = createEmail(form)
-    console.log(emailToSend.html)
-    const sentEmailResponse = await fetch('http://localhost:3001/send-form', {
-      method: 'POST',
-      headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-      },  
-      body: JSON.stringify(emailToSend)
-    })
-    const parsedResonse = await sentEmailResponse.json();
-    console.log(parsedResonse)
+    try{
+      const emailToSend = createEmail(form)
+      const sentEmailResponse = await fetch('http://localhost:3001/send-form', {
+        method: 'POST',
+        headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+        },  
+        body: JSON.stringify(emailToSend)
+      })
+    } catch (error) {
+      throw new Error(error)
+    }
   }
 
   render() {
