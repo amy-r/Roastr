@@ -21,7 +21,7 @@ export const addRoasterData = ({userId, name, location, altitude, equipment, wat
   })
 }
 
-const convertToArray = (roasters) => {
+export const convertToArray = (roasters) => {
   return Object.keys(roasters).map( roaster => {
     return {...roasters[roaster]}
   });
