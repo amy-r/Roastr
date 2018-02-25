@@ -11,7 +11,7 @@ export const db = firebaseApp.database();
 const ref = db.ref('/roasters');
 
 
-class App extends Component {
+export class App extends Component {
   async componentDidMount() {
     const user = JSON.parse(localStorage.getItem('user'))
     if (user) {

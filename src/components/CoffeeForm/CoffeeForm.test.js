@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { CoffeeForm } from './CoffeeForm';
+import { CoffeeForm, mapDispatchToProps } from './CoffeeForm';
 import { shallow } from 'enzyme';
 
 describe('CoffeeForm', () => {
@@ -85,4 +85,14 @@ describe('CoffeeForm', () => {
 
     expect(wrapper.state()).toEqual(expectedState)
   });
+})
+
+describe('MDTP', () => {
+  it('should call the dispatch function on MDTP', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.addCoffee();
+    expect(mockDispatch).toHaveBeenCalled;
+
+  })
 })

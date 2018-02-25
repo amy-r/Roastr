@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Form } from './Form';
+import { Form, mapStateToProps, mapDispatchToProps } from './Form';
 import { shallow } from 'enzyme';
 
 describe('Form', () => {
@@ -76,4 +76,23 @@ describe('Form', () => {
 
     expect(wrapper.state()).toEqual(expectedState)
   });
+})
+
+describe('MSTP and MDTP', () => {
+
+  it('should define the user props for the container MSTP', () => {
+    const userName= "Frank Ocean";
+    const userEmail= "frank@gmail.com";
+    const mockStore = {user: [ {name, userEmail} ]};
+    const expected = [ {name, userEmail} ];
+    const mapped = mapStateToProps(mockStore);
+    expect(mapped.user).toEqual(expected)
+  })
+  
+  it('should call the dispatch function on MDTP', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.addRoaster();
+    expect(mockDispatch).toHaveBeenCalled;
+  })
 })

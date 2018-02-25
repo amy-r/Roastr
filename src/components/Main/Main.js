@@ -10,20 +10,20 @@ import Login from '../Login/Login';
 import Header from '../Header/Header';
 import CoffeeForm from '../CoffeeForm/CoffeeForm';
 
-const sgMail = require('@sendgrid/mail');
-  sgMail.setApiKey(key);
-  const msg = {
-    to: 'jpquinn605@gmail.com',
-    from: 'elle@amethystcoffee.co',
-    subject: 'Hello, Will!',
-    text: text,
-    html: body,
-    headers: {
-      'Access-Control-Allow-Origin': '*'
-    },
-    mode: 'no-cors'
-  };
-  sgMail.send(msg)
+// const sgMail = require('@sendgrid/mail');
+//   sgMail.setApiKey(key);
+//   const msg = {
+//     to: 'jpquinn605@gmail.com',
+//     from: 'elle@amethystcoffee.co',
+//     subject: 'Hello, Will!',
+//     text: text,
+//     html: body,
+//     headers: {
+//       'Access-Control-Allow-Origin': '*'
+//     },
+//     mode: 'no-cors'
+//   };
+//   sgMail.send(msg)
 
 export class Main extends Component {
   displayHeader = () => {

@@ -79,7 +79,6 @@ export class Login extends Component {
   }
 }
 
-
 export const mapStateToProps = store => ({
   user: store.user
 })
