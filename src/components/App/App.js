@@ -13,16 +13,30 @@ const ref1 = db.ref('/roasters');
 const ref2 = db.ref('/coffees');
 
 export class App extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      errorState: ''
+    }
+  }
+
   async componentDidMount() {
-    const user = JSON.parse(localStorage.getItem('user'))
-    if (user) {
-     this.props.logIn(user);
-     const currentRoasters = await pullRoasters(ref1);
-     const currentCoffees = await pullRoasters(ref2);
-     localStorage.setItem('roasters', JSON.stringify(currentRoasters));
-     localStorage.setItem('coffees', JSON.stringify(currentCoffees));
-     this.props.retrievedRoasters(currentRoasters);
-     this.props.retrievedCoffees(currentCoffees);
+    try{
+      const user = JSON.parse(localStorage.getItem('user'))
+      if (user) {
+       this.props.logIn(user);
+       const currentRoasters = await pullRoasters(ref1);
+       const currentCoffees = await pullRoasters(ref2);
+       localStorage.setItem('roasters', JSON.stringify(currentRoasters));
+       localStorage.setItem('coffees', JSON.stringify(currentCoffees));
+       this.props.retrievedRoasters(currentRoasters);
+       this.props.retrievedCoffees(currentCoffees);
+      }
+    } catch (error) {
+      this.setState({
+        errorState: 'Error Retrieving Information'
+      })
     }
   }
 
@@ -30,6 +44,7 @@ export class App extends Component {
     return(
       <div> 
         <Main />
+        <p> {this.state.errorState} </p>
       </div>
     )
   }

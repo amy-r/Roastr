@@ -27,91 +27,31 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <div>
         <h1>
-           WELCOME
-</h1>,
+                 WELCOME
+        </h1>
         <h3
-          className="name"
->
-          Jordan
-           
-</h3>,
+                className="name"
+        >
+                Jordan
+                 
+        </h3>
         <img
-          alt="user"
-          className="profile-picture"
-          src="photo-url"
-/>,
+                alt="user"
+                className="profile-picture"
+                src="photo-url"
+        />
         <button
-          className="logout"
-          onClick={[Function]}
->
-           LOG OUT
-</button>,
-      ],
+                className="logout"
+                onClick={[Function]}
+        >
+                 LOG OUT
+        </button>
+</div>,
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": " WELCOME",
-        },
-        "ref": null,
-        "rendered": " WELCOME",
-        "type": "h1",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Jordan",
-            " ",
-          ],
-          "className": "name",
-        },
-        "ref": null,
-        "rendered": Array [
-          "Jordan",
-          " ",
-        ],
-        "type": "h3",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "alt": "user",
-          "className": "profile-picture",
-          "src": "photo-url",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": " LOG OUT",
-          "className": "logout",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": " LOG OUT",
-        "type": "button",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -197,6 +137,128 @@ ShallowWrapper {
           "type": "button",
         },
       ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div>
+          <h1>
+                     WELCOME
+          </h1>
+          <h3
+                    className="name"
+          >
+                    Jordan
+                     
+          </h3>
+          <img
+                    alt="user"
+                    className="profile-picture"
+                    src="photo-url"
+          />
+          <button
+                    className="logout"
+                    onClick={[Function]}
+          >
+                     LOG OUT
+          </button>
+</div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+               WELCOME
+</h1>,
+            <h3
+              className="name"
+>
+              Jordan
+               
+</h3>,
+            <img
+              alt="user"
+              className="profile-picture"
+              src="photo-url"
+/>,
+            <button
+              className="logout"
+              onClick={[Function]}
+>
+               LOG OUT
+</button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " WELCOME",
+            },
+            "ref": null,
+            "rendered": " WELCOME",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Jordan",
+                " ",
+              ],
+              "className": "name",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Jordan",
+              " ",
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "user",
+              "className": "profile-picture",
+              "src": "photo-url",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " LOG OUT",
+              "className": "logout",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": " LOG OUT",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],

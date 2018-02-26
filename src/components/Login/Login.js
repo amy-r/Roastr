@@ -42,29 +42,32 @@ export class Login extends Component {
     this.props.logOut(user);
   }
 
-  render() {
-    const { user } = this.props 
-    if(!user.userName) {
-      return(
-        <div>
+  loginDisplay = ({user}) => {
+    return !user.userName ?
+       <div>
           <div className='header-container'>
             <img src = {HeaderImage} className='header-triagle' alt='Roastr Logo' />
           </div>
           <h3> welcome to </h3>
           <img src= {Logo} alt='Roastr logo' className='landing-logo'/>
           <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
-        </div>
-      ) 
-    } else {
-       return (
+        </div> 
+        :
         <div>
           <h1> WELCOME</h1> 
           <h3 className='name'>{user.userName} </h3>
           <img src={user.userPhoto} alt='user' className='profile-picture'/>
           <button onClick={this.signOut} className='logout'> LOG OUT</button>
         </div>
-      )
-    }
+  }
+
+  render() {
+    const pageToDisplay = this.loginDisplay(this.props)
+    return (
+      <div>
+        {pageToDisplay}
+      </div>
+    )
   }
 }
 
