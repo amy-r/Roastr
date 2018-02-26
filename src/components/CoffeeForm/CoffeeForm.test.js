@@ -155,7 +155,10 @@ describe('CoffeeForm', () => {
       preventDefault: jest.fn()
     }
 
-    const wrapper = shallow(<CoffeeForm addCoffee={jest.fn()}/>);
+    const wrapper = shallow(<CoffeeForm 
+      addCoffee={jest.fn()}
+      history={[]}
+      />);
     wrapper.setState({
       name: 'Marcus Mumford'
     })
