@@ -15,20 +15,20 @@ export class Form extends Component {
       equipment: '',
       water: '',
       contact: '',
-      email: '',
-    }
+      email: ''
+    };
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const { history, user, addRoaster } = this.props
+    const { history, user, addRoaster } = this.props;
     const newRoaster = {
       userId: user.userId,
       ...this.state
-    }
-    const currentRoasters = JSON.parse(localStorage.getItem('roasters'))
-    const newRoasters = [...currentRoasters, newRoaster]
-    localStorage.setItem('roasters', JSON.stringify(newRoasters))
+    };
+    const currentRoasters = JSON.parse(localStorage.getItem('roasters'));
+    const newRoasters = [...currentRoasters, newRoaster];
+    localStorage.setItem('roasters', JSON.stringify(newRoasters));
     addRoaster(newRoaster);
     addRoasterData(newRoaster);
     this.setState({
@@ -44,73 +44,74 @@ export class Form extends Component {
   }
 
   handleChange = (event) => {
-    const {name, value} = event.target
-    this.setState({[name]:value})
+    const {name, value} = event.target;
+    this.setState({[name]:value});
   }
 
   render() {
     return (
-    <div>
-      <h1> ADD A NEW ROASTER </h1>
-      <form onSubmit= {this.handleSubmit} className = 'new-roaster'>
-        <input type="text" 
-          className="full"
-          name="name" 
-          value={this.state.name}
-          placeholder='NAME' 
-          onChange={this.handleChange}/>
-        <input type="text" 
-          className="half"
-          name="location" 
-          value={this.state.location} 
-          placeholder='LOCATION'
-          onChange={this.handleChange}/>
+      <div>
+        <h1> ADD A NEW ROASTER </h1>
+        <form onSubmit= {this.handleSubmit} className = 'new-roaster'>
           <input type="text" 
-          className="half right"
-          name="altitude" 
-          value={this.state.altitude} 
-          placeholder='ALTITUDE'
-          onChange={this.handleChange}/>
-        <input type="text" 
-          className="full"
-          name="equipment" 
-          value={this.state.equipment} 
-          placeholder='EQUIPMENT'
-          onChange={this.handleChange}/>
-        <input type="text" 
-          className="full"
-          name="water" 
-          value={this.state.water} 
-          placeholder='WATER TDS'
-          onChange={this.handleChange}/>
-        <input type="text" 
-          name="contact" 
-          className="half"
-          value={this.state.contact} 
-          placeholder='CONTACT'
-          onChange={this.handleChange}/>
-        <input type="text" 
-          name="email" 
-          className="half right"
-          value={this.state.email} 
-          placeholder='EMAIL'
-          onChange={this.handleChange}/>
-        <input type="submit" className="submit" value='SUBMIT'/>
-      </form>
-    </div>  
-    )
+            className="full"
+            name="name" 
+            value={this.state.name}
+            placeholder='NAME' 
+            onChange={this.handleChange}/>
+          <input type="text" 
+            className="half"
+            name="location" 
+            value={this.state.location} 
+            placeholder='LOCATION'
+            onChange={this.handleChange}/>
+          <input type="text" 
+            className="half right"
+            name="altitude" 
+            value={this.state.altitude} 
+            placeholder='ALTITUDE'
+            onChange={this.handleChange}/>
+          <input type="text" 
+            className="full"
+            name="equipment" 
+            value={this.state.equipment} 
+            placeholder='EQUIPMENT'
+            onChange={this.handleChange}/>
+          <input type="text" 
+            className="full"
+            name="water" 
+            value={this.state.water} 
+            placeholder='WATER TDS'
+            onChange={this.handleChange}/>
+          <input type="text" 
+            name="contact" 
+            className="half"
+            value={this.state.contact} 
+            placeholder='CONTACT'
+            onChange={this.handleChange}/>
+          <input type="text" 
+            name="email" 
+            className="half right"
+            value={this.state.email} 
+            placeholder='EMAIL'
+            onChange={this.handleChange}/>
+          <input type="submit" className="submit" value='SUBMIT'/>
+        </form>
+      </div>  
+    );
   }
 }
 
 export const mapStateToProps = state => ({
   user: state.user
-})
+});
 
 export const mapDispatchToProps = dispatch => ({
   addRoaster: roaster => dispatch(addRoaster(roaster))
-})
+});
 
 Form.propTypes = {
+  history: PropTypes.object,
   addRoaster: PropTypes.func,
   user: PropTypes.shape({
     userName: PropTypes.string,
@@ -120,4 +121,4 @@ Form.propTypes = {
   })
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Form)
+export default connect(mapStateToProps, mapDispatchToProps)(Form);

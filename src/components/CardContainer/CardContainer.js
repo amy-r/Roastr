@@ -1,4 +1,4 @@
-import React, { Component }from 'react';
+import React, { Component } from 'react';
 import { withRouter, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Card } from '../Card/Card';
@@ -16,24 +16,23 @@ export class CardContainer extends Component {
   }
     
   renderedCards = () => {
-    return this.props.roasters.map( (roaster, i) => {
-      return <Card key={i} {...roaster} />
-      }
-    )
+    return this.props.roasters.map( (roaster, index) => {
+      return <Card key={index} {...roaster} />;
+    });
   }
 
   render() {     
     return (
       <div>
         <h1> ROASTERS </h1>
-          <input type="text" className ='search' placeholder="SEARCH" /> 
-          <NavLink to='/form' className='addButton'>
-            <HoverImage
-              src={add}
-              hoverSrc={addhover}
-              className='addButton'
-            />
-          </NavLink>
+        <input type="text" className ='search' placeholder="SEARCH" /> 
+        <NavLink to='/form' className='addButton'>
+          <HoverImage
+            src={add}
+            hoverSrc={addhover}
+            className='addButton'
+          />
+        </NavLink>
         <h3 className='add'>
             ADD NEW
         </h3>
@@ -41,19 +40,19 @@ export class CardContainer extends Component {
           {this.renderedCards()}
         </div>
       </div>
-    )
+    );
   }
 }
 
 export const mapStateToProps = state => ({
   roasters: state.roasters,
   coffees: state.coffees
-})
+});
 
 export const mapDispatchToProps = dispatch => ({
   retrievedRoasters: roasters => dispatch(retrievedRoasters(roasters)),
   retrievedCoffees: coffees => dispatch(retrievedCoffees(coffees))
-})
+});
 
 CardContainer.propTypes = {
   retrievedRoasters: PropTypes.func,
@@ -81,4 +80,5 @@ CardContainer.propTypes = {
   }))
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CardContainer))
+export default 
+withRouter(connect(mapStateToProps, mapDispatchToProps)(CardContainer));

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { CoffeeForm, mapDispatchToProps } from './CoffeeForm';
@@ -191,6 +192,5 @@ describe('MDTP', () => {
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.addCoffee();
     expect(mockDispatch).toHaveBeenCalled;
-
   })
 })
