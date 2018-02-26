@@ -5,31 +5,31 @@ import Logo from './header-logo.svg';
 import './Header.css';
 import PropTypes from 'prop-types';
 
-export const Header = (props) => {
+export const Header = () => {
   return (
     <div>
       <div className='header-desktop'>
-      <img src={Logo} alt='roastr logo' className='header-logo' />
-      <div>
-      <NavLink to='/current-roasters'> 
-        <h3 className='nav'>
-        ROASTERS
-        </h3>
-      </NavLink>
-    </div>
-      <NavLink to ='/'>
-        <h3 className='nav'>
-          HOME
-        </h3>
-      </NavLink>
+        <img src={Logo} alt='roastr logo' className='header-logo' />
+        <div>
+          <NavLink to='/current-roasters'> 
+            <h3 className='nav'>
+              ROASTERS
+            </h3>
+          </NavLink>
+        </div>
+        <NavLink to ='/'>
+          <h3 className='nav'>
+            HOME
+          </h3>
+        </NavLink>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export const mapStateToProps = state => ({
   user: state.user
-})
+});
 
 Header.propTypes = {
   user: PropTypes.shape({
@@ -40,4 +40,4 @@ Header.propTypes = {
   })
 };
 
-export default connect(mapStateToProps, null)(Header)
+export default connect(mapStateToProps, null)(Header);

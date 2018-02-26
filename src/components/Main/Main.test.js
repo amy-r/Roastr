@@ -1,7 +1,8 @@
+/* eslint-disable */
+
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Main, mapStateToProps, mapDispatchToProps } from './Main';
-import { shallow, mount } from 'enzyme';
+import { Main, mapStateToProps } from './Main';
+import { shallow } from 'enzyme';
 
 describe('Main', () => {
   it('should render correctly', () => {

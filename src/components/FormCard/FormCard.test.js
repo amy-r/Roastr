@@ -1,5 +1,6 @@
+/* eslint-disable */
+
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { FormCard } from './FormCard';
 import { shallow } from 'enzyme'
 
