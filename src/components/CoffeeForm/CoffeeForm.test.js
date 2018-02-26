@@ -92,6 +92,7 @@ describe('CoffeeForm', () => {
 
     expect(wrapper.state()).toEqual(expectedState)
   });
+
   it('should make a fetch call with sendEmail when passed the correct params', () => {
     const form = { name:'Corvus', overallImpression: 'great'}
     const wrapper = shallow(<CoffeeForm />)
@@ -104,7 +105,15 @@ describe('CoffeeForm', () => {
 
   it('should setState to an error when status is not okay', () => {
     const form = { name:'Corvus', overallImpression: 'great'}
-          email: '',
+    const expectedState = {
+      name:'',
+      overallScore: '',
+      region: '',
+      acidity: '',
+      body: '',
+      sweetness: '',
+      tactile: '',
+      email: '',
       overallImpression: '', 
       roaster: '',
       errorState: 'Your email could not be sent at this time',
@@ -140,14 +149,16 @@ describe('CoffeeForm', () => {
       errorState: '',
       additionalComments: ''
     };
+    
     const mockEvent = {
       preventDefault: jest.fn()
     }
+
     const wrapper = shallow(<CoffeeForm addCoffee={jest.fn()}/>);
     wrapper.setState({
       name: 'Marcus Mumford'
     })
-
+    wrapper.instance().sendEmail = jest.fn();
     wrapper.instance().handleSubmit(mockEvent)
     expect(wrapper.state()).toEqual(expectedState);
   })
