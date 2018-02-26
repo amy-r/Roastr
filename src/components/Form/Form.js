@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { addRoaster } from '../../actions/index';
 import './Form.css';
 import { addRoasterData } from '../../Utilities/firebaseFunctions';
+import PropTypes from 'prop-types';
 
 export class Form extends Component {
   constructor(props) {  
@@ -108,5 +109,15 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   addRoaster: roaster => dispatch(addRoaster(roaster))
 })
+
+Form.propTypes = {
+  addRoaster: PropTypes.func,
+  user: PropTypes.shape({
+    userName: PropTypes.string,
+    userEmail: PropTypes.string,
+    userPhoto: PropTypes.string,
+    userId: PropTypes.string
+  })
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form)

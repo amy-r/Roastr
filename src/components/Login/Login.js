@@ -9,6 +9,7 @@ import { firebaseApp } from '../../Utilities/firebaseFunctions'
 import HeaderImage from '../../assets/header-triangle_2.svg';
 import Logo from '../../assets/logo.svg';
 import './Login.css';
+import PropTypes from 'prop-types';
 
 export class Login extends Component {
   constructor() {
@@ -75,5 +76,16 @@ export const mapDispatchToProps = dispatch => ({
   logIn: user => dispatch(logIn(user)),
   logOut: user => dispatch(logOut(user)),
 })
+
+Login.propTypes = {
+  logIn: PropTypes.func,
+  logOut: PropTypes.func,
+  user: PropTypes.shape({
+    userName: PropTypes.string,
+    userEmail: PropTypes.string,
+    userPhoto: PropTypes.string,
+    userId: PropTypes.string
+  })
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login)

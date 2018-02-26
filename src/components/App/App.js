@@ -6,6 +6,7 @@ import { logIn, retrievedRoasters, retrievedCoffees } from '../../actions/index'
 import { connect } from 'react-redux';
 import { pullRoasters } from '../../Utilities/firebaseFunctions';
 import { firebaseApp } from '../../Utilities/firebaseFunctions';
+import PropTypes from 'prop-types';
 
 export const db = firebaseApp.database();
 const ref1 = db.ref('/roasters');
@@ -43,5 +44,18 @@ export const mapDispatchToProps = dispatch => ({
   retrievedRoasters: roasters => dispatch(retrievedRoasters(roasters)),
   retrievedCoffees: coffees => dispatch(retrievedCoffees(coffees))
 })
+
+
+App.propTypes = {
+  logIn: PropTypes.func,
+  retrievedRoasters: PropTypes.func,
+  retrievedCoffees: PropTypes.func,
+  user: PropTypes.shape({
+    userName: PropTypes.string,
+    userEmail: PropTypes.string,
+    userPhoto: PropTypes.string,
+    userId: PropTypes.string
+  })
+};
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
