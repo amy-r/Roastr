@@ -91,6 +91,16 @@ describe('CoffeeForm', () => {
 
     expect(wrapper.state()).toEqual(expectedState)
   });
+
+  it('should make a fetch call with sendEmail when passed the correct params', () => {
+    const form = { name:'Corvus', overallImpression: 'great'}
+    const wrapper = shallow(<CoffeeForm />)
+    window.fetch = jest.fn();
+    
+    wrapper.instance().sendEmail(form);
+
+    expect(window.fetch).toHaveBeenCalled;
+  })
 })
 
 describe('MDTP', () => {
