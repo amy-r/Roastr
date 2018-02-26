@@ -6,24 +6,25 @@ import PropTypes from 'prop-types';
 export const SingleRoaster = (props) => {
   const coffeeForms = props.coffees.filter( coffee => {
     return coffee.roaster.toLowerCase() === props.name.toLowerCase();
-  })
+  });
 
-  const formCards = coffeeForms.map( (form, i) => {
-    return <FormCard key={form.name + i} {...form} />
-  })
+  const formCards = coffeeForms.map( (form, index) => {
+    return <FormCard key={form.name + index} {...form} />;
+  });
   return (
     <div>
       <h1> {props.name} </h1>
       {formCards}
     </div>
-  )
-}
+  );
+};
 
 export const mapStateToProps = state => ({
   coffees: state.coffees
-})
+});
 
 SingleRoaster.propTypes = {
+  name: PropTypes.string,
   coffees: PropTypes.arrayOf(PropTypes.shape({
     acidty: PropTypes.string,
     additionalComments: PropTypes.string,
@@ -38,4 +39,4 @@ SingleRoaster.propTypes = {
   }))
 };
 
-export default connect(mapStateToProps, null)(SingleRoaster)
+export default connect(mapStateToProps, null)(SingleRoaster);

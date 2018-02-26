@@ -1,5 +1,6 @@
+/* eslint-disable */
+
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Login, mapStateToProps, mapDispatchToProps, signOut } from './Login';
 import { shallow, mount } from 'enzyme';
 require('jest-localstorage-mock');

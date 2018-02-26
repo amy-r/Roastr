@@ -12,17 +12,17 @@ import PropTypes from 'prop-types';
 
 export class Main extends Component {
   displayHeader = () => {
-    if(this.props.user.userName) {
-      return <Header />
+    if (this.props.user.userName) {
+      return <Header />;
     }
   }
 
-  findRoute = (match, data) => {
-    const found = data.find( item => {
-      return item.name === match.params.name
-    })
+  findRoute = (match, roasters) => {
+    const found = roasters.find( item => {
+      return item.name === match.params.name;
+    });
     
-    return <SingleRoaster {...found} />
+    return <SingleRoaster {...found} />;
   }
 
   render() {
@@ -34,19 +34,19 @@ export class Main extends Component {
           <Route path='/coffee-form' component={CoffeeForm} />
           <Route path='/current-roasters' component={CardContainer} />
           <Route path='/single-roaster/:name' render={({ match }) => {
-           return this.findRoute(match, this.props.roasters)
+            return this.findRoute(match, this.props.roasters);
           }} />
           <Route path='/' component={Login} />
         </Switch>
       </div>
-    )
+    );
   }
 }
 
 export const mapStateToProps = state => ({
   user: state.user,
   roasters: state.roasters
-})
+});
 
 Main.propTypes = {
   user: PropTypes.shape({
@@ -66,5 +66,5 @@ Main.propTypes = {
   }))
 };
 
-export default withRouter(connect(mapStateToProps, null)(Main))
+export default withRouter(connect(mapStateToProps, null)(Main));
 
