@@ -21,11 +21,31 @@ export const addRoasterData = ({userId, name, location, altitude, equipment, wat
   })
 }
 
-export const convertToArray = (roasters) => {
-  return Object.keys(roasters).map( roaster => {
-    return {...roasters[roaster]}
-  });
+export const addCoffeeData = ({roaster, name, overallScore, region, acidity, body, sweetness, tactile, overallImpression, additionalComments}) => {
+  firebaseApp.database().ref('coffees/' + name).set({
+    name,
+    roaster,
+    overallScore,
+    region,
+    acidity,
+    body,
+    sweetness,
+    tactile,
+    overallImpression,
+    additionalComments
+  })
 }
+
+export const convertToArray = (roasters) => {
+  if(roasters) {
+    return Object.keys(roasters).map( roaster => {
+      return {...roasters[roaster]}
+    });
+  } else {
+    return []
+  }
+}
+
 
 export const pullRoasters = async (ref) => {
   const currentValue = await ref.once("value")

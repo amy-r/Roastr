@@ -21,17 +21,13 @@ export class Form extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const { history, user, addRoaster } = this.props
-    const {name, location, altitude, equipment, water, contact, email} = this.state;
     const newRoaster = {
       userId: user.userId,
-      name,
-      location,
-      altitude,
-      equipment,
-      water,
-      contact,
-      email
-    } 
+      ...this.state
+    }
+    const currentRoasters = JSON.parse(localStorage.getItem('roasters'))
+    const newRoasters = [...currentRoasters, newRoaster]
+    localStorage.setItem('roasters', JSON.stringify(newRoasters))
     addRoaster(newRoaster);
     addRoasterData(newRoaster);
     this.setState({
@@ -52,7 +48,6 @@ export class Form extends Component {
   }
 
   render() {
-
     return (
     <div>
       <h1> ADD A NEW ROASTER </h1>

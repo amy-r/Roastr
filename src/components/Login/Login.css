@@ -4,6 +4,15 @@
   height: 100px;
 }
 
+.profile-picture {
+  border-radius: 100%;
+  display: block;
+  margin: auto;
+  height: 250px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
 h3 {
   font-family: 'Open Sans', sans-serif;
   color: #444444;

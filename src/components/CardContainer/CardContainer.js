@@ -6,14 +6,13 @@ import './CardContainer.css';
 import HoverImage from "react-hover-image";
 import add from './add.svg';
 import addhover from './add-hover.svg';
-import { retrievedRoasters } from '../../actions/index'
+import { retrievedRoasters, retrievedCoffees } from '../../actions/index'
 
 export class CardContainer extends Component {
   componentDidMount() {
-    const currentRoasters = 
-      JSON.parse(localStorage.getItem('roasters'));
-    this.props.retrievedRoasters(currentRoasters);
+
   }
+    
 
   renderedCards = () => {
     return this.props.roasters.map( (roaster, i) => {
@@ -51,7 +50,8 @@ export const mapStateToProps = state => ({
 })
 
 export const mapDispatchToProps = dispatch => ({
-  retrievedRoasters: roasters => dispatch(retrievedRoasters(roasters))
+  retrievedRoasters: roasters => dispatch(retrievedRoasters(roasters)),
+  retrievedCoffees: coffees => dispatch(retrievedCoffees(coffees))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CardContainer))

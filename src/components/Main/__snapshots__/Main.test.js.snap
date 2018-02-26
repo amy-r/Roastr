@@ -42,6 +42,10 @@ ShallowWrapper {
                     path="/current-roasters"
           />
           <Route
+                    path="/single-roaster/:name"
+                    render={[Function]}
+          />
+          <Route
                     component={[Function]}
                     path="/"
           />
@@ -76,6 +80,10 @@ ShallowWrapper {
             <Route
               component={[Function]}
               path="/current-roasters"
+/>,
+            <Route
+              path="/single-roaster/:name"
+              render={[Function]}
 />,
             <Route
               component={[Function]}
@@ -126,6 +134,18 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "path": "/single-roaster/:name",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
               "component": [Function],
               "path": "/",
             },
@@ -159,6 +179,10 @@ ShallowWrapper {
             <Route
                         component={[Function]}
                         path="/current-roasters"
+            />
+            <Route
+                        path="/single-roaster/:name"
+                        render={[Function]}
             />
             <Route
                         component={[Function]}
@@ -195,6 +219,10 @@ ShallowWrapper {
               <Route
                 component={[Function]}
                 path="/current-roasters"
+/>,
+              <Route
+                path="/single-roaster/:name"
+                render={[Function]}
 />,
               <Route
                 component={[Function]}
@@ -235,6 +263,18 @@ ShallowWrapper {
               "props": Object {
                 "component": [Function],
                 "path": "/current-roasters",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "path": "/single-roaster/:name",
+                "render": [Function],
               },
               "ref": null,
               "rendered": null,
