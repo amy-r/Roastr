@@ -46,7 +46,8 @@ export class CoffeeForm extends Component {
         roaster: '',
         additionalComments: ''
       });
-    } catch (error) {
+      this.props.history.push(`/single-roaster/${newCoffee.roaster}`);
+    } catch(error) {
       this.setState({
         errorState: 'Your email could not be sent at this time'
       });
