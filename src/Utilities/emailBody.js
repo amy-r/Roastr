@@ -14,7 +14,6 @@ export const text = (form) => {
   )
 }
 
-
 export const body = (form) => {
   return (
     `<div>
@@ -47,7 +46,7 @@ export const createEmail = (form) => {
     from: 'elle@amethystcoffee.co',
     subject: 'Coffee Review',
     text: emailText,
-    html: body
+    html: emailBody
   };
   return msg
 }

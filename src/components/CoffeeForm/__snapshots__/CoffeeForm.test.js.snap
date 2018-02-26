@@ -28,6 +28,14 @@ ShallowWrapper {
 />,
         <input
           className="full"
+          name="email"
+          onChange={[Function]}
+          placeholder="Email"
+          type="email"
+          value=""
+/>,
+        <input
+          className="full"
           name="overallScore"
           onChange={[Function]}
           placeholder="Overall Score (1-6)"
@@ -118,6 +126,22 @@ ShallowWrapper {
           "onChange": [Function],
           "placeholder": "Name",
           "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "full",
+          "name": "email",
+          "onChange": [Function],
+          "placeholder": "Email",
+          "type": "email",
           "value": "",
         },
         "ref": null,
@@ -300,6 +324,14 @@ ShallowWrapper {
 />,
           <input
             className="full"
+            name="email"
+            onChange={[Function]}
+            placeholder="Email"
+            type="email"
+            value=""
+/>,
+          <input
+            className="full"
             name="overallScore"
             onChange={[Function]}
             placeholder="Overall Score (1-6)"
@@ -390,6 +422,22 @@ ShallowWrapper {
             "onChange": [Function],
             "placeholder": "Name",
             "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "full",
+            "name": "email",
+            "onChange": [Function],
+            "placeholder": "Email",
+            "type": "email",
             "value": "",
           },
           "ref": null,
