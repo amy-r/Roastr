@@ -39,6 +39,7 @@ ShallowWrapper {
 </h3>,
         <img
           alt="user"
+          className="profile-picture"
           src="photo-url"
 />,
         <button
@@ -86,6 +87,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "alt": "user",
+          "className": "profile-picture",
           "src": "photo-url",
         },
         "ref": null,
@@ -126,6 +128,7 @@ ShallowWrapper {
 </h3>,
           <img
             alt="user"
+            className="profile-picture"
             src="photo-url"
 />,
           <button
@@ -173,6 +176,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "alt": "user",
+            "className": "profile-picture",
             "src": "photo-url",
           },
           "ref": null,

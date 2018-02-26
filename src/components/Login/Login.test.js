@@ -66,11 +66,4 @@ describe('MSTP and MDTP', () => {
     mapped.logOut();
     expect(mockDispatch).toHaveBeenCalled;
   })
-
-  it('should call the dispatch function on MDTP for retrievedRoasters', () => {
-    const mockDispatch = jest.fn();
-    const mapped = mapDispatchToProps(mockDispatch);
-    mapped.retrievedRoasters();
-    expect(mockDispatch).toHaveBeenCalledTimes(1);
-  })
 })

@@ -22,6 +22,7 @@ describe('CoffeeForm', () => {
       overallImpression: '', 
       roaster: '',
       email: '',
+      errorState:'',
       additionalComments: ''
     };
 
@@ -42,6 +43,7 @@ describe('CoffeeForm', () => {
       overallImpression: '', 
       roaster: '',
       email: '',
+      errorState: '',
       additionalComments: ''
     };
     const wrapper = shallow(<CoffeeForm />)
@@ -67,6 +69,7 @@ describe('CoffeeForm', () => {
       email: '1',
       overallImpression: '1', 
       roaster: '1',
+      errorState: '',
       additionalComments: '1'
     };
 
