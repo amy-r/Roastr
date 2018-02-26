@@ -5,6 +5,7 @@ import { withRouter } from 'react-router';
 import { addCoffeeData } from '../../Utilities/firebaseFunctions';
 import { createEmail } from '../../Utilities/emailBody'
 import '../Form/Form.css';
+import PropTypes from 'prop-types';
 
 export class CoffeeForm extends Component {
   constructor(props) {
@@ -163,12 +164,13 @@ export class CoffeeForm extends Component {
   }
 }
 
-// export const mapStateToProps = (state) => {
-//   roaster: state.roaster;
-// }
 
 export const mapDispatchToProps = (dispatch) => ({
   addCoffee: coffee => dispatch(addCoffee(coffee))
 })
+
+CoffeeForm.propTypes = {
+  addCoffee: PropTypes.func,
+};
 
 export default withRouter(connect(null, mapDispatchToProps)(CoffeeForm))

@@ -2,7 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Logo from './header-logo.svg';
-import './Header.css'
+import './Header.css';
+import PropTypes from 'prop-types';
 
 export const Header = (props) => {
   return (
@@ -29,5 +30,14 @@ export const Header = (props) => {
 export const mapStateToProps = state => ({
   user: state.user
 })
+
+Header.propTypes = {
+  user: PropTypes.shape({
+    userName: PropTypes.string,
+    userEmail: PropTypes.string,
+    userPhoto: PropTypes.string,
+    userId: PropTypes.string
+  })
+};
 
 export default connect(mapStateToProps, null)(Header)

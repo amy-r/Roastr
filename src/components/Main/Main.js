@@ -8,6 +8,7 @@ import SingleRoaster from '../singleRoaster/singleRoaster';
 import Login from '../Login/Login';
 import Header from '../Header/Header';
 import CoffeeForm from '../CoffeeForm/CoffeeForm';
+import PropTypes from 'prop-types';
 
 export class Main extends Component {
   displayHeader = () => {
@@ -46,6 +47,24 @@ export const mapStateToProps = state => ({
   user: state.user,
   roasters: state.roasters
 })
+
+Main.propTypes = {
+  user: PropTypes.shape({
+    userName: PropTypes.string,
+    userEmail: PropTypes.string,
+    userPhoto: PropTypes.string,
+    userId: PropTypes.string
+  }),
+  roasters: PropTypes.arrayOf(PropTypes.shape({
+    altitude: PropTypes.string,
+    contact: PropTypes.string,
+    email: PropTypes.string,
+    equipment: PropTypes.string,
+    location: PropTypes.string,
+    name: PropTypes.string,
+    water: PropTypes.string
+  }))
+};
 
 export default withRouter(connect(mapStateToProps, null)(Main))
 
