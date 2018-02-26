@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { addCoffee } from '../../actions/index';
 import { withRouter } from 'react-router';
 import { addCoffeeData } from '../../Utilities/firebaseFunctions';
-import { createEmail } from '../../Utilities/emailBody'
+import { createEmail } from '../../Utilities/emailBody';
 import '../Form/Form.css';
 import PropTypes from 'prop-types';
 
@@ -23,13 +23,13 @@ export class CoffeeForm extends Component {
       roaster: '',
       additionalComments: '',
       errorState: ''
-    }
+    };
   }
 
   handleSubmit = async (event) => {
     try {
       event.preventDefault();
-      const newCoffee = {...this.state}
+      const newCoffee = {...this.state};
       addCoffeeData(newCoffee);
       this.props.addCoffee(newCoffee);
       this.sendEmail(newCoffee);
@@ -44,36 +44,36 @@ export class CoffeeForm extends Component {
         tactile: '',
         overallImpression: '',
         roaster: '',
-        additionalComments: '',
+        additionalComments: ''
       });
       this.props.history.push(`/single-roaster/${newCoffee.roaster}`);
     } catch(error) {
       this.setState({
         errorState: 'Your email could not be sent at this time'
-      })
+      });
     }
   }
 
   handleChange = (event) => {
-    const {name, value} = event.target
-    this.setState({[name]:value})
+    const {name, value} = event.target;
+    this.setState({[name]:value});
   }
 
   sendEmail = async (form) => {
-    try{
-      const emailToSend = createEmail(form)
+    try {
+      const emailToSend = createEmail(form);
       await fetch('http://localhost:3001/send-form', {
         method: 'POST',
         headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
         },  
         body: JSON.stringify(emailToSend)
-      })
+      });
     } catch (error) {
       this.setState({
         errorState: 'Your email could not be sent at this time'
-      })
+      });
     }
   }
 
@@ -131,28 +131,28 @@ export class CoffeeForm extends Component {
             placeholder='Sweetness (1-6)'
             onChange={this.handleChange}
             required/>
-           <input type="text"
+          <input type="text"
             className='full' 
             name="tactile" 
             value={this.state.tactile} 
             placeholder='Tactile (1-6)'
             onChange={this.handleChange}
             required/>
-           <input type="text"
+          <input type="text"
             className='full' 
             name="overallImpression" 
             value={this.state.overallImpression} 
             placeholder='Overall Impression (Comments)'
             onChange={this.handleChange}
             required/>
-            <input type="text"
+          <input type="text"
             className='full' 
             name="roaster" 
             value={this.state.roaster} 
             placeholder='Roaster Name'
             onChange={this.handleChange}
             required/>
-            <input type="text" 
+          <input type="text" 
             className='full'
             name="additionalComments" 
             value={this.state.additionalComments} 
@@ -161,17 +161,17 @@ export class CoffeeForm extends Component {
           <input type="submit"className='submit'/>
         </form>
       </div>
-    )
+    );
   }
 }
 
 
 export const mapDispatchToProps = (dispatch) => ({
   addCoffee: coffee => dispatch(addCoffee(coffee))
-})
+});
 
 CoffeeForm.propTypes = {
-  addCoffee: PropTypes.func,
+  addCoffee: PropTypes.func
 };
 
-export default withRouter(connect(null, mapDispatchToProps)(CoffeeForm))
+export default withRouter(connect(null, mapDispatchToProps)(CoffeeForm));
