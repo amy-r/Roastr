@@ -17,6 +17,18 @@ describe('Header', () => {
   })
 })
 
+// Some people would argue that you don't need
+// to test a function as simple as mapStateToProps
+// it's up to you, as a developer
+
+// some common questions to help you decide:
+// - is the application broken if the subject under test (SUT) has incorrect behavior?
+// - will you know if the SUT has incorrect behavior even if you don't run the test? (e.g., will the app launch?)
+
+// Personally, I'm at a maybe
+// if you're using a strongly typed language (javascript is not a strongly typed language)
+// I'd be at a no
+
 describe('MSTP', () => {
   it('should define user props for the container', () => {
     const userName= "Ziggy Stardust";
