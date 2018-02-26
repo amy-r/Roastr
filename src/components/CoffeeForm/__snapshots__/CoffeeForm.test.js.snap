@@ -18,101 +18,119 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <input
-          className="full"
-          name="name"
-          onChange={[Function]}
-          placeholder="Name"
-          type="text"
-          value=""
-/>,
-        <input
-          className="full"
-          name="email"
-          onChange={[Function]}
-          placeholder="Email"
-          type="email"
-          value=""
-/>,
-        <input
-          className="full"
-          name="overallScore"
-          onChange={[Function]}
-          placeholder="Overall Score (1-6)"
-          type="text"
-          value=""
-/>,
-        <input
-          className="full"
-          name="region"
-          onChange={[Function]}
-          placeholder="Region"
-          type="text"
-          value=""
-/>,
-        <input
-          className="full"
-          name="acidity"
-          onChange={[Function]}
-          placeholder="Acidity (1-6)"
-          type="text"
-          value=""
-/>,
-        <input
-          className="full"
-          name="body"
-          onChange={[Function]}
-          placeholder="Body (1-6)"
-          type="text"
-          value=""
-/>,
-        <input
-          className="full"
-          name="sweetness"
-          onChange={[Function]}
-          placeholder="Sweetness (1-6)"
-          type="text"
-          value=""
-/>,
-        <input
-          className="full"
-          name="tactile"
-          onChange={[Function]}
-          placeholder="Tactile (1-6)"
-          type="text"
-          value=""
-/>,
-        <input
-          className="full"
-          name="overallImpression"
-          onChange={[Function]}
-          placeholder="Overall Impression (Comments)"
-          type="text"
-          value=""
-/>,
-        <input
-          className="full"
-          name="roaster"
-          onChange={[Function]}
-          placeholder="Roaster Name"
-          type="text"
-          value=""
-/>,
-        <input
-          className="full"
-          name="additionalComments"
-          onChange={[Function]}
-          placeholder="Additional Comments (Optional)"
-          type="text"
-          value=""
-/>,
-        <input
-          className="submit"
-          type="submit"
-/>,
+        <p>
+           
+          
+           
+</p>,
+        <form
+          className="new-roaster"
+          onSubmit={[Function]}
+>
+          <input
+                    className="full"
+                    name="name"
+                    onChange={[Function]}
+                    placeholder="Blend/Bean Name"
+                    required={true}
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="full"
+                    name="email"
+                    onChange={[Function]}
+                    placeholder="Email"
+                    required={true}
+                    type="email"
+                    value=""
+          />
+          <input
+                    className="full"
+                    name="overallScore"
+                    onChange={[Function]}
+                    placeholder="Overall Score (1-6)"
+                    required={true}
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="full"
+                    name="region"
+                    onChange={[Function]}
+                    placeholder="Region"
+                    required={true}
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="full"
+                    name="acidity"
+                    onChange={[Function]}
+                    placeholder="Acidity (1-6)"
+                    required={true}
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="full"
+                    name="body"
+                    onChange={[Function]}
+                    placeholder="Body (1-6)"
+                    required={true}
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="full"
+                    name="sweetness"
+                    onChange={[Function]}
+                    placeholder="Sweetness (1-6)"
+                    required={true}
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="full"
+                    name="tactile"
+                    onChange={[Function]}
+                    placeholder="Tactile (1-6)"
+                    required={true}
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="full"
+                    name="overallImpression"
+                    onChange={[Function]}
+                    placeholder="Overall Impression (Comments)"
+                    required={true}
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="full"
+                    name="roaster"
+                    onChange={[Function]}
+                    placeholder="Roaster Name"
+                    required={true}
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="full"
+                    name="additionalComments"
+                    onChange={[Function]}
+                    placeholder="Additional Comments (Optional)"
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="submit"
+                    type="submit"
+          />
+</form>,
       ],
-      "className": "new-roaster",
-      "onSubmit": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -121,191 +139,337 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "full",
-          "name": "name",
-          "onChange": [Function],
-          "placeholder": "Name",
-          "type": "text",
-          "value": "",
+          "children": Array [
+            " ",
+            "",
+            " ",
+          ],
         },
         "ref": null,
-        "rendered": null,
-        "type": "input",
+        "rendered": Array [
+          " ",
+          "",
+          " ",
+        ],
+        "type": "p",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "full",
-          "name": "email",
-          "onChange": [Function],
-          "placeholder": "Email",
-          "type": "email",
-          "value": "",
+          "children": Array [
+            <input
+              className="full"
+              name="name"
+              onChange={[Function]}
+              placeholder="Blend/Bean Name"
+              required={true}
+              type="text"
+              value=""
+/>,
+            <input
+              className="full"
+              name="email"
+              onChange={[Function]}
+              placeholder="Email"
+              required={true}
+              type="email"
+              value=""
+/>,
+            <input
+              className="full"
+              name="overallScore"
+              onChange={[Function]}
+              placeholder="Overall Score (1-6)"
+              required={true}
+              type="text"
+              value=""
+/>,
+            <input
+              className="full"
+              name="region"
+              onChange={[Function]}
+              placeholder="Region"
+              required={true}
+              type="text"
+              value=""
+/>,
+            <input
+              className="full"
+              name="acidity"
+              onChange={[Function]}
+              placeholder="Acidity (1-6)"
+              required={true}
+              type="text"
+              value=""
+/>,
+            <input
+              className="full"
+              name="body"
+              onChange={[Function]}
+              placeholder="Body (1-6)"
+              required={true}
+              type="text"
+              value=""
+/>,
+            <input
+              className="full"
+              name="sweetness"
+              onChange={[Function]}
+              placeholder="Sweetness (1-6)"
+              required={true}
+              type="text"
+              value=""
+/>,
+            <input
+              className="full"
+              name="tactile"
+              onChange={[Function]}
+              placeholder="Tactile (1-6)"
+              required={true}
+              type="text"
+              value=""
+/>,
+            <input
+              className="full"
+              name="overallImpression"
+              onChange={[Function]}
+              placeholder="Overall Impression (Comments)"
+              required={true}
+              type="text"
+              value=""
+/>,
+            <input
+              className="full"
+              name="roaster"
+              onChange={[Function]}
+              placeholder="Roaster Name"
+              required={true}
+              type="text"
+              value=""
+/>,
+            <input
+              className="full"
+              name="additionalComments"
+              onChange={[Function]}
+              placeholder="Additional Comments (Optional)"
+              type="text"
+              value=""
+/>,
+            <input
+              className="submit"
+              type="submit"
+/>,
+          ],
+          "className": "new-roaster",
+          "onSubmit": [Function],
         },
         "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "full",
-          "name": "overallScore",
-          "onChange": [Function],
-          "placeholder": "Overall Score (1-6)",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "full",
-          "name": "region",
-          "onChange": [Function],
-          "placeholder": "Region",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "full",
-          "name": "acidity",
-          "onChange": [Function],
-          "placeholder": "Acidity (1-6)",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "full",
-          "name": "body",
-          "onChange": [Function],
-          "placeholder": "Body (1-6)",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "full",
-          "name": "sweetness",
-          "onChange": [Function],
-          "placeholder": "Sweetness (1-6)",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "full",
-          "name": "tactile",
-          "onChange": [Function],
-          "placeholder": "Tactile (1-6)",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "full",
-          "name": "overallImpression",
-          "onChange": [Function],
-          "placeholder": "Overall Impression (Comments)",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "full",
-          "name": "roaster",
-          "onChange": [Function],
-          "placeholder": "Roaster Name",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "full",
-          "name": "additionalComments",
-          "onChange": [Function],
-          "placeholder": "Additional Comments (Optional)",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "submit",
-          "type": "submit",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full",
+              "name": "name",
+              "onChange": [Function],
+              "placeholder": "Blend/Bean Name",
+              "required": true,
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full",
+              "name": "email",
+              "onChange": [Function],
+              "placeholder": "Email",
+              "required": true,
+              "type": "email",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full",
+              "name": "overallScore",
+              "onChange": [Function],
+              "placeholder": "Overall Score (1-6)",
+              "required": true,
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full",
+              "name": "region",
+              "onChange": [Function],
+              "placeholder": "Region",
+              "required": true,
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full",
+              "name": "acidity",
+              "onChange": [Function],
+              "placeholder": "Acidity (1-6)",
+              "required": true,
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full",
+              "name": "body",
+              "onChange": [Function],
+              "placeholder": "Body (1-6)",
+              "required": true,
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full",
+              "name": "sweetness",
+              "onChange": [Function],
+              "placeholder": "Sweetness (1-6)",
+              "required": true,
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full",
+              "name": "tactile",
+              "onChange": [Function],
+              "placeholder": "Tactile (1-6)",
+              "required": true,
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full",
+              "name": "overallImpression",
+              "onChange": [Function],
+              "placeholder": "Overall Impression (Comments)",
+              "required": true,
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full",
+              "name": "roaster",
+              "onChange": [Function],
+              "placeholder": "Roaster Name",
+              "required": true,
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full",
+              "name": "additionalComments",
+              "onChange": [Function],
+              "placeholder": "Additional Comments (Optional)",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "submit",
+              "type": "submit",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "form",
       },
     ],
-    "type": "form",
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -314,101 +478,119 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <input
-            className="full"
-            name="name"
-            onChange={[Function]}
-            placeholder="Name"
-            type="text"
-            value=""
-/>,
-          <input
-            className="full"
-            name="email"
-            onChange={[Function]}
-            placeholder="Email"
-            type="email"
-            value=""
-/>,
-          <input
-            className="full"
-            name="overallScore"
-            onChange={[Function]}
-            placeholder="Overall Score (1-6)"
-            type="text"
-            value=""
-/>,
-          <input
-            className="full"
-            name="region"
-            onChange={[Function]}
-            placeholder="Region"
-            type="text"
-            value=""
-/>,
-          <input
-            className="full"
-            name="acidity"
-            onChange={[Function]}
-            placeholder="Acidity (1-6)"
-            type="text"
-            value=""
-/>,
-          <input
-            className="full"
-            name="body"
-            onChange={[Function]}
-            placeholder="Body (1-6)"
-            type="text"
-            value=""
-/>,
-          <input
-            className="full"
-            name="sweetness"
-            onChange={[Function]}
-            placeholder="Sweetness (1-6)"
-            type="text"
-            value=""
-/>,
-          <input
-            className="full"
-            name="tactile"
-            onChange={[Function]}
-            placeholder="Tactile (1-6)"
-            type="text"
-            value=""
-/>,
-          <input
-            className="full"
-            name="overallImpression"
-            onChange={[Function]}
-            placeholder="Overall Impression (Comments)"
-            type="text"
-            value=""
-/>,
-          <input
-            className="full"
-            name="roaster"
-            onChange={[Function]}
-            placeholder="Roaster Name"
-            type="text"
-            value=""
-/>,
-          <input
-            className="full"
-            name="additionalComments"
-            onChange={[Function]}
-            placeholder="Additional Comments (Optional)"
-            type="text"
-            value=""
-/>,
-          <input
-            className="submit"
-            type="submit"
-/>,
+          <p>
+             
+            
+             
+</p>,
+          <form
+            className="new-roaster"
+            onSubmit={[Function]}
+>
+            <input
+                        className="full"
+                        name="name"
+                        onChange={[Function]}
+                        placeholder="Blend/Bean Name"
+                        required={true}
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="full"
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="Email"
+                        required={true}
+                        type="email"
+                        value=""
+            />
+            <input
+                        className="full"
+                        name="overallScore"
+                        onChange={[Function]}
+                        placeholder="Overall Score (1-6)"
+                        required={true}
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="full"
+                        name="region"
+                        onChange={[Function]}
+                        placeholder="Region"
+                        required={true}
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="full"
+                        name="acidity"
+                        onChange={[Function]}
+                        placeholder="Acidity (1-6)"
+                        required={true}
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="full"
+                        name="body"
+                        onChange={[Function]}
+                        placeholder="Body (1-6)"
+                        required={true}
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="full"
+                        name="sweetness"
+                        onChange={[Function]}
+                        placeholder="Sweetness (1-6)"
+                        required={true}
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="full"
+                        name="tactile"
+                        onChange={[Function]}
+                        placeholder="Tactile (1-6)"
+                        required={true}
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="full"
+                        name="overallImpression"
+                        onChange={[Function]}
+                        placeholder="Overall Impression (Comments)"
+                        required={true}
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="full"
+                        name="roaster"
+                        onChange={[Function]}
+                        placeholder="Roaster Name"
+                        required={true}
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="full"
+                        name="additionalComments"
+                        onChange={[Function]}
+                        placeholder="Additional Comments (Optional)"
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="submit"
+                        type="submit"
+            />
+</form>,
         ],
-        "className": "new-roaster",
-        "onSubmit": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -417,191 +599,337 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "full",
-            "name": "name",
-            "onChange": [Function],
-            "placeholder": "Name",
-            "type": "text",
-            "value": "",
+            "children": Array [
+              " ",
+              "",
+              " ",
+            ],
           },
           "ref": null,
-          "rendered": null,
-          "type": "input",
+          "rendered": Array [
+            " ",
+            "",
+            " ",
+          ],
+          "type": "p",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "full",
-            "name": "email",
-            "onChange": [Function],
-            "placeholder": "Email",
-            "type": "email",
-            "value": "",
+            "children": Array [
+              <input
+                className="full"
+                name="name"
+                onChange={[Function]}
+                placeholder="Blend/Bean Name"
+                required={true}
+                type="text"
+                value=""
+/>,
+              <input
+                className="full"
+                name="email"
+                onChange={[Function]}
+                placeholder="Email"
+                required={true}
+                type="email"
+                value=""
+/>,
+              <input
+                className="full"
+                name="overallScore"
+                onChange={[Function]}
+                placeholder="Overall Score (1-6)"
+                required={true}
+                type="text"
+                value=""
+/>,
+              <input
+                className="full"
+                name="region"
+                onChange={[Function]}
+                placeholder="Region"
+                required={true}
+                type="text"
+                value=""
+/>,
+              <input
+                className="full"
+                name="acidity"
+                onChange={[Function]}
+                placeholder="Acidity (1-6)"
+                required={true}
+                type="text"
+                value=""
+/>,
+              <input
+                className="full"
+                name="body"
+                onChange={[Function]}
+                placeholder="Body (1-6)"
+                required={true}
+                type="text"
+                value=""
+/>,
+              <input
+                className="full"
+                name="sweetness"
+                onChange={[Function]}
+                placeholder="Sweetness (1-6)"
+                required={true}
+                type="text"
+                value=""
+/>,
+              <input
+                className="full"
+                name="tactile"
+                onChange={[Function]}
+                placeholder="Tactile (1-6)"
+                required={true}
+                type="text"
+                value=""
+/>,
+              <input
+                className="full"
+                name="overallImpression"
+                onChange={[Function]}
+                placeholder="Overall Impression (Comments)"
+                required={true}
+                type="text"
+                value=""
+/>,
+              <input
+                className="full"
+                name="roaster"
+                onChange={[Function]}
+                placeholder="Roaster Name"
+                required={true}
+                type="text"
+                value=""
+/>,
+              <input
+                className="full"
+                name="additionalComments"
+                onChange={[Function]}
+                placeholder="Additional Comments (Optional)"
+                type="text"
+                value=""
+/>,
+              <input
+                className="submit"
+                type="submit"
+/>,
+            ],
+            "className": "new-roaster",
+            "onSubmit": [Function],
           },
           "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "full",
-            "name": "overallScore",
-            "onChange": [Function],
-            "placeholder": "Overall Score (1-6)",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "full",
-            "name": "region",
-            "onChange": [Function],
-            "placeholder": "Region",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "full",
-            "name": "acidity",
-            "onChange": [Function],
-            "placeholder": "Acidity (1-6)",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "full",
-            "name": "body",
-            "onChange": [Function],
-            "placeholder": "Body (1-6)",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "full",
-            "name": "sweetness",
-            "onChange": [Function],
-            "placeholder": "Sweetness (1-6)",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "full",
-            "name": "tactile",
-            "onChange": [Function],
-            "placeholder": "Tactile (1-6)",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "full",
-            "name": "overallImpression",
-            "onChange": [Function],
-            "placeholder": "Overall Impression (Comments)",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "full",
-            "name": "roaster",
-            "onChange": [Function],
-            "placeholder": "Roaster Name",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "full",
-            "name": "additionalComments",
-            "onChange": [Function],
-            "placeholder": "Additional Comments (Optional)",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "submit",
-            "type": "submit",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full",
+                "name": "name",
+                "onChange": [Function],
+                "placeholder": "Blend/Bean Name",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full",
+                "name": "email",
+                "onChange": [Function],
+                "placeholder": "Email",
+                "required": true,
+                "type": "email",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full",
+                "name": "overallScore",
+                "onChange": [Function],
+                "placeholder": "Overall Score (1-6)",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full",
+                "name": "region",
+                "onChange": [Function],
+                "placeholder": "Region",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full",
+                "name": "acidity",
+                "onChange": [Function],
+                "placeholder": "Acidity (1-6)",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full",
+                "name": "body",
+                "onChange": [Function],
+                "placeholder": "Body (1-6)",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full",
+                "name": "sweetness",
+                "onChange": [Function],
+                "placeholder": "Sweetness (1-6)",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full",
+                "name": "tactile",
+                "onChange": [Function],
+                "placeholder": "Tactile (1-6)",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full",
+                "name": "overallImpression",
+                "onChange": [Function],
+                "placeholder": "Overall Impression (Comments)",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full",
+                "name": "roaster",
+                "onChange": [Function],
+                "placeholder": "Roaster Name",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full",
+                "name": "additionalComments",
+                "onChange": [Function],
+                "placeholder": "Additional Comments (Optional)",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "submit",
+                "type": "submit",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "form",
         },
       ],
-      "type": "form",
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
