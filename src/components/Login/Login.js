@@ -22,8 +22,7 @@ export class Login extends Component {
  componentDidMount() {
     firebase.auth().onAuthStateChanged( async user => {
       if(user) {
-        const userToStore = {
-          userName: user.displayName,
+        const userToStore = {    userName: user.displayName,
           userEmail: user.email,
           userPhoto: user.photoURL,
           userId: user.uid 

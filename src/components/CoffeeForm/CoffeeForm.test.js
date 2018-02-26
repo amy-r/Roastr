@@ -96,10 +96,41 @@ describe('CoffeeForm', () => {
     const form = { name:'Corvus', overallImpression: 'great'}
     const wrapper = shallow(<CoffeeForm />)
     window.fetch = jest.fn();
-    
+
     wrapper.instance().sendEmail(form);
 
     expect(window.fetch).toHaveBeenCalled;
+  })
+
+  it('should setState to an error when status is not okay', () => {
+    const form = { name:'Corvus', overallImpression: 'great'}
+    const expectedState = {
+      name:'',
+      overallScore: '',
+      region: '',
+      acidity: '',
+      body: '',
+      sweetness: '',
+      tactile: '',
+      email: '',
+      overallImpression: '', 
+      roaster: '',
+      errorState: 'Your email could not be sent at this time',
+      additionalComments: '',
+    }
+    
+    const wrapper = shallow(<CoffeeForm />)
+    window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          ok: false,
+          status: 404,
+          error
+
+        })
+    }) 
+    wrapper.instance().sendEmail(form)
+
+    expect(wrapper.state()).toEqual(expectedState)  
   })
 })
 
