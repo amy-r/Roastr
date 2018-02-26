@@ -46,7 +46,6 @@ export const convertToArray = (roasters) => {
   }
 }
 
-
 export const pullRoasters = async (ref) => {
   const currentValue = await ref.once("value")
   const snapshotValue = await currentValue.val()
