@@ -47,7 +47,7 @@ export class CoffeeForm extends Component {
         additionalComments: ''
       });
       this.props.history.push(`/single-roaster/${newCoffee.roaster}`);
-    } catch(error) {
+    } catch (error) {
       this.setState({
         errorState: 'Your email could not be sent at this time'
       });
@@ -171,7 +171,8 @@ export const mapDispatchToProps = (dispatch) => ({
 });
 
 CoffeeForm.propTypes = {
-  addCoffee: PropTypes.func
+  addCoffee: PropTypes.func,
+  history: PropTypes.array
 };
 
 export default withRouter(connect(null, mapDispatchToProps)(CoffeeForm));
