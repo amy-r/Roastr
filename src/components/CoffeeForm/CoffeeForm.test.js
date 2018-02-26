@@ -21,6 +21,7 @@ describe('CoffeeForm', () => {
       tactile: '',
       overallImpression: '', 
       roaster: '',
+      email: '',
       additionalComments: ''
     };
 
@@ -40,6 +41,7 @@ describe('CoffeeForm', () => {
       tactile: '',
       overallImpression: '', 
       roaster: '',
+      email: '',
       additionalComments: ''
     };
     const wrapper = shallow(<CoffeeForm />)
@@ -62,6 +64,7 @@ describe('CoffeeForm', () => {
       body: '1',
       sweetness: '1',
       tactile: '1',
+      email: '1',
       overallImpression: '1', 
       roaster: '1',
       additionalComments: '1'
