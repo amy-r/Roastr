@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Main from '../Main/Main';
 import { withRouter } from 'react-router-dom';
-import { logIn } from '../../actions/index';
+import { logIn, retrievedRoasters, retrievedCoffees } from '../../actions/index';
 import { connect } from 'react-redux';
 import { pullRoasters } from '../../Utilities/firebaseFunctions';
 import { firebaseApp } from '../../Utilities/firebaseFunctions';
@@ -20,6 +20,8 @@ export class App extends Component {
      const currentCoffees = await pullRoasters(ref2);
      localStorage.setItem('roasters', JSON.stringify(currentRoasters));
      localStorage.setItem('coffees', JSON.stringify(currentCoffees));
+     this.props.retrievedRoasters(currentRoasters);
+     this.props.retrievedCoffees(currentCoffees);
     }
   }
 
@@ -37,7 +39,9 @@ export const mapStateToProps = state => ({
 })
 
 export const mapDispatchToProps = dispatch => ({
-  logIn: user => dispatch(logIn(user))
+  logIn: user => dispatch(logIn(user)),
+  retrievedRoasters: roasters => dispatch(retrievedRoasters(roasters)),
+  retrievedCoffees: coffees => dispatch(retrievedCoffees(coffees))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

@@ -10,10 +10,7 @@ import { retrievedRoasters, retrievedCoffees } from '../../actions/index'
 
 export class CardContainer extends Component {
   componentDidMount() {
-    const currentRoasters = JSON.parse(localStorage.getItem('roasters'));
-    this.props.retrievedRoasters(currentRoasters);
-    const currentCoffees = JSON.parse(localStorage.getItem('coffees'));
-    this.props.retrievedCoffees(currentCoffees)
+
   }
     
 
