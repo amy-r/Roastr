@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { CoffeeForm, mapDispatchToProps } from './CoffeeForm';
 import { shallow } from 'enzyme';
+import * as firebaseFunctions from '../../Utilities/firebaseFunctions';
 
 describe('CoffeeForm', () => {
   it('should exist', () => {
@@ -91,6 +92,54 @@ describe('CoffeeForm', () => {
 
     expect(wrapper.state()).toEqual(expectedState)
   });
+
+  it('handleSubmit should reset the values of the input fields', () => {
+    const expectedState = {
+      name:'',
+      overallScore: '',
+      region: '',
+      acidity: '',
+      body: '',
+      sweetness: '',
+      tactile: '',
+      overallImpression: '', 
+      roaster: '',
+      email: '',
+      errorState: '',
+      additionalComments: ''
+    };
+    const mockEvent = {
+      preventDefault: jest.fn()
+    }
+    const wrapper = shallow(<CoffeeForm addCoffee={jest.fn()}/>);
+    wrapper.setState({
+      name: 'Marcus Mumford'
+    })
+
+    wrapper.instance().handleSubmit(mockEvent)
+    expect(wrapper.state()).toEqual(expectedState);
+  })
+
+  it('should set an error state if there is a problem with handleSubmit', () => {
+    const expectedState = {
+      name:'',
+      overallScore: '',
+      region: '',
+      acidity: '',
+      body: '',
+      sweetness: '',
+      tactile: '',
+      overallImpression: '', 
+      roaster: '',
+      email: '',
+      errorState: 'Your email could not be sent at this time',
+      additionalComments: ''
+    };
+    const wrapper = shallow(<CoffeeForm addCoffee={jest.fn()} />)
+    wrapper.instance().handleSubmit()
+
+    expect(wrapper.state()).toEqual(expectedState);
+  })
 })
 
 describe('MDTP', () => {
