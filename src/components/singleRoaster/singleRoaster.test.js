@@ -16,13 +16,13 @@ describe('FormCard', () => {
   })
 
   describe('MSTP', () => {
-    it('should define the coffee props for the container MSTP', () => {
-    const roasterName = "Corvus";
-    const overAllScore= "frank@gmail.com";
-    const mockStore = {coffees: [ {roasterName, overAllScore} ]};
-    const expected = [ {roasterName, overAllScore} ];
-    const mapped = mapStateToProps(mockStore);
-    expect(mapped.coffees).toEqual(expected)
+    it('should define the coffee props for the container', () => {
+      const roasterName = "Corvus";
+      const overAllScore= "10";
+      const mockStore = {coffees: [ {roasterName, overAllScore} ]};
+      const expected = [ {roasterName, overAllScore} ];
+      const mapped = mapStateToProps(mockStore);
+      expect(mapped.coffees).toEqual(expected)
     })
   })
 })

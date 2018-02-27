@@ -29,6 +29,7 @@ export class Login extends Component {
         };
         localStorage.setItem('user', JSON.stringify(userToStore));
         this.props.logIn(userToStore);
+        //try catch
         writeUserData(userToStore);
       }
     });

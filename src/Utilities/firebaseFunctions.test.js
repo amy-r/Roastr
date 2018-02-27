@@ -1,4 +1,5 @@
-import {writeUserData, addRoasterData, convertToArray, pullRoasters } from './firebaseFunctions.js'
+import { writeUserData, addRoasterData, convertToArray, pullRoasters } from './firebaseFunctions.js';
+import * as firebase from 'firebase';
 
 describe('firebaseFuctions', () => {
 
@@ -17,6 +18,35 @@ describe('firebaseFuctions', () => {
       ]
       expect(convertToArray(mockRoasters)).toEqual(mockRoastersArray)
 
+    })
+  })
+
+  describe('addRoasterData', () => {
+    it('should throw an error if unsuccessful', () => {
+
+    firebaseApp.database().ref('roasters/' + name).set({
+      name,
+      altitude,
+      location,
+      equipment,
+      water,
+      contact,
+      email,
+    }) = jest.fn().mockImplementation( () => {
+      throw new Error('error adding Roaster')
+    })
+
+    const errorFunction = addRoasterData();
+
+    expect(firebaseApp.database().ref('roasters/' + name).set({
+      name,
+      altitude,
+      location,
+      equipment,
+      water,
+      contact,
+      email,
+    }).toHaveBeenCalled())
     })
   })
 })

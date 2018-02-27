@@ -54,14 +54,14 @@ describe('MSTP and MDTP', () => {
     expect(mapped.user).toEqual(expected)
   })
 
-  it('should call the dispatch function on MDTP for logIn', () => {
+  it('should call dispatch on logIn', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.logIn();
     expect(mockDispatch).toHaveBeenCalled;
   })
 
-  it('should call the dispatch function on MDTP for logOut', () => {
+  it('should call dispatch on logOut', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.logOut();

@@ -28,4 +28,13 @@ describe('MSTP', () => {
     const mapped = mapStateToProps(mockStore);
     expect(mapped.user).toEqual(expected)
   })
+
+  it('should define the roaster props for the container', () => {
+    const name = "Corvus";
+    const location = "Denver";
+    const mockStore = {roasters: [ { name, location }]}
+    const expected = [{ name, location }]
+    const mapped = mapStateToProps(mockStore);
+    expect(mapped.roasters).toEqual(expected);
+  })
 })

@@ -90,7 +90,7 @@ describe('MSTP and MDTP', () => {
     expect(mapped.user).toEqual(expected)
   })
   
-  it('should call the dispatch function on MDTP', () => {
+  it('should call dispatch on addRoaster', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.addRoaster();
