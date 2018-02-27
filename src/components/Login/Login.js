@@ -20,19 +20,22 @@ export class Login extends Component {
   }
 
   componentDidMount() {
-    firebase.auth().onAuthStateChanged( async user => {
-      if (user) {
-        const userToStore = {    userName: user.displayName,
-          userEmail: user.email,
-          userPhoto: user.photoURL,
-          userId: user.uid 
-        };
-        localStorage.setItem('user', JSON.stringify(userToStore));
-        this.props.logIn(userToStore);
-        //try catch
-        writeUserData(userToStore);
-      }
-    });
+    try {
+      firebase.auth().onAuthStateChanged( async user => {
+        if (user) {
+          const userToStore = {    userName: user.displayName,
+            userEmail: user.email,
+            userPhoto: user.photoURL,
+            userId: user.uid 
+          };
+          localStorage.setItem('user', JSON.stringify(userToStore));
+          this.props.logIn(userToStore);
+          await writeUserData(userToStore);
+        }
+      }); 
+    } catch (error) {
+      this.setState({errorState: 'error finding user'})
+    }
   }
 
   signOut = (user) => {
