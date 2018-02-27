@@ -15,7 +15,8 @@ export class Form extends Component {
       equipment: '',
       water: '',
       contact: '',
-      email: ''
+      email: '',
+      errorState: ''
     };
   }
 
@@ -31,17 +32,21 @@ export class Form extends Component {
     localStorage.setItem('roasters', JSON.stringify(newRoasters));
     addRoaster(newRoaster);
     //needs a try catch block, and a test to catch the error
-    addRoasterData(newRoaster);
-    this.setState({
-      name: '',
-      location: '',
-      altitude: '',
-      equipment: '',
-      water: '',
-      contact: '',
-      email: ''
-    });
-    history.push('/current-roasters');
+    try {
+      addRoasterData(newRoaster);
+      this.setState({
+        name: '',
+        location: '',
+        altitude: '',
+        equipment: '',
+        water: '',
+        contact: '',
+        email: ''
+      });
+      history.push('/current-roasters'); 
+    } catch (error) {
+      this.setState({errorState: 'error adding roaster'})
+    }
   }
 
   handleChange = (event) => {
