@@ -27,17 +27,33 @@ export class App extends Component {
       const user = JSON.parse(localStorage.getItem('user'));
       if (user) {
         this.props.logIn(user);
-        const currentRoasters = await pullRoasters(ref1);
-        const currentCoffees = await pullRoasters(ref2);
-        localStorage.setItem('roasters', JSON.stringify(currentRoasters));
-        localStorage.setItem('coffees', JSON.stringify(currentCoffees));
-        this.props.retrievedRoasters(currentRoasters);
-        this.props.retrievedCoffees(currentCoffees);
+        this.updateStore();
       }
     } catch (error) {
       this.setState({
         errorState: 'Error Retrieving Information'
       });
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(this.props.user !== nextProps.user) {
+      this.updateStore();
+    }
+  }
+
+  updateStore = async () => {
+    try {
+      const currentRoasters = await pullRoasters(ref1);
+      const currentCoffees = await pullRoasters(ref2);
+      localStorage.setItem('roasters', JSON.stringify(currentRoasters));
+      localStorage.setItem('coffees', JSON.stringify(currentCoffees));
+      this.props.retrievedRoasters(currentRoasters);
+      this.props.retrievedCoffees(currentCoffees);
+    } catch (error) {
+      this.setState({
+        errorState: 'Error Retrieving Information'
+      })
     }
   }
 
