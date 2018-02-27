@@ -22,10 +22,24 @@ describe('MSTP and MDTP', () => {
     expect(mapped.user).toEqual(expected)
   })
 
-  it('should call dispatch on MDTP', () => {
+  it('should call dispatch on logIn', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.logIn();
     expect(mockDispatch).toHaveBeenCalled;
   })
+
+  it('should call dispatch on retrievedRoasters', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.retrievedRoasters();
+    expect(mockDispatch).toHaveBeenCalled;
+  })
+
+  it('should call dispatch on retrievedCoffees', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.retrievedCoffees();
+    expect(mockDispatch).toHaveBeenCalled;
+  })  
 })

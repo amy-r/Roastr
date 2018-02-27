@@ -30,6 +30,7 @@ export class Form extends Component {
     const newRoasters = [...currentRoasters, newRoaster];
     localStorage.setItem('roasters', JSON.stringify(newRoasters));
     addRoaster(newRoaster);
+    //needs a try catch block, and a test to catch the error
     addRoasterData(newRoaster);
     this.setState({
       name: '',

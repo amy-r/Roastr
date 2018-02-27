@@ -190,7 +190,7 @@ describe('CoffeeForm', () => {
 })
 
 describe('MDTP', () => {
-  it('should call the dispatch function on MDTP', () => {
+  it('should call dispatch on addCoffee', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.addCoffee();
