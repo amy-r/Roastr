@@ -3,6 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Form, mapStateToProps, mapDispatchToProps } from './Form';
 import { shallow } from 'enzyme';
+import * as firebaseFunction from '../../Utilities/firebaseFunctions';
+require('jest-localstorage-mock');
 
 describe('Form', () => {
   it('should exist', () => {
@@ -20,6 +22,7 @@ describe('Form', () => {
       water: '',
       contact: '',
       email: '',
+      errorState: ''
     }
 
     const wrapper = shallow(<Form />);
@@ -36,6 +39,7 @@ describe('Form', () => {
       water: '',
       contact: '',
       email: '',
+      errorState: ''
     }
     const wrapper = shallow(<Form />)
     const mockEvent = {
@@ -57,6 +61,7 @@ describe('Form', () => {
       water: '1',
       contact: '1',
       email: '1',
+      errorState: ''
     }
 
     const wrapper = shallow(<Form />);
@@ -77,6 +82,31 @@ describe('Form', () => {
 
     expect(wrapper.state()).toEqual(expectedState)
   });
+
+  it('should set an error state if addRoasterData rejects', () => {
+    firebaseFunction.addRoasterData = () => {
+      throw new Error
+    }
+    const user = {userId: '1'};
+    const mockEvent = {preventDefault: jest.fn()};
+    const wrapper = shallow(<Form user={user} addRoaster={jest.fn()}/>);
+    localStorage.setItem('roasters', JSON.stringify(['Corvus']) )
+
+    wrapper.instance().handleSubmit(mockEvent);
+    expect(wrapper.state('errorState')).toEqual('error adding roaster')
+  })
+
+  it('calls addRoaster on a successful submission', () => {
+    firebaseFunction.addRoasterData = jest.fn();
+    const user = {userId: '1'};
+    const mockEvent = {preventDefault: jest.fn()};
+    const wrapper = shallow(<Form user={user} addRoaster={jest.fn()}/>);
+    localStorage.setItem('roasters', JSON.stringify(['Corvus']) )
+
+    wrapper.instance().handleSubmit(mockEvent);
+
+    expect(wrapper.props().addRoaster).toHaveBeenCalled;
+  })
 })
 
 describe('MSTP and MDTP', () => {

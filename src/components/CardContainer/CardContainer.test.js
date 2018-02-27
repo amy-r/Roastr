@@ -31,6 +31,14 @@ describe('CardContainer', () => {
 
     expect(wrapper).toMatchSnapshot();
   })
+
+  it('should call renderedCards', () => {
+    const wrapper = shallow(<CardContainer roasters={mockRoasters} />, {disableLifecycleMethods:true})
+
+    wrapper.instance().renderedCards = jest.fn();
+
+    expect(wrapper.instance().renderedCards).toHaveBeenCalled;
+  })
 })
 
 describe('MDTP', () => {

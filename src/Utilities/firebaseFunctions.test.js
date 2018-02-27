@@ -1,7 +1,12 @@
-import { writeUserData, addRoasterData, convertToArray, pullRoasters } from './firebaseFunctions.js';
+import { writeUserData, addRoasterData, convertToArray, pullRoasters, firebaseApp } from './firebaseFunctions.js';
 import * as firebase from 'firebase';
+import { config } from './firebase-config';
+
+
 
 describe('firebaseFuctions', () => {
+  
+  // const firebaseApp = firebase.initializeApp(config);
 
   describe('convertToArray', () => {
     it('should take in a roaster array and return an array', () => {
@@ -22,31 +27,36 @@ describe('firebaseFuctions', () => {
   })
 
   describe('addRoasterData', () => {
+    it('should call set with expected params', () => {
+
+    })
+
     it('should throw an error if unsuccessful', () => {
 
-    firebaseApp.database().ref('roasters/' + name).set({
-      name,
-      altitude,
-      location,
-      equipment,
-      water,
-      contact,
-      email,
-    }) = jest.fn().mockImplementation( () => {
-      throw new Error('error adding Roaster')
-    })
+    firebaseApp.database()= jest.fn();
+    // ref('roasters/' + name) = jest.fn().mockImplementation( () => {
+    //   throw new Error('error adding Roaster')
+    // })
 
     const errorFunction = addRoasterData();
 
-    expect(firebaseApp.database().ref('roasters/' + name).set({
-      name,
-      altitude,
-      location,
-      equipment,
-      water,
-      contact,
-      email,
-    }).toHaveBeenCalled())
+    expect(addRoasterData()).toThrow('error adding Roaster')
+    })
+  })
+
+  describe('addCoffeeData', () => {
+    it('should call set with expected params', () => {
+
+    })
+
+    it('should throw an error if unsuccessful', () => {
+
+    })
+  })
+
+  describe('pullRoasters', () => {
+    it('should throw an error if unsuccessful', () => {
+
     })
   })
 })

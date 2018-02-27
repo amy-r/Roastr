@@ -187,6 +187,14 @@ describe('CoffeeForm', () => {
 
     expect(wrapper.state()).toEqual(expectedState);
   })
+
+  it('should call addCoffee and sendEmail on submit', () => {
+    const wrapper = shallow(<CoffeeForm addCoffee={jest.fn()} />)
+    wrapper.instance().handleSubmit();
+
+    expect(wrapper.props().addCoffee).toHaveBeenCalled;
+    expect(wrapper.instance().sendEmail).toHaveBeenCalled;
+  })
 })
 
 describe('MDTP', () => {
