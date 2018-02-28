@@ -23,7 +23,8 @@ export class Login extends Component {
     try {
       firebase.auth().onAuthStateChanged( async user => {
         if (user) {
-          const userToStore = {    userName: user.displayName,
+          const userToStore = {    
+            userName: user.displayName,
             userEmail: user.email,
             userPhoto: user.photoURL,
             userId: user.uid 
@@ -34,15 +35,17 @@ export class Login extends Component {
         }
       }); 
     } catch (error) {
-      this.setState({errorState: 'error finding user'})
+      this.setState({
+        errorState: 'error finding user'
+      });
     }
   }
 
-  signOut = (user) => {
+  signOut = () => {
     firebase.auth().signOut();
     localStorage.removeItem('user');
     localStorage.removeItem('roasters');
-    this.props.logOut(user);
+    this.props.logOut();
   }
 
   loginDisplay = ({user}) => {
@@ -95,7 +98,7 @@ export const mapStateToProps = store => ({
 
 export const mapDispatchToProps = dispatch => ({
   logIn: user => dispatch(logIn(user)),
-  logOut: user => dispatch(logOut(user))
+  logOut: () => dispatch(logOut())
 });
 
 Login.propTypes = {

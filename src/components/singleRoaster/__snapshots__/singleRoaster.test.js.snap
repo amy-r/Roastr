@@ -32,11 +32,13 @@ ShallowWrapper {
           Corvus
            
 </h1>,
-        Array [
+        <div
+          className="form-container"
+>
           <Unknown
-            roaster="Corvus"
-/>,
-        ],
+                    roaster="Corvus"
+          />
+</div>,
       ],
     },
     "ref": null,
@@ -62,14 +64,31 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "NaN",
-        "nodeType": "function",
+        "key": undefined,
+        "nodeType": "host",
         "props": Object {
-          "roaster": "Corvus",
+          "children": Array [
+            <Unknown
+              roaster="Corvus"
+/>,
+          ],
+          "className": "form-container",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "NaN",
+            "nodeType": "function",
+            "props": Object {
+              "roaster": "Corvus",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -86,11 +105,13 @@ ShallowWrapper {
             Corvus
              
 </h1>,
-          Array [
+          <div
+            className="form-container"
+>
             <Unknown
-              roaster="Corvus"
-/>,
-          ],
+                        roaster="Corvus"
+            />
+</div>,
         ],
       },
       "ref": null,
@@ -116,14 +137,31 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "NaN",
-          "nodeType": "function",
+          "key": undefined,
+          "nodeType": "host",
           "props": Object {
-            "roaster": "Corvus",
+            "children": Array [
+              <Unknown
+                roaster="Corvus"
+/>,
+            ],
+            "className": "form-container",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "NaN",
+              "nodeType": "function",
+              "props": Object {
+                "roaster": "Corvus",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",

@@ -21,8 +21,14 @@ export class Main extends Component {
     const found = roasters.find( item => {
       return item.name === match.params.name;
     });
-    
     return <SingleRoaster {...found} />;
+  }
+
+  findFormInfo = (match, roasters) => {
+    const found = roasters.find( item => {
+      return item.name === match.params.name;
+    });
+    return <CoffeeForm {...found} />;
   }
 
   render() {
@@ -31,7 +37,9 @@ export class Main extends Component {
         { this.displayHeader() }
         <Switch>
           <Route path='/form' component={Form} />
-          <Route path='/coffee-form' component={CoffeeForm} />
+          <Route path='/coffee-form/:name' render={({ match }) => {
+            return this.findFormInfo(match, this.props.roasters);
+          }} />
           <Route path='/current-roasters' component={CardContainer} />
           <Route path='/single-roaster/:name' render={({ match }) => {
             return this.findRoute(match, this.props.roasters);

@@ -1,12 +1,9 @@
-import { writeUserData, addRoasterData, convertToArray, pullRoasters, firebaseApp } from './firebaseFunctions.js';
+import { writeUserData, addRoasterData, addCoffeeData, convertToArray, pullRoasters, firebaseApp } from './firebaseFunctions.js';
 import * as firebase from 'firebase';
 import { config } from './firebase-config';
 
 
-
 describe('firebaseFuctions', () => {
-  
-  // const firebaseApp = firebase.initializeApp(config);
 
   describe('convertToArray', () => {
     it('should take in a roaster array and return an array', () => {
@@ -27,36 +24,123 @@ describe('firebaseFuctions', () => {
   })
 
   describe('addRoasterData', () => {
-    it('should call set with expected params', () => {
+    it('should call set', () => {
+      const mockRoaster = {
+        Corvus: { 
+          name: 'Corvus',
+          location: 'Denver',
+          altitude: '5280',
+          equipment: '',
+          water: '',
+          contact: '',
+          email: '' 
+        }
+      }
 
+      firebaseApp.database = jest.fn().mockImplementation( (mockRoaster) => {
+        return {ref: jest.fn().mockImplementation ( (mockRoaster) => {
+          return {set: jest.fn().mockImplementation( (mockRoaster) => {
+            return mockRoaster
+          })}
+        })}
+      })
+
+      addRoasterData(mockRoaster)
+      expect(firebaseApp.database().ref('roasters/' + mockRoaster.name).set).toHaveBeenCalled;
     })
 
     it('should throw an error if unsuccessful', () => {
+       const mockRoaster = {
+              Corvus: { 
+                name: 'Corvus',
+                location: 'Denver',
+                altitude: '5280',
+                equipment: '',
+                water: '',
+                contact: '',
+                email: '' 
+              }
+            }
 
-    firebaseApp.database()= jest.fn();
-    // ref('roasters/' + name) = jest.fn().mockImplementation( () => {
-    //   throw new Error('error adding Roaster')
-    // })
+      firebaseApp.database = jest.fn().mockImplementation( (mockRoaster) => {
+        return {ref: jest.fn().mockImplementation ( (mockRoaster) => {
+          return {set: jest.fn().mockImplementation( (mockRoaster) => {
+            throw new Error('error adding Roaster')
+          })}
+        })}
+      })
 
-    const errorFunction = addRoasterData();
-
-    expect(addRoasterData()).toThrow('error adding Roaster')
+      expect(firebaseApp.database().ref('roasters/' + mockRoaster.name).set).toThrow('error adding Roaster')
     })
   })
 
   describe('addCoffeeData', () => {
-    it('should call set with expected params', () => {
+    it('should call set', () => {
+      const mockCoffee = {
+        name:'',
+        overallScore: '',
+        region: '',
+        acidity: '',
+        body: '',
+        sweetness: '',
+        tactile: '',
+        overallImpression: '', 
+        roaster: '',
+        email: '',
+        errorState:'',
+        additionalComments: ''
+      };
 
+      firebaseApp.database = jest.fn().mockImplementation( (mockCoffee) => {
+        return {ref: jest.fn().mockImplementation ( (mockCoffee) => {
+          return {set: jest.fn().mockImplementation( (mockCoffee) => {
+            return mockCoffee
+          })}
+        })}
+      })
+
+      addCoffeeData(mockCoffee)
+      expect(firebaseApp.database().ref('coffees/' + mockCoffee.name).set).toHaveBeenCalled;
     })
 
     it('should throw an error if unsuccessful', () => {
+      const mockCoffee = {
+        name:'',
+        overallScore: '',
+        region: '',
+        acidity: '',
+        body: '',
+        sweetness: '',
+        tactile: '',
+        overallImpression: '', 
+        roaster: '',
+        email: '',
+        errorState:'',
+        additionalComments: ''
+      };
 
+      firebaseApp.database = jest.fn().mockImplementation( (mockCoffee) => {
+        return {ref: jest.fn().mockImplementation ( (mockCoffee) => {
+          return {set: jest.fn().mockImplementation( (mockCoffee) => {
+            throw new Error('error adding Coffee data')
+          })}
+        })}
+      })
+
+      expect(firebaseApp.database().ref('coffees/' + mockCoffee.name).set).toThrow('error adding Coffee data')
     })
   })
 
-  describe('pullRoasters', () => {
-    it('should throw an error if unsuccessful', () => {
+  // describe('pullRoasters', () => {
+  //   it('should throw an error if unsuccessful', async () => {
+  //     const db = firebaseApp.database()
+  //     const ref2 = db.ref('/coffees');
 
-    })
-  })
+  //     ref2.once = jest.fn().mockImplementation( (value) => {
+  //       throw new Error('error')
+  //     })
+  //     const thing = await pullRoasters(ref2)
+  //     expect(pullRoasters(ref2)).toThrow();
+  //   })
+  // })
 })

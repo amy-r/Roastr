@@ -28,21 +28,30 @@ ShallowWrapper {
           onSubmit={[Function]}
 >
           <input
+                    className="full prefilled"
+                    disabled={true}
+                    name="roaster"
+                    placeholder="Roaster Name"
+                    required={true}
+                    type="text"
+                    value={undefined}
+          />
+          <input
+                    className="full prefilled"
+                    disabled={true}
+                    name="email"
+                    placeholder="Email"
+                    required={true}
+                    type="email"
+                    value={undefined}
+          />
+          <input
                     className="full"
                     name="name"
                     onChange={[Function]}
                     placeholder="Blend/Bean Name"
                     required={true}
                     type="text"
-                    value=""
-          />
-          <input
-                    className="full"
-                    name="email"
-                    onChange={[Function]}
-                    placeholder="Email"
-                    required={true}
-                    type="email"
                     value=""
           />
           <input
@@ -110,15 +119,6 @@ ShallowWrapper {
           />
           <input
                     className="full"
-                    name="roaster"
-                    onChange={[Function]}
-                    placeholder="Roaster Name"
-                    required={true}
-                    type="text"
-                    value=""
-          />
-          <input
-                    className="full"
                     name="additionalComments"
                     onChange={[Function]}
                     placeholder="Additional Comments (Optional)"
@@ -160,21 +160,30 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <input
+              className="full prefilled"
+              disabled={true}
+              name="roaster"
+              placeholder="Roaster Name"
+              required={true}
+              type="text"
+              value={undefined}
+/>,
+            <input
+              className="full prefilled"
+              disabled={true}
+              name="email"
+              placeholder="Email"
+              required={true}
+              type="email"
+              value={undefined}
+/>,
+            <input
               className="full"
               name="name"
               onChange={[Function]}
               placeholder="Blend/Bean Name"
               required={true}
               type="text"
-              value=""
-/>,
-            <input
-              className="full"
-              name="email"
-              onChange={[Function]}
-              placeholder="Email"
-              required={true}
-              type="email"
               value=""
 />,
             <input
@@ -242,15 +251,6 @@ ShallowWrapper {
 />,
             <input
               className="full"
-              name="roaster"
-              onChange={[Function]}
-              placeholder="Roaster Name"
-              required={true}
-              type="text"
-              value=""
-/>,
-            <input
-              className="full"
               name="additionalComments"
               onChange={[Function]}
               placeholder="Additional Comments (Optional)"
@@ -272,13 +272,30 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": "full",
-              "name": "name",
-              "onChange": [Function],
-              "placeholder": "Blend/Bean Name",
+              "className": "full prefilled",
+              "disabled": true,
+              "name": "roaster",
+              "placeholder": "Roaster Name",
               "required": true,
               "type": "text",
-              "value": "",
+              "value": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "full prefilled",
+              "disabled": true,
+              "name": "email",
+              "placeholder": "Email",
+              "required": true,
+              "type": "email",
+              "value": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -290,11 +307,11 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "className": "full",
-              "name": "email",
+              "name": "name",
               "onChange": [Function],
-              "placeholder": "Email",
+              "placeholder": "Blend/Bean Name",
               "required": true,
-              "type": "email",
+              "type": "text",
               "value": "",
             },
             "ref": null,
@@ -426,23 +443,6 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "className": "full",
-              "name": "roaster",
-              "onChange": [Function],
-              "placeholder": "Roaster Name",
-              "required": true,
-              "type": "text",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "full",
               "name": "additionalComments",
               "onChange": [Function],
               "placeholder": "Additional Comments (Optional)",
@@ -488,21 +488,30 @@ ShallowWrapper {
             onSubmit={[Function]}
 >
             <input
+                        className="full prefilled"
+                        disabled={true}
+                        name="roaster"
+                        placeholder="Roaster Name"
+                        required={true}
+                        type="text"
+                        value={undefined}
+            />
+            <input
+                        className="full prefilled"
+                        disabled={true}
+                        name="email"
+                        placeholder="Email"
+                        required={true}
+                        type="email"
+                        value={undefined}
+            />
+            <input
                         className="full"
                         name="name"
                         onChange={[Function]}
                         placeholder="Blend/Bean Name"
                         required={true}
                         type="text"
-                        value=""
-            />
-            <input
-                        className="full"
-                        name="email"
-                        onChange={[Function]}
-                        placeholder="Email"
-                        required={true}
-                        type="email"
                         value=""
             />
             <input
@@ -570,15 +579,6 @@ ShallowWrapper {
             />
             <input
                         className="full"
-                        name="roaster"
-                        onChange={[Function]}
-                        placeholder="Roaster Name"
-                        required={true}
-                        type="text"
-                        value=""
-            />
-            <input
-                        className="full"
                         name="additionalComments"
                         onChange={[Function]}
                         placeholder="Additional Comments (Optional)"
@@ -620,21 +620,30 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <input
+                className="full prefilled"
+                disabled={true}
+                name="roaster"
+                placeholder="Roaster Name"
+                required={true}
+                type="text"
+                value={undefined}
+/>,
+              <input
+                className="full prefilled"
+                disabled={true}
+                name="email"
+                placeholder="Email"
+                required={true}
+                type="email"
+                value={undefined}
+/>,
+              <input
                 className="full"
                 name="name"
                 onChange={[Function]}
                 placeholder="Blend/Bean Name"
                 required={true}
                 type="text"
-                value=""
-/>,
-              <input
-                className="full"
-                name="email"
-                onChange={[Function]}
-                placeholder="Email"
-                required={true}
-                type="email"
                 value=""
 />,
               <input
@@ -702,15 +711,6 @@ ShallowWrapper {
 />,
               <input
                 className="full"
-                name="roaster"
-                onChange={[Function]}
-                placeholder="Roaster Name"
-                required={true}
-                type="text"
-                value=""
-/>,
-              <input
-                className="full"
                 name="additionalComments"
                 onChange={[Function]}
                 placeholder="Additional Comments (Optional)"
@@ -732,13 +732,30 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": "full",
-                "name": "name",
-                "onChange": [Function],
-                "placeholder": "Blend/Bean Name",
+                "className": "full prefilled",
+                "disabled": true,
+                "name": "roaster",
+                "placeholder": "Roaster Name",
                 "required": true,
                 "type": "text",
-                "value": "",
+                "value": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "full prefilled",
+                "disabled": true,
+                "name": "email",
+                "placeholder": "Email",
+                "required": true,
+                "type": "email",
+                "value": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -750,11 +767,11 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "className": "full",
-                "name": "email",
+                "name": "name",
                 "onChange": [Function],
-                "placeholder": "Email",
+                "placeholder": "Blend/Bean Name",
                 "required": true,
-                "type": "email",
+                "type": "text",
                 "value": "",
               },
               "ref": null,
@@ -872,23 +889,6 @@ ShallowWrapper {
                 "name": "overallImpression",
                 "onChange": [Function],
                 "placeholder": "Overall Impression (Comments)",
-                "required": true,
-                "type": "text",
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "full",
-                "name": "roaster",
-                "onChange": [Function],
-                "placeholder": "Roaster Name",
                 "required": true,
                 "type": "text",
                 "value": "",
