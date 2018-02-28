@@ -11,7 +11,7 @@ h1 {
 .full, 
 .half {
   display: block;
-  color: #AA9E91;
+  color: #444444;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -20,6 +20,11 @@ h1 {
   padding: 5px;
   margin-top: 5px;
   height: 20px;
+}
+
+.prefilled {
+  color: black;
+  font-weight: 400;
 }
 
 .full {

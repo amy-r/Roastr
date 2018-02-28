@@ -17,7 +17,7 @@ export const Card = (props) => {
           <li className='roaster-data'> contact: {contact} </li>
           <li className='roaster-data'> email: {email} </li>
         </ul>
-        <Link to='coffee-form'> 
+        <Link to={`coffee-form/${name}`}> 
           <button className='new-coffee'>+ NEW COFFEE</button> 
         </Link>
         <Link to={`single-roaster/${name}`}>

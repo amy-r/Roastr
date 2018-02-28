@@ -37,7 +37,7 @@ export class App extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if(this.props.user !== nextProps.user) {
+    if (this.props.user !== nextProps.user) {
       this.updateStore();
     }
   }
@@ -53,7 +53,7 @@ export class App extends Component {
     } catch (error) {
       this.setState({
         errorState: 'Error Retrieving Information'
-      })
+      });
     }
   }
 

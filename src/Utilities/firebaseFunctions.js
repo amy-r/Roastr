@@ -13,7 +13,7 @@ export const writeUserData = ({userId, userName, userEmail}) => {
   }
 }
 
-export const addRoasterData = ({userId, name, location, altitude, equipment, water, contact, email}) => {
+export const addRoasterData = ({name, location, altitude, equipment, water, contact, email}) => {
   try { 
     firebaseApp.database().ref('roasters/' + name).set({
       name,
@@ -44,7 +44,7 @@ export const addCoffeeData = ({roaster, name, overallScore, region, acidity, bod
       additionalComments
     })
   } catch (error) {
-    throw new Error('error adding Coffee')
+    throw new Error('error adding Coffee data')
   } 
 }
 
@@ -64,6 +64,6 @@ export const pullRoasters = async (ref) => {
     const snapshotValue = await currentValue.val()
     return convertToArray(snapshotValue) 
   } catch (error) {
-    throw new Error ('error pulling data')
+    throw new Error('error pulling data')
   }
 }

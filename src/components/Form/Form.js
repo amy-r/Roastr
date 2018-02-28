@@ -45,7 +45,9 @@ export class Form extends Component {
       });
       history.push('/current-roasters'); 
     } catch (error) {
-      this.setState({errorState: 'error adding roaster'})
+      this.setState({
+        errorState: 'error adding roaster'
+      });
     }
   }
 
