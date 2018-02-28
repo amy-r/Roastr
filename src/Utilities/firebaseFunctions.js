@@ -64,6 +64,6 @@ export const pullRoasters = async (ref) => {
     const snapshotValue = await currentValue.val()
     return convertToArray(snapshotValue) 
   } catch (error) {
-    throw new Error ('error pulling data')
+    throw new Error('error pulling data')
   }
 }

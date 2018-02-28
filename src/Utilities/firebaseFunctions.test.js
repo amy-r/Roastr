@@ -131,16 +131,17 @@ describe('firebaseFuctions', () => {
     })
   })
 
-  // describe('pullRoasters', () => {
-  //   it('should throw an error if unsuccessful', async () => {
-  //     const db = firebaseApp.database()
-  //     const ref2 = db.ref('/coffees');
+  describe('pullRoasters', () => {
+    it('should throw an error if unsuccessful', async () => {
+      const ref = {
+        once: jest.fn().mockImplementation(() => Promise.reject({
+        error: 'some error'
+        }))
+      }
 
-  //     ref2.once = jest.fn().mockImplementation( (value) => {
-  //       throw new Error('error')
-  //     })
-  //     const thing = await pullRoasters(ref2)
-  //     expect(pullRoasters(ref2)).toThrow();
-  //   })
-  // })
+      const error = new Error('error pulling data')
+
+      await expect(pullRoasters(ref)).rejects.toEqual(error);
+    })
+  })
 })
