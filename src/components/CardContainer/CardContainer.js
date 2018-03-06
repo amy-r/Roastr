@@ -11,9 +11,6 @@ import PropTypes from 'prop-types';
 
 
 export class CardContainer extends Component {
-  componentDidMount() {
-
-  }
     
   renderedCards = () => {
     return this.props.roasters.map( (roaster, index) => {

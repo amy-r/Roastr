@@ -98,25 +98,11 @@ describe('actions', () => {
   describe('logOut', () => {
 
     it ('should create an action to log out', () => {
-
-      const user = {
-        userName: "Beyoncé Knowles",
-        userEmail: "beyonce@gmail.com",
-        userPhoto: "beyoncephoto.jpg",
-        userId: "encryptedid"
-      }
-
       const expectedAction = {
         type: 'LOG_OUT',
-        user: {
-          userName: "Beyoncé Knowles",
-          userEmail: "beyonce@gmail.com",
-          userPhoto: "beyoncephoto.jpg",
-          userId: "encryptedid"
-        }
       }
 
-      expect(actions.logOut(user)).toEqual(expectedAction)
+      expect(actions.logOut()).toEqual(expectedAction)
     })
   })
 })

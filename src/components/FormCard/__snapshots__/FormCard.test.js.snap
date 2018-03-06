@@ -28,7 +28,27 @@ ShallowWrapper {
           id="roaster-list"
 >
           <li>
-                     Overall Score 
+                     Overall Score: 
+                     
+          </li>
+          <li>
+                     Region: 
+                     
+          </li>
+          <li>
+                     Acidity: 
+                     
+          </li>
+          <li>
+                     Body: 
+                     
+          </li>
+          <li>
+                     Sweetness: 
+                     
+          </li>
+          <li>
+                     Tactile: 
                      
           </li>
 </ul>,
@@ -62,32 +82,151 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <li>
-             Overall Score 
-             
+          "children": Array [
+            <li>
+               Overall Score: 
+               
 </li>,
+            <li>
+               Region: 
+               
+</li>,
+            <li>
+               Acidity: 
+               
+</li>,
+            <li>
+               Body: 
+               
+</li>,
+            <li>
+               Sweetness: 
+               
+</li>,
+            <li>
+               Tactile: 
+               
+</li>,
+          ],
           "id": "roaster-list",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              " Overall Score ",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " Overall Score: ",
+                undefined,
+                " ",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              " Overall Score: ",
               undefined,
               " ",
             ],
+            "type": "li",
           },
-          "ref": null,
-          "rendered": Array [
-            " Overall Score ",
-            undefined,
-            " ",
-          ],
-          "type": "li",
-        },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " Region: ",
+                undefined,
+                " ",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              " Region: ",
+              undefined,
+              " ",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " Acidity: ",
+                undefined,
+                " ",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              " Acidity: ",
+              undefined,
+              " ",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " Body: ",
+                undefined,
+                " ",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              " Body: ",
+              undefined,
+              " ",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " Sweetness: ",
+                undefined,
+                " ",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              " Sweetness: ",
+              undefined,
+              " ",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " Tactile: ",
+                undefined,
+                " ",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              " Tactile: ",
+              undefined,
+              " ",
+            ],
+            "type": "li",
+          },
+        ],
         "type": "ul",
       },
     ],
@@ -110,7 +249,27 @@ ShallowWrapper {
             id="roaster-list"
 >
             <li>
-                         Overall Score 
+                         Overall Score: 
+                         
+            </li>
+            <li>
+                         Region: 
+                         
+            </li>
+            <li>
+                         Acidity: 
+                         
+            </li>
+            <li>
+                         Body: 
+                         
+            </li>
+            <li>
+                         Sweetness: 
+                         
+            </li>
+            <li>
+                         Tactile: 
                          
             </li>
 </ul>,
@@ -144,32 +303,151 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <li>
-               Overall Score 
-               
+            "children": Array [
+              <li>
+                 Overall Score: 
+                 
 </li>,
+              <li>
+                 Region: 
+                 
+</li>,
+              <li>
+                 Acidity: 
+                 
+</li>,
+              <li>
+                 Body: 
+                 
+</li>,
+              <li>
+                 Sweetness: 
+                 
+</li>,
+              <li>
+                 Tactile: 
+                 
+</li>,
+            ],
             "id": "roaster-list",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                " Overall Score ",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " Overall Score: ",
+                  undefined,
+                  " ",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                " Overall Score: ",
                 undefined,
                 " ",
               ],
+              "type": "li",
             },
-            "ref": null,
-            "rendered": Array [
-              " Overall Score ",
-              undefined,
-              " ",
-            ],
-            "type": "li",
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " Region: ",
+                  undefined,
+                  " ",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                " Region: ",
+                undefined,
+                " ",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " Acidity: ",
+                  undefined,
+                  " ",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                " Acidity: ",
+                undefined,
+                " ",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " Body: ",
+                  undefined,
+                  " ",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                " Body: ",
+                undefined,
+                " ",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " Sweetness: ",
+                  undefined,
+                  " ",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                " Sweetness: ",
+                undefined,
+                " ",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " Tactile: ",
+                  undefined,
+                  " ",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                " Tactile: ",
+                undefined,
+                " ",
+              ],
+              "type": "li",
+            },
+          ],
           "type": "ul",
         },
       ],

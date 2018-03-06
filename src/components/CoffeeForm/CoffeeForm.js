@@ -11,8 +11,8 @@ export class CoffeeForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name:'',
-      email: '',
+      name: '',
+      email: this.props.email,
       overallScore: '',
       region: '',
       acidity: '',
@@ -20,7 +20,7 @@ export class CoffeeForm extends Component {
       sweetness: '',
       tactile: '',
       overallImpression: '', 
-      roaster: '',
+      roaster: this.props.name,
       additionalComments: '',
       errorState: ''
     };
@@ -46,7 +46,7 @@ export class CoffeeForm extends Component {
         roaster: '',
         additionalComments: ''
       });
-      this.props.history.push(`/single-roaster/${newCoffee.roaster}`);
+      this.props.history.push(`/single-roaster/${this.props.name}`);
     } catch (error) {
       this.setState({
         errorState: 'Your email could not be sent at this time'
@@ -83,17 +83,24 @@ export class CoffeeForm extends Component {
         <p> {this.state.errorState} </p>
         <form onSubmit= {this.handleSubmit} className='new-roaster'>
           <input type="text"
+            className='full prefilled' 
+            name="roaster" 
+            value={this.props.name} 
+            placeholder='Roaster Name'
+            disabled
+            required/>
+          <input type="email"
+            className='full prefilled' 
+            name="email" 
+            value={this.props.email}
+            placeholder='Email' 
+            disabled
+            required/>
+          <input type="text"
             className='full' 
             name="name" 
             value={this.state.name}
             placeholder='Blend/Bean Name' 
-            onChange={this.handleChange}
-            required/>
-          <input type="email"
-            className='full' 
-            name="email" 
-            value={this.state.email}
-            placeholder='Email' 
             onChange={this.handleChange}
             required/>
           <input type="text" 
@@ -145,13 +152,6 @@ export class CoffeeForm extends Component {
             placeholder='Overall Impression (Comments)'
             onChange={this.handleChange}
             required/>
-          <input type="text"
-            className='full' 
-            name="roaster" 
-            value={this.state.roaster} 
-            placeholder='Roaster Name'
-            onChange={this.handleChange}
-            required/>
           <input type="text" 
             className='full'
             name="additionalComments" 
@@ -171,8 +171,10 @@ export const mapDispatchToProps = (dispatch) => ({
 });
 
 CoffeeForm.propTypes = {
+  email: PropTypes.string,
+  name: PropTypes.string,
   addCoffee: PropTypes.func,
-  history: PropTypes.array
+  history: PropTypes.object
 };
 
 export default withRouter(connect(null, mapDispatchToProps)(CoffeeForm));

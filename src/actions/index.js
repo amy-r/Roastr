@@ -24,6 +24,5 @@ export const logIn = (user) => ({
 })
 
 export const logOut = (user) => ({
-  type: 'LOG_OUT',
-  user
+  type: 'LOG_OUT'
 })
