@@ -16,9 +16,9 @@ export const SingleRoaster = (props) => {
   return (
     <div>
       <h1> {props.name} </h1>
-      <div className='form-container'>
+      <div className='formCards'>
         {formCards}
-      </div>
+      </div>  
     </div>
   );
 };

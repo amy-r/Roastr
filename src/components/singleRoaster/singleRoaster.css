@@ -1,5 +1,7 @@
-.form-container {
+h1 {
+  text-transform: uppercase;
+}
+
+.formCards {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
 }
